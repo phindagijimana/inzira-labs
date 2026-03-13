@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inzira Labs | Translational Biomedical Research</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="#" class="logo" onclick="showPage('home')">Inzira Labs</a>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+      <ul id="nav-menu">
+        <li><a href="#" onclick="showPage('home'); closeMenu();">Home</a></li>
+        <li><a href="#" onclick="showPage('platforms'); closeMenu();">Platforms</a></li>
+        <li><a href="#" onclick="showPage('downloads'); closeMenu();">Downloads</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="home" class="page active">
+    <section class="hero">
+      <h1>Inzira Labs</h1>
+      <p class="hero-subtitle">Translational Biomedical Research</p>
+      <div class="mission-vision-container">
+        <div class="mission-box">
+          <h6>Mission</h6>
+          <p>Translate rigorous biomedical research into secure, usable software for real-world clinical and scientific impact.</p>
+        </div>
+        <div class="vision-box">
+          <h6>Vision</h6>
+          <p>Enable research teams worldwide to deploy trustworthy tools faster, with compliant workflows and reproducible analytics.</p>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#" onclick="showPage('downloads')" class="cta-button">Request License and Download</a>
+      </div>
+    </section>
+
+    <section class="what-we-do">
+      <div class="section-inner">
+        <h2>What We Offer</h2>
+        <p class="section-subtitle">Inzira Labs hosts translational research platforms, licensing workflows, and distribution channels.</p>
+        <div class="services-preview">
+          <div class="service-preview-card">
+            <h3>Research Platforms</h3>
+            <p>Production-focused tools built from translational biomedical pipelines.</p>
+          </div>
+          <div class="service-preview-card">
+            <h3>License Services</h3>
+            <p>Pre-download registration and controlled license issuance workflows.</p>
+          </div>
+          <div class="service-preview-card">
+            <h3>Secure Distribution</h3>
+            <p>Checksum-backed installer downloads with operational traceability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="platforms" class="page">
+    <section class="projects">
+      <div class="section-inner">
+        <h2>Platform Catalog</h2>
+        <p class="section-subtitle">NIR is one of the platforms distributed through Inzira Labs.</p>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>NeuroInsight Research (NIR)</h3>
+            <p>Self-hosted neuroimaging orchestration platform for secure data connectors, workflow execution, and reproducible analysis.</p>
+          </div>
+          <div class="project-card">
+            <h3>Future Services</h3>
+            <p>Inzira Labs can host additional translational biomedical tools under the same licensing and distribution controls.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="downloads" class="page">
+    <section class="services-full">
+      <div class="section-inner">
+        <h2>Downloads</h2>
+        <p class="section-subtitle">A license request is required before downloading platform installers.</p>
+
+        <div class="download-card">
+          <h3>NIR Desktop</h3>
+          <p>Linux, Windows, and macOS installers are distributed through GitHub releases after license approval.</p>
+          <div class="download-actions">
+            <button class="cta-button" onclick="openLicenseModal('nir-desktop')">Request License and Download</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="license-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="license-modal-title">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeLicenseModal()" aria-label="Close modal">x</button>
+      <h3 id="license-modal-title">License Request</h3>
+      <p class="modal-subtitle">Complete this form to request a license before download.</p>
+
+      <form id="license-form" onsubmit="submitLicenseRequest(event)">
+        <input type="hidden" id="requested-platform" name="requestedPlatform" />
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="institution">Institution</label>
+          <input id="institution" name="institution" type="text" required />
+        </div>
+
+        <div class="form-group">
+          <label for="purpose">Why do you need this platform?</label>
+          <textarea id="purpose" name="purpose" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit and Continue</button>
+      </form>
+
+      <p id="form-status" class="form-status"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p><strong>Contact:</strong> inzira-labs@zerogap.tech</p>
+    <p style="margin-top: 0.5rem;">© 2026 Inzira Labs. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
