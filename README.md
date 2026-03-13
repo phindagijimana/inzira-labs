@@ -1,6 +1,6 @@
 # Inzira Labs Landing Site
 
-This is a standalone landing site for **Inzira Labs (Translational Biomedical Research)**.
+This is a standalone landing site for **Inzira Labs (Translating Biomedical Research to Usable Tools)**.
 
 It is modeled after the structure/style used in the ZeroGap landing repo and is intentionally isolated inside this repository at:
 
