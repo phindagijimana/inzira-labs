@@ -29,8 +29,24 @@ In `js/script.js`:
 
 - `NIR_DOWNLOAD_URL` controls where users are sent after request.
 - `LICENSE_SERVICE_ENDPOINT` is where form data is posted.
+- It expects a successful backend response before redirecting to download.
 
-If `LICENSE_SERVICE_ENDPOINT` is empty, the site stores the request in local storage as a fallback.
+## Included no-admin license service
+
+This repository now includes a lightweight backend under:
+
+- `license-service/`
+
+Flow:
+
+1. landing form posts to `/api/license/request`
+2. backend auto-generates `license.txt`
+3. backend emails license to submitted email
+4. frontend redirects user to NIR releases
+
+Service setup details are in:
+
+- `license-service/README.md`
 
 ## Local preview
 

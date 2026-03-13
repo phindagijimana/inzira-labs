@@ -1,5 +1,6 @@
 const NIR_DOWNLOAD_URL = "https://github.com/phindagijimana/neuroinsight_research/releases";
-const LICENSE_SERVICE_ENDPOINT = ""; // Example: https://license.inzira-labs.com/api/license-requests
+const LICENSE_SERVICE_ENDPOINT =
+  window.INZIRA_LICENSE_ENDPOINT || "https://license.inzira-labs.com/api/license/request";
 
 function showPage(pageId) {
   document.querySelectorAll(".page").forEach((page) => page.classList.remove("active"));
@@ -48,21 +49,20 @@ async function submitLicenseRequest(event) {
   statusEl.className = "form-status";
 
   try {
-    if (LICENSE_SERVICE_ENDPOINT) {
-      const response = await fetch(LICENSE_SERVICE_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!response.ok) {
-        throw new Error(`License service request failed with status ${response.status}`);
-      }
-    } else {
-      // Fallback when service endpoint is not yet configured.
-      localStorage.setItem("inziraLabsLastLicenseRequest", JSON.stringify(payload));
+    const response = await fetch(LICENSE_SERVICE_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(
+        `License service request failed with status ${response.status}. ${text}`.trim()
+      );
     }
+    localStorage.setItem("inziraLabsLastLicenseRequest", JSON.stringify(payload));
 
-    statusEl.textContent = "Request received. Redirecting to download page...";
+    statusEl.textContent = "License generated and emailed. Redirecting to download page...";
     statusEl.className = "form-status success";
     setTimeout(() => {
       window.location.href = NIR_DOWNLOAD_URL;

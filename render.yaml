@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: inzira-labs-license-service
+    runtime: python
+    rootDir: license-service
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    autoDeploy: true
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: ALLOWED_ORIGINS
+        value: https://phindagijimana.github.io
+      - key: NIR_RELEASE_URL
+        value: https://github.com/phindagijimana/neuroinsight_research/releases
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM_EMAIL
+        sync: false
+      - key: LICENSE_SIGNING_SECRET
+        sync: false
