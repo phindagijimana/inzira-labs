@@ -15,6 +15,7 @@ It is modeled after the structure/style used in the ZeroGap landing repo and is 
   - full name
   - email
   - institution
+  - target operating system (linux/windows/macos)
   - why they need the platform
 
 ## Separate GitHub Repo / Service Architecture

@@ -57,6 +57,7 @@ app.add_middleware(
 
 class LicenseRequest(BaseModel):
     requestedPlatform: str = Field(min_length=3, max_length=64)
+    targetOS: str = Field(pattern="^(linux|windows|macos)$")
     name: str = Field(min_length=2, max_length=120)
     email: EmailStr
     institution: str = Field(min_length=2, max_length=200)
@@ -72,6 +73,7 @@ CSV_HEADERS = [
     "email",
     "email_hash",
     "platform",
+    "target_os",
     "institution",
     "source",
     "asset_name",
@@ -164,6 +166,27 @@ def _recommended_assets(assets: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return out
 
 
+def _filter_assets_for_target_os(
+    assets: List[Dict[str, Any]], target_os: str
+) -> List[Dict[str, Any]]:
+    wanted = str(target_os or "").strip().lower()
+    if wanted not in {"linux", "windows", "macos"}:
+        return assets
+
+    out: List[Dict[str, Any]] = []
+    for asset in assets:
+        name = str(asset.get("name", ""))
+        platform = _asset_platform(name)
+        lowered = name.lower()
+        if platform == wanted:
+            out.append(asset)
+            continue
+        # Keep generic checksum file for support workflows.
+        if lowered == "desktop-release-sha256.txt":
+            out.append(asset)
+    return out
+
+
 def _token_b64_encode(data: bytes) -> str:
     return base64.urlsafe_b64encode(data).decode("utf-8").rstrip("=")
 
@@ -225,6 +248,7 @@ def build_license_text(req: LicenseRequest) -> str:
     payload = {
         "license_id": license_id,
         "product": req.requestedPlatform,
+        "target_os": req.targetOS,
         "name": req.name,
         "email": req.email,
         "institution": req.institution,
@@ -241,6 +265,7 @@ def build_license_text(req: LicenseRequest) -> str:
         "INZIRA_LABS_LICENSE_V1\n"
         f"license_id={license_id}\n"
         f"product={req.requestedPlatform}\n"
+        f"target_os={req.targetOS}\n"
         f"name={req.name}\n"
         f"email={req.email}\n"
         f"institution={req.institution}\n"
@@ -262,7 +287,7 @@ async def send_email_with_license(
 
     attachment_name = "nir_license.txt"
     encoded = base64.b64encode(license_text.encode("utf-8")).decode("utf-8")
-    subject = f"Inzira Labs License - {req.requestedPlatform}"
+    subject = f"Inzira Labs License - {req.requestedPlatform} ({req.targetOS})"
     download_links_html = ""
     secure_links = secure_links if secure_links is not None else []
     recommended_links = recommended_links if recommended_links is not None else []
@@ -294,6 +319,7 @@ async def send_email_with_license(
     html = f"""
     <p>Hello {req.name},</p>
     <p>Your license request for <strong>{req.requestedPlatform}</strong> has been approved.</p>
+    <p>Selected operating system: <strong>{req.targetOS}</strong></p>
     <p>Your license file is attached as <code>{attachment_name}</code>.</p>
     {download_links_html}
     <p>Regards,<br/>Inzira Labs</p>
@@ -364,12 +390,13 @@ async def get_release_assets() -> List[Dict[str, Any]]:
     return out
 
 
-async def build_secure_download_links(email: str) -> List[Dict[str, str]]:
+async def build_secure_download_links(email: str, target_os: str = "") -> List[Dict[str, str]]:
     assets = await get_release_assets()
     assets = sorted(
         assets,
         key=lambda a: (_asset_priority(str(a.get("name", ""))), str(a.get("name", "")).lower()),
     )
+    assets = _filter_assets_for_target_os(assets, target_os)
     links: List[Dict[str, str]] = []
     for asset in assets:
         token = make_download_token(asset["id"], asset["name"], email)
@@ -382,12 +409,15 @@ async def build_secure_download_links(email: str) -> List[Dict[str, str]]:
     return links
 
 
-async def build_secure_link_sets(email: str) -> Tuple[List[Dict[str, str]], List[Dict[str, str]]]:
+async def build_secure_link_sets(
+    email: str, target_os: str = ""
+) -> Tuple[List[Dict[str, str]], List[Dict[str, str]]]:
     assets = await get_release_assets()
     assets = sorted(
         assets,
         key=lambda a: (_asset_priority(str(a.get("name", ""))), str(a.get("name", "")).lower()),
     )
+    assets = _filter_assets_for_target_os(assets, target_os)
     recommended_assets = _recommended_assets(assets)
 
     def _to_links(picks: List[Dict[str, Any]]) -> List[Dict[str, str]]:
@@ -423,6 +453,7 @@ def log_request(req: LicenseRequest, ok: bool, error: str = "", client_ip: str =
             "email": req.email,
             "email_hash": hashlib.sha256(req.email.lower().encode("utf-8")).hexdigest(),
             "platform": req.requestedPlatform,
+            "target_os": req.targetOS,
             "institution": req.institution,
             "source": req.source,
             "asset_name": "",
@@ -508,7 +539,7 @@ async def download_private_asset(token: str, request: Request) -> Response:
 async def request_license(req: LicenseRequest, request: Request) -> dict:
     try:
         license_text = build_license_text(req)
-        secure_links, recommended_links = await build_secure_link_sets(req.email)
+        secure_links, recommended_links = await build_secure_link_sets(req.email, req.targetOS)
         await send_email_with_license(req, license_text, secure_links, recommended_links)
         log_request(req, ok=True, client_ip=request.client.host if request.client else "")
         return {

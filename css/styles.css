@@ -233,6 +233,7 @@ footer {
 }
 
 .form-group input,
+.form-group select,
 .form-group textarea {
   width: 100%;
   border: 1px solid #d0d0d0;

@@ -14,8 +14,8 @@ offer: verify checksum -> install.
 - `GET /download/{token}`
 `POST /api/license/request` success response includes:
 
-- `recommendedLinks` (helper/checksum/installer set by platform)
-- `downloadLinks` (all allowed assets)
+- `recommendedLinks` (helper/checksum/installer set for selected OS)
+- `downloadLinks` (selected OS assets only)
 
 
 Request body:
@@ -23,6 +23,7 @@ Request body:
 ```json
 {
   "requestedPlatform": "nir-desktop",
+  "targetOS": "linux",
   "name": "Jane Doe",
   "email": "jane@example.org",
   "institution": "Example University",

@@ -73,6 +73,8 @@ function openLicenseModal(platformId, platformLabel = "Selected Platform") {
   const rec = document.getElementById("recommended-downloads");
   rec.classList.add("hidden");
   rec.innerHTML = "";
+  const targetOs = document.getElementById("target-os");
+  if (targetOs) targetOs.value = "";
   document.getElementById("license-modal").classList.remove("hidden");
 }
 
@@ -88,6 +90,7 @@ async function submitLicenseRequest(event) {
   const payload = {
     requestedPlatform: formData.get("requestedPlatform"),
     requestedPlatformLabel: formData.get("requestedPlatformLabel"),
+    targetOS: formData.get("targetOS"),
     name: formData.get("name"),
     email: formData.get("email"),
     institution: formData.get("institution"),
@@ -125,7 +128,12 @@ async function submitLicenseRequest(event) {
       RECOMMENDED_LINKS_KEY,
       JSON.stringify({ links: recommendedLinks, savedAt: new Date().toISOString() })
     );
-    renderRecommendedLinksBox(recEl, recommendedLinks, "Recommended NIR Downloads (Verify then Install)");
+    const osLabel = (payload.targetOS || "").toString().trim().toLowerCase();
+    const osMap = { linux: "Linux", windows: "Windows", macos: "macOS" };
+    const osTitle = osMap[osLabel]
+      ? `${osMap[osLabel]} Recommended NIR Downloads (Verify then Install)`
+      : "Recommended NIR Downloads (Verify then Install)";
+    renderRecommendedLinksBox(recEl, recommendedLinks, osTitle);
     setDownloadsGate(recommendedLinks);
   } catch (err) {
     statusEl.textContent = `Unable to submit request: ${err.message}`;
