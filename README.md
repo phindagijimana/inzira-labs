@@ -35,3 +35,23 @@ If `LICENSE_SERVICE_ENDPOINT` is empty, the site stores the request in local sto
 ## Local preview
 
 Open `index.html` directly, or serve with a static server from `src/inzira-labs`.
+
+## GitHub Hosting (Pages)
+
+This repository is configured for GitHub Pages deployment via:
+
+- `.github/workflows/pages.yml`
+
+Deployment behavior:
+
+- automatic deploy on push to `main`
+- manual deploy from Actions tab via workflow dispatch
+
+After first workflow run, enable Pages in repository settings:
+
+1. GitHub repository -> Settings -> Pages
+2. Source: `GitHub Actions`
+
+Your site URL will be:
+
+- `https://phindagijimana.github.io/inzira-labs/`
