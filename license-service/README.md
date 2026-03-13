@@ -1,11 +1,12 @@
-# Inzira Labs License Service (No-Admin, Auto-Issue)
+# Inzira Labs License Service (No-Admin, Auto-Issue, Private Download Proxy)
 
-This service receives landing-page form submissions, auto-generates a `license.txt`, emails it to the requester, then allows frontend redirect to NIR releases.
+This service receives landing-page form submissions, auto-generates a `license.txt`, emails it to the requester, and includes **time-limited secure links** to private GitHub release assets.
 
 ## API
 
 - `GET /health`
 - `POST /api/license/request`
+- `GET /download/{token}`
 
 Request body:
 
@@ -28,8 +29,12 @@ Copy `.env.example` to `.env` and set:
 - `RESEND_API_KEY`
 - `RESEND_FROM_EMAIL` (verified sender/domain)
 - `ALLOWED_ORIGINS` (include your GitHub Pages origin)
-- `NIR_RELEASE_URL` (download destination)
 - `LICENSE_SIGNING_SECRET`
+- `GITHUB_TOKEN` (must have access to private repo releases)
+- `GITHUB_REPO` (`owner/repo`)
+- `GITHUB_RELEASE_TAG` (`latest` or specific tag)
+- `DOWNLOAD_LINK_BASE_URL` (public URL of this service)
+- optional `ASSET_NAME_ALLOWLIST` (comma-separated exact names)
 
 ## Run locally
 
@@ -55,8 +60,15 @@ window.INZIRA_LICENSE_ENDPOINT = "https://<your-service-domain>/api/license/requ
 
 or change the constant directly.
 
+## How private downloads work
+
+1. Service reads private assets from GitHub Releases API.
+2. It generates tokenized `/download/{token}` links (time-limited, signed).
+3. Links are emailed to requester.
+4. `/download/{token}` validates token and proxies the private asset from GitHub.
+
 ## Notes
 
-- This version is intentionally no-admin and auto-approves all requests.
+- This version is intentionally no-admin and auto-approves requests.
 - Request logs are appended to `license-service/data/license_requests.jsonl`.
-- Add an admin/review workflow later when you are ready.
+- Add admin/review workflow later when you are ready.

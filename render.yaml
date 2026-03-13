@@ -13,9 +13,19 @@ services:
         value: https://phindagijimana.github.io
       - key: NIR_RELEASE_URL
         value: https://github.com/phindagijimana/neuroinsight_research/releases
+      - key: GITHUB_REPO
+        value: phindagijimana/neuroinsight_research
+      - key: GITHUB_RELEASE_TAG
+        value: latest
+      - key: DOWNLOAD_LINK_BASE_URL
+        sync: false
+      - key: DOWNLOAD_TOKEN_TTL_HOURS
+        value: "24"
       - key: RESEND_API_KEY
         sync: false
       - key: RESEND_FROM_EMAIL
         sync: false
       - key: LICENSE_SIGNING_SECRET
+        sync: false
+      - key: GITHUB_TOKEN
         sync: false

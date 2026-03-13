@@ -41,8 +41,8 @@ Flow:
 
 1. landing form posts to `/api/license/request`
 2. backend auto-generates `license.txt`
-3. backend emails license to submitted email
-4. frontend redirects user to NIR releases
+3. backend emails license to submitted email with secure download links
+4. user downloads installers through time-limited links served by backend proxy
 
 Service setup details are in:
 

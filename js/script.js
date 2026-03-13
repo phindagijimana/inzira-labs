@@ -1,4 +1,3 @@
-const NIR_DOWNLOAD_URL = "https://github.com/phindagijimana/neuroinsight_research/releases";
 const LICENSE_SERVICE_ENDPOINT =
   window.INZIRA_LICENSE_ENDPOINT || "https://license.inzira-labs.com/api/license/request";
 
@@ -60,13 +59,12 @@ async function submitLicenseRequest(event) {
         `License service request failed with status ${response.status}. ${text}`.trim()
       );
     }
+    const result = await response.json().catch(() => ({}));
     localStorage.setItem("inziraLabsLastLicenseRequest", JSON.stringify(payload));
-
-    statusEl.textContent = "License generated and emailed. Redirecting to download page...";
+    statusEl.textContent =
+      result.message ||
+      "License generated and emailed. Check your inbox for secure download links.";
     statusEl.className = "form-status success";
-    setTimeout(() => {
-      window.location.href = NIR_DOWNLOAD_URL;
-    }, 800);
   } catch (err) {
     statusEl.textContent = `Unable to submit request: ${err.message}`;
     statusEl.className = "form-status error";
