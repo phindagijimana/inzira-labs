@@ -45,12 +45,12 @@ function setDownloadsGate(links) {
   if (!unlocked) {
     statusEl.textContent = "Downloads are locked until license form submission succeeds.";
     statusEl.className = "downloads-gate-status locked";
-    renderRecommendedLinksBox(linksEl, [], "Verified Install Links");
+    renderRecommendedLinksBox(linksEl, [], "Verified NIR Install Links");
     return;
   }
-  statusEl.textContent = "Downloads unlocked for this request. Use verified install links below.";
+  statusEl.textContent = "NIR downloads unlocked for this request. Use verified install links below.";
   statusEl.className = "downloads-gate-status unlocked";
-  renderRecommendedLinksBox(linksEl, links, "Verified Install Links");
+  renderRecommendedLinksBox(linksEl, links, "Verified NIR Install Links");
 }
 
 function loadStoredRecommendedLinks() {
@@ -64,8 +64,10 @@ function loadStoredRecommendedLinks() {
   }
 }
 
-function openLicenseModal(platformId) {
+function openLicenseModal(platformId, platformLabel = "Selected Platform") {
   document.getElementById("requested-platform").value = platformId;
+  document.getElementById("requested-platform-label").value = platformLabel;
+  document.getElementById("license-modal-title").textContent = `${platformLabel} License Request`;
   document.getElementById("form-status").textContent = "";
   document.getElementById("form-status").className = "form-status";
   const rec = document.getElementById("recommended-downloads");
@@ -85,6 +87,7 @@ async function submitLicenseRequest(event) {
   const formData = new FormData(form);
   const payload = {
     requestedPlatform: formData.get("requestedPlatform"),
+    requestedPlatformLabel: formData.get("requestedPlatformLabel"),
     name: formData.get("name"),
     email: formData.get("email"),
     institution: formData.get("institution"),
@@ -122,7 +125,7 @@ async function submitLicenseRequest(event) {
       RECOMMENDED_LINKS_KEY,
       JSON.stringify({ links: recommendedLinks, savedAt: new Date().toISOString() })
     );
-    renderRecommendedLinksBox(recEl, recommendedLinks, "Recommended Downloads (Verify then Install)");
+    renderRecommendedLinksBox(recEl, recommendedLinks, "Recommended NIR Downloads (Verify then Install)");
     setDownloadsGate(recommendedLinks);
   } catch (err) {
     statusEl.textContent = `Unable to submit request: ${err.message}`;

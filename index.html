@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="hero-cta">
-        <a href="#" onclick="showPage('downloads')" class="cta-button">Request License and Download</a>
+        <a href="#" onclick="showPage('platforms')" class="cta-button">Explore Platforms</a>
       </div>
     </section>
 
@@ -64,15 +64,23 @@
     <section class="projects">
       <div class="section-inner">
         <h2>Platform Catalog</h2>
-        <p class="section-subtitle">NIR is one of the platforms distributed through Inzira Labs.</p>
+        <p class="section-subtitle">Choose a platform to start its license-gated download flow.</p>
         <div class="projects-grid">
           <div class="project-card">
             <h3>NeuroInsight Research (NIR)</h3>
             <p>Self-hosted neuroimaging orchestration platform for secure data connectors, workflow execution, and reproducible analysis.</p>
+            <div class="download-actions">
+              <button class="cta-button" onclick="openLicenseModal('nir-desktop', 'NIR Desktop')">
+                Get NIR
+              </button>
+            </div>
           </div>
           <div class="project-card">
             <h3>Future Services</h3>
             <p>Inzira Labs can host additional translational biomedical tools under the same licensing and distribution controls.</p>
+            <div class="download-actions">
+              <button class="cta-button" disabled title="Coming soon">Coming Soon</button>
+            </div>
           </div>
         </div>
       </div>
@@ -89,7 +97,7 @@
           <h3>NIR Desktop</h3>
           <p>Linux, Windows, and macOS installers are distributed through GitHub releases after license approval.</p>
           <div class="download-actions">
-            <button class="cta-button" onclick="openLicenseModal('nir-desktop')">Request License and Download</button>
+            <button class="cta-button" onclick="openLicenseModal('nir-desktop', 'NIR Desktop')">Request License and Download</button>
           </div>
           <p id="downloads-gate-status" class="downloads-gate-status locked">
             Downloads are locked until license form submission succeeds.
@@ -108,6 +116,7 @@
 
       <form id="license-form" onsubmit="submitLicenseRequest(event)">
         <input type="hidden" id="requested-platform" name="requestedPlatform" />
+        <input type="hidden" id="requested-platform-label" name="requestedPlatformLabel" />
 
         <div class="form-group">
           <label for="name">Full Name</label>
