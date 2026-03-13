@@ -163,7 +163,7 @@ async def send_email_with_license(req: LicenseRequest, license_text: str) -> Non
     if not RESEND_API_KEY or not RESEND_FROM_EMAIL:
         raise RuntimeError("Email service is not configured.")
 
-    attachment_name = f"license-{_slug(req.requestedPlatform)}.txt"
+    attachment_name = "nir_license.txt"
     encoded = base64.b64encode(license_text.encode("utf-8")).decode("utf-8")
     subject = f"Inzira Labs License - {req.requestedPlatform}"
     download_links_html = ""
