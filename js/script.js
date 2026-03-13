@@ -1,6 +1,17 @@
-const LICENSE_SERVICE_ENDPOINT =
-  window.INZIRA_LICENSE_ENDPOINT || "https://license.inzira-labs.com/api/license/request";
 const RECOMMENDED_LINKS_KEY = "inziraLabsRecommendedLinks";
+
+function getLicenseServiceEndpoints() {
+  if (Array.isArray(window.INZIRA_LICENSE_ENDPOINTS) && window.INZIRA_LICENSE_ENDPOINTS.length) {
+    return window.INZIRA_LICENSE_ENDPOINTS.filter(Boolean);
+  }
+  if (window.INZIRA_LICENSE_ENDPOINT) {
+    return [window.INZIRA_LICENSE_ENDPOINT];
+  }
+  return [
+    "https://license.inzira-labs.com/api/license/request",
+    "https://inzira-labs-license-service.onrender.com/api/license/request",
+  ];
+}
 
 function showPage(pageId) {
   document.querySelectorAll(".page").forEach((page) => page.classList.remove("active"));
@@ -106,16 +117,30 @@ async function submitLicenseRequest(event) {
   recEl.innerHTML = "";
 
   try {
-    const response = await fetch(LICENSE_SERVICE_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-    if (!response.ok) {
-      const text = await response.text();
-      throw new Error(
-        `License service request failed with status ${response.status}. ${text}`.trim()
-      );
+    const endpoints = getLicenseServiceEndpoints();
+    let response = null;
+    let lastErr = null;
+    for (const endpoint of endpoints) {
+      try {
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (res.ok) {
+          response = res;
+          break;
+        }
+        const text = await res.text();
+        lastErr = new Error(
+          `License service request failed with status ${res.status}. ${text}`.trim()
+        );
+      } catch (e) {
+        lastErr = e;
+      }
+    }
+    if (!response) {
+      throw lastErr || new Error("No reachable license service endpoint.");
     }
     const result = await response.json().catch(() => ({}));
     localStorage.setItem("inziraLabsLastLicenseRequest", JSON.stringify(payload));
