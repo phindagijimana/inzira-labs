@@ -1,5 +1,6 @@
 const LICENSE_SERVICE_ENDPOINT =
   window.INZIRA_LICENSE_ENDPOINT || "https://license.inzira-labs.com/api/license/request";
+const RECOMMENDED_LINKS_KEY = "inziraLabsRecommendedLinks";
 
 function showPage(pageId) {
   document.querySelectorAll(".page").forEach((page) => page.classList.remove("active"));
@@ -18,10 +19,58 @@ function closeMenu() {
   menu.classList.remove("active");
 }
 
+function renderRecommendedLinksBox(targetEl, links, titleText) {
+  if (!targetEl) return;
+  if (!Array.isArray(links) || links.length === 0) {
+    targetEl.classList.add("hidden");
+    targetEl.innerHTML = "";
+    return;
+  }
+  const items = links
+    .map((item) => `<li><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.name}</a></li>`)
+    .join("");
+  targetEl.innerHTML = `
+    <h4>${titleText}</h4>
+    <p>Use the platform helper first. It verifies checksums, then starts installation.</p>
+    <ul>${items}</ul>
+  `;
+  targetEl.classList.remove("hidden");
+}
+
+function setDownloadsGate(links) {
+  const statusEl = document.getElementById("downloads-gate-status");
+  const linksEl = document.getElementById("downloads-unlocked-links");
+  const unlocked = Array.isArray(links) && links.length > 0;
+  if (!statusEl || !linksEl) return;
+  if (!unlocked) {
+    statusEl.textContent = "Downloads are locked until license form submission succeeds.";
+    statusEl.className = "downloads-gate-status locked";
+    renderRecommendedLinksBox(linksEl, [], "Verified Install Links");
+    return;
+  }
+  statusEl.textContent = "Downloads unlocked for this request. Use verified install links below.";
+  statusEl.className = "downloads-gate-status unlocked";
+  renderRecommendedLinksBox(linksEl, links, "Verified Install Links");
+}
+
+function loadStoredRecommendedLinks() {
+  try {
+    const raw = localStorage.getItem(RECOMMENDED_LINKS_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed.links) ? parsed.links : [];
+  } catch (_err) {
+    return [];
+  }
+}
+
 function openLicenseModal(platformId) {
   document.getElementById("requested-platform").value = platformId;
   document.getElementById("form-status").textContent = "";
   document.getElementById("form-status").className = "form-status";
+  const rec = document.getElementById("recommended-downloads");
+  rec.classList.add("hidden");
+  rec.innerHTML = "";
   document.getElementById("license-modal").classList.remove("hidden");
 }
 
@@ -46,6 +95,9 @@ async function submitLicenseRequest(event) {
 
   statusEl.textContent = "Submitting license request...";
   statusEl.className = "form-status";
+  const recEl = document.getElementById("recommended-downloads");
+  recEl.classList.add("hidden");
+  recEl.innerHTML = "";
 
   try {
     const response = await fetch(LICENSE_SERVICE_ENDPOINT, {
@@ -65,6 +117,13 @@ async function submitLicenseRequest(event) {
       result.message ||
       "License generated and emailed. Check your inbox for secure download links.";
     statusEl.className = "form-status success";
+    const recommendedLinks = Array.isArray(result.recommendedLinks) ? result.recommendedLinks : [];
+    localStorage.setItem(
+      RECOMMENDED_LINKS_KEY,
+      JSON.stringify({ links: recommendedLinks, savedAt: new Date().toISOString() })
+    );
+    renderRecommendedLinksBox(recEl, recommendedLinks, "Recommended Downloads (Verify then Install)");
+    setDownloadsGate(recommendedLinks);
   } catch (err) {
     statusEl.textContent = `Unable to submit request: ${err.message}`;
     statusEl.className = "form-status error";
@@ -77,4 +136,8 @@ document.addEventListener("click", (event) => {
   if (!modal.classList.contains("hidden") && !content.contains(event.target) && event.target === modal) {
     closeLicenseModal();
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  setDownloadsGate(loadStoredRecommendedLinks());
 });

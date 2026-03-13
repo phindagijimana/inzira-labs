@@ -1,12 +1,22 @@
 # Inzira Labs License Service (No-Admin, Auto-Issue, Private Download Proxy)
 
-This service receives landing-page form submissions, auto-generates a `license.txt`, emails it to the requester, and includes **time-limited secure links** to private GitHub release assets.
+This service receives landing-page form submissions, auto-generates a
+`license.txt`, emails it to the requester, and includes **time-limited secure
+links** to private GitHub release assets.
+
+It also returns helper-first links in API response so the landing modal can
+offer: verify checksum -> install.
 
 ## API
 
 - `GET /health`
 - `POST /api/license/request`
 - `GET /download/{token}`
+`POST /api/license/request` success response includes:
+
+- `recommendedLinks` (helper/checksum/installer set by platform)
+- `downloadLinks` (all allowed assets)
+
 
 Request body:
 
@@ -64,11 +74,13 @@ or change the constant directly.
 
 1. Service reads private assets from GitHub Releases API.
 2. It generates tokenized `/download/{token}` links (time-limited, signed).
-3. Links are emailed to requester.
+3. Links are emailed to requester and returned in API response.
 4. `/download/{token}` validates token and proxies the private asset from GitHub.
 
 ## Notes
 
 - This version is intentionally no-admin and auto-approves requests.
 - Request logs are appended to `license-service/data/license_requests.jsonl`.
+- CSV activity tracking is appended to `license-service/data/license_activity.csv`
+  (license requests + download events), suitable for spreadsheet review.
 - Add admin/review workflow later when you are ready.

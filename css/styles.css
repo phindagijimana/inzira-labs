@@ -158,6 +158,19 @@ section h2 {
   margin-top: 1rem;
 }
 
+.downloads-gate-status {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.downloads-gate-status.locked {
+  color: #a40000;
+}
+
+.downloads-gate-status.unlocked {
+  color: #0a6b0a;
+}
+
 .projects {
   background: #f5f5f5;
 }
@@ -239,6 +252,37 @@ footer {
 
 .form-status.success {
   color: #0a6b0a;
+}
+
+.recommended-downloads {
+  margin-top: 0.9rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 0.8rem;
+  background: #fafafa;
+}
+
+.recommended-downloads.hidden {
+  display: none;
+}
+
+.recommended-downloads h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.recommended-downloads p {
+  font-size: 0.88rem;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+
+.recommended-downloads ul {
+  margin: 0 0 0 1rem;
+}
+
+.recommended-downloads a {
+  color: #0b4ea2;
 }
 
 @media (max-width: 800px) {

@@ -29,7 +29,8 @@ In `js/script.js`:
 
 - `NIR_DOWNLOAD_URL` controls where users are sent after request.
 - `LICENSE_SERVICE_ENDPOINT` is where form data is posted.
-- It expects a successful backend response before redirecting to download.
+- It expects a successful backend response and now displays helper-first links
+  (verify checksum then install) directly in the modal.
 
 ## Included no-admin license service
 
@@ -42,7 +43,8 @@ Flow:
 1. landing form posts to `/api/license/request`
 2. backend auto-generates `license.txt`
 3. backend emails license to submitted email with secure download links
-4. user downloads installers through time-limited links served by backend proxy
+4. landing modal + email both prioritize platform install helpers first
+5. user downloads installers through time-limited links served by backend proxy
 
 Service setup details are in:
 

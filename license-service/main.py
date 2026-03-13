@@ -1,4 +1,5 @@
 import base64
+import csv
 import hashlib
 import hmac
 import json
@@ -7,11 +8,11 @@ import re
 import uuid
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional, Tuple
 
 import httpx
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 from pydantic import BaseModel, EmailStr, Field
@@ -42,6 +43,7 @@ if not ALLOWED_ORIGINS:
 DATA_DIR = Path(__file__).resolve().parent / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 REQUEST_LOG = DATA_DIR / "license_requests.jsonl"
+ACTIVITY_CSV = DATA_DIR / "license_activity.csv"
 
 app = FastAPI(title="Inzira Labs License Service", version="0.1.0")
 app.add_middleware(
@@ -63,13 +65,103 @@ class LicenseRequest(BaseModel):
     submittedAt: str
 
 
+CSV_HEADERS = [
+    "ts",
+    "event",
+    "ok",
+    "email",
+    "email_hash",
+    "platform",
+    "institution",
+    "source",
+    "asset_name",
+    "asset_id",
+    "token_exp",
+    "client_ip",
+    "error",
+]
+
+
 def _slug(value: str) -> str:
     return re.sub(r"[^a-zA-Z0-9]+", "-", value).strip("-").lower()
 
 
+def append_activity_csv(row: Dict[str, Any]) -> None:
+    first_write = not ACTIVITY_CSV.exists()
+    with ACTIVITY_CSV.open("a", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=CSV_HEADERS)
+        if first_write:
+            writer.writeheader()
+        out = {k: row.get(k, "") for k in CSV_HEADERS}
+        writer.writerow(out)
+
+
 def _default_asset_allowed(name: str) -> bool:
     allowed_ext = (".appimage", ".deb", ".exe", ".msi", ".dmg", ".pkg", ".zip")
-    return name.lower().endswith(allowed_ext)
+    lowered = name.lower()
+    if lowered.endswith(allowed_ext):
+        return True
+    if lowered.startswith("install-nir-") and lowered.endswith((".sh", ".cmd", ".ps1")):
+        return True
+    if lowered.startswith("desktop-release-sha256") and lowered.endswith(".txt"):
+        return True
+    return False
+
+
+def _asset_priority(name: str) -> int:
+    lowered = name.lower()
+    if lowered.startswith("install-nir-"):
+        return 0
+    if lowered.startswith("desktop-release-sha256-"):
+        return 1
+    if lowered.startswith("desktop-release-sha256"):
+        return 2
+    if lowered.endswith((".appimage", ".deb", ".exe", ".msi", ".dmg", ".pkg", ".zip")):
+        return 3
+    return 9
+
+
+def _asset_platform(name: str) -> Optional[str]:
+    lowered = name.lower()
+    if "linux" in lowered or lowered.endswith(".appimage") or lowered.endswith(".deb"):
+        return "linux"
+    if "windows" in lowered or lowered.endswith(".exe") or lowered.endswith(".msi"):
+        return "windows"
+    if "macos" in lowered or lowered.endswith(".dmg") or lowered.endswith(".pkg") or lowered.endswith(".zip"):
+        return "macos"
+    return None
+
+
+def _recommended_assets(assets: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    by_platform: Dict[str, Dict[str, Dict[str, Any]]] = {
+        "linux": {},
+        "windows": {},
+        "macos": {},
+    }
+    for asset in assets:
+        name = str(asset.get("name", ""))
+        platform = _asset_platform(name)
+        if not platform:
+            continue
+        lowered = name.lower()
+        slot = "installer"
+        if lowered.startswith("install-nir-"):
+            slot = "helper"
+        elif lowered == f"desktop-release-sha256-{platform}.txt":
+            slot = "checksum"
+        if slot not in by_platform[platform]:
+            by_platform[platform][slot] = asset
+
+    out: List[Dict[str, Any]] = []
+    for platform in ("linux", "windows", "macos"):
+        pick = by_platform[platform]
+        if "helper" in pick:
+            out.append(pick["helper"])
+        if "checksum" in pick:
+            out.append(pick["checksum"])
+        if "installer" in pick:
+            out.append(pick["installer"])
+    return out
 
 
 def _token_b64_encode(data: bytes) -> str:
@@ -159,7 +251,12 @@ def build_license_text(req: LicenseRequest) -> str:
     )
 
 
-async def send_email_with_license(req: LicenseRequest, license_text: str) -> None:
+async def send_email_with_license(
+    req: LicenseRequest,
+    license_text: str,
+    secure_links: Optional[List[Dict[str, str]]] = None,
+    recommended_links: Optional[List[Dict[str, str]]] = None,
+) -> None:
     if not RESEND_API_KEY or not RESEND_FROM_EMAIL:
         raise RuntimeError("Email service is not configured.")
 
@@ -167,13 +264,25 @@ async def send_email_with_license(req: LicenseRequest, license_text: str) -> Non
     encoded = base64.b64encode(license_text.encode("utf-8")).decode("utf-8")
     subject = f"Inzira Labs License - {req.requestedPlatform}"
     download_links_html = ""
-    secure_links = await build_secure_download_links(req.email)
+    secure_links = secure_links if secure_links is not None else []
+    recommended_links = recommended_links if recommended_links is not None else []
     if secure_links:
+        recommended_html = ""
+        if recommended_links:
+            recommended_items = "\n".join(
+                [f'<li><a href="{item["url"]}">{item["name"]}</a></li>' for item in recommended_links]
+            )
+            recommended_html = f"""
+            <p><strong>Recommended first:</strong> run platform helper, then install.</p>
+            <ul>{recommended_items}</ul>
+            """
         link_items = "\n".join(
             [f'<li><a href="{item["url"]}">{item["name"]}</a></li>' for item in secure_links]
         )
         download_links_html = f"""
         <p>Your secure private download links (valid for {DOWNLOAD_TOKEN_TTL_HOURS}h):</p>
+        {recommended_html}
+        <p>All assets:</p>
         <ul>{link_items}</ul>
         """
     else:
@@ -257,6 +366,10 @@ async def get_release_assets() -> List[Dict[str, Any]]:
 
 async def build_secure_download_links(email: str) -> List[Dict[str, str]]:
     assets = await get_release_assets()
+    assets = sorted(
+        assets,
+        key=lambda a: (_asset_priority(str(a.get("name", ""))), str(a.get("name", "")).lower()),
+    )
     links: List[Dict[str, str]] = []
     for asset in assets:
         token = make_download_token(asset["id"], asset["name"], email)
@@ -269,7 +382,29 @@ async def build_secure_download_links(email: str) -> List[Dict[str, str]]:
     return links
 
 
-def log_request(req: LicenseRequest, ok: bool, error: str = "") -> None:
+async def build_secure_link_sets(email: str) -> Tuple[List[Dict[str, str]], List[Dict[str, str]]]:
+    assets = await get_release_assets()
+    assets = sorted(
+        assets,
+        key=lambda a: (_asset_priority(str(a.get("name", ""))), str(a.get("name", "")).lower()),
+    )
+    recommended_assets = _recommended_assets(assets)
+
+    def _to_links(picks: List[Dict[str, Any]]) -> List[Dict[str, str]]:
+        out: List[Dict[str, str]] = []
+        for asset in picks:
+            token = make_download_token(asset["id"], asset["name"], email)
+            if DOWNLOAD_LINK_BASE_URL:
+                url = f"{DOWNLOAD_LINK_BASE_URL}/download/{token}"
+            else:
+                url = f"/download/{token}"
+            out.append({"name": asset["name"], "url": url})
+        return out
+
+    return _to_links(assets), _to_links(recommended_assets)
+
+
+def log_request(req: LicenseRequest, ok: bool, error: str = "", client_ip: str = "") -> None:
     entry = {
         "ts": datetime.now(timezone.utc).isoformat(),
         "email": req.email,
@@ -280,6 +415,23 @@ def log_request(req: LicenseRequest, ok: bool, error: str = "") -> None:
     }
     with REQUEST_LOG.open("a", encoding="utf-8") as f:
         f.write(json.dumps(entry) + "\n")
+    append_activity_csv(
+        {
+            "ts": entry["ts"],
+            "event": "license_request",
+            "ok": ok,
+            "email": req.email,
+            "email_hash": hashlib.sha256(req.email.lower().encode("utf-8")).hexdigest(),
+            "platform": req.requestedPlatform,
+            "institution": req.institution,
+            "source": req.source,
+            "asset_name": "",
+            "asset_id": "",
+            "token_exp": "",
+            "client_ip": client_ip,
+            "error": error,
+        }
+    )
 
 
 @app.get("/health")
@@ -288,7 +440,7 @@ async def health() -> dict:
 
 
 @app.get("/download/{token}")
-async def download_private_asset(token: str) -> Response:
+async def download_private_asset(token: str, request: Request) -> Response:
     payload = parse_download_token(token)
     asset_id = int(payload["aid"])
     filename = str(payload["fn"])
@@ -303,10 +455,44 @@ async def download_private_asset(token: str) -> Response:
     async with httpx.AsyncClient(timeout=120.0, follow_redirects=True) as client:
         resp = await client.get(url, headers=headers)
         if resp.status_code >= 300:
+            append_activity_csv(
+                {
+                    "ts": datetime.now(timezone.utc).isoformat(),
+                    "event": "download_attempt",
+                    "ok": False,
+                    "email": "",
+                    "email_hash": payload.get("eh", ""),
+                    "platform": _asset_platform(filename) or "",
+                    "institution": "",
+                    "source": "download-token",
+                    "asset_name": filename,
+                    "asset_id": asset_id,
+                    "token_exp": payload.get("exp", ""),
+                    "client_ip": request.client.host if request.client else "",
+                    "error": f"github_asset_fetch_{resp.status_code}",
+                }
+            )
             raise HTTPException(
                 status_code=502,
                 detail=f"Could not fetch private asset from GitHub ({resp.status_code}).",
             )
+        append_activity_csv(
+            {
+                "ts": datetime.now(timezone.utc).isoformat(),
+                "event": "download_granted",
+                "ok": True,
+                "email": "",
+                "email_hash": payload.get("eh", ""),
+                "platform": _asset_platform(filename) or "",
+                "institution": "",
+                "source": "download-token",
+                "asset_name": filename,
+                "asset_id": asset_id,
+                "token_exp": payload.get("exp", ""),
+                "client_ip": request.client.host if request.client else "",
+                "error": "",
+            }
+        )
         content_type = resp.headers.get("Content-Type", "application/octet-stream")
         return Response(
             content=resp.content,
@@ -319,17 +505,25 @@ async def download_private_asset(token: str) -> Response:
 
 
 @app.post("/api/license/request")
-async def request_license(req: LicenseRequest) -> dict:
+async def request_license(req: LicenseRequest, request: Request) -> dict:
     try:
         license_text = build_license_text(req)
-        await send_email_with_license(req, license_text)
-        log_request(req, ok=True)
+        secure_links, recommended_links = await build_secure_link_sets(req.email)
+        await send_email_with_license(req, license_text, secure_links, recommended_links)
+        log_request(req, ok=True, client_ip=request.client.host if request.client else "")
         return {
             "ok": True,
             "message": "License generated and emailed with secure download links.",
+            "recommendedLinks": recommended_links,
+            "downloadLinks": secure_links,
         }
     except Exception as exc:  # noqa: BLE001
-        log_request(req, ok=False, error=str(exc))
+        log_request(
+            req,
+            ok=False,
+            error=str(exc),
+            client_ip=request.client.host if request.client else "",
+        )
         raise HTTPException(status_code=502, detail=f"License dispatch failed: {exc}") from exc
 
 

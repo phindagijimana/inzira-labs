@@ -91,6 +91,10 @@
           <div class="download-actions">
             <button class="cta-button" onclick="openLicenseModal('nir-desktop')">Request License and Download</button>
           </div>
+          <p id="downloads-gate-status" class="downloads-gate-status locked">
+            Downloads are locked until license form submission succeeds.
+          </p>
+          <div id="downloads-unlocked-links" class="recommended-downloads hidden"></div>
         </div>
       </div>
     </section>
@@ -129,6 +133,7 @@
       </form>
 
       <p id="form-status" class="form-status"></p>
+      <div id="recommended-downloads" class="recommended-downloads hidden"></div>
     </div>
   </div>
 
