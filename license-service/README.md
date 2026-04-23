@@ -61,6 +61,30 @@ Service default URL:
 
 - `http://localhost:8080`
 
+## Deploy on Railway
+
+This repository includes `railway.json` at the repo root with build/start
+commands targeting `license-service/`.
+
+1. Create a new Railway project from this GitHub repo.
+2. Add required environment variables in Railway (same keys as `.env.example`):
+   - `RESEND_API_KEY`
+   - `RESEND_FROM_EMAIL`
+   - `ALLOWED_ORIGINS` (for example `https://phindagijimana.github.io`)
+   - `LICENSE_SIGNING_SECRET`
+   - `GITHUB_TOKEN`
+   - `GITHUB_REPO`
+   - `GITHUB_RELEASE_TAG`
+   - `DOWNLOAD_LINK_BASE_URL` (set to your Railway public URL)
+   - `DOWNLOAD_TOKEN_TTL_HOURS`
+   - optional `ASSET_NAME_ALLOWLIST`
+   - optional `NIR_RELEASE_URL`
+3. Deploy and verify:
+   - `GET https://<your-railway-domain>/health` returns `{"ok": true}`.
+4. Update landing endpoint config in `index.html`:
+   - set `window.INZIRA_LICENSE_ENDPOINTS` to include your Railway URL
+     (`https://<your-railway-domain>/api/license/request`).
+
 ## Landing site integration
 
 In `../js/script.js`, set:

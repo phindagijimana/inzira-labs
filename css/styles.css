@@ -182,6 +182,16 @@ footer {
   padding: 1.5rem;
 }
 
+footer a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+footer a:hover {
+  opacity: 0.85;
+}
+
 .modal.hidden {
   display: none;
 }

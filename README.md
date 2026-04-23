@@ -51,6 +51,13 @@ Service setup details are in:
 
 - `license-service/README.md`
 
+### Railway backend option
+
+You can deploy the license backend on Railway using the included
+`railway.json` (repo root), then point landing API endpoints to:
+
+- `https://<your-railway-domain>/api/license/request`
+
 ## Local preview
 
 Open `index.html` directly, or serve with a static server from `src/inzira-labs`.
