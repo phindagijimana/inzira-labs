@@ -241,12 +241,13 @@ document.addEventListener("DOMContentLoaded", () => {
   } else if (
     rawHash === "rd" ||
     rawHash === "publications" ||
+    rawHash === "research" ||
     rawHash === "team" ||
     rawHash === "news" ||
     rawHash === "builder-review" ||
     rawHash === "home"
   ) {
-    showPage(rawHash);
+    showPage(rawHash === "publications" ? "research" : rawHash);
   }
   applyAllPlatformGates();
 });
