@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=20" />
+  <link rel="stylesheet" href="css/styles.css?v=21" />
 </head>
-<body data-inzira-rev="20">
-  <!-- site revision 20: NIR + BIDSHub platforms -->
+<body data-inzira-rev="21">
+  <!-- site revision 21 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -114,8 +114,8 @@
       <div class="section-inner">
         <h2>Platforms</h2>
         <p class="section-subtitle">
-          Use <strong>Get NIR</strong> or <strong>Get BIDSHub</strong> to request a license. After it is approved, verified links
-          for that product appear in its card.
+          <strong>NIR</strong> and <strong>BIDSHub</strong>: use the buttons to request a license; after approval, verified links
+          show in each card. <strong>medAI</strong> is open on GitHub — use the repository link (no license request on this site).
         </p>
         <div class="projects-grid">
           <div class="project-card project-card-nir">
@@ -144,6 +144,21 @@
               Verified download links are locked until a license request succeeds.
             </p>
             <div id="bidshub-unlocked-links" class="recommended-downloads hidden"></div>
+          </div>
+          <div class="project-card project-card-medai">
+            <h3>medAI</h3>
+            <p>
+              Data mining for unstructured medical data, locally hosted so sensitive information stays under your control.
+            </p>
+            <div class="download-actions">
+              <a
+                class="cta-button"
+                href="https://github.com/phindagijimana/medAI"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View on GitHub</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -332,6 +347,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=20"></script>
+  <script src="js/script.js?v=21"></script>
 </body>
 </html>
