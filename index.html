@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inzira Labs | Translating Biomedical Research to Usable Tools</title>
   <meta http-equiv="Cache-Control" content="no-cache" />
-  <link rel="stylesheet" href="css/styles.css?v=6" />
+  <link rel="stylesheet" href="css/styles.css?v=7" />
 </head>
-<body data-inzira-rev="6">
-  <!-- inzira-labs static build rev-6 -->
+<body data-inzira-rev="7">
+  <!-- inzira-labs static build rev-7 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="showPage('home')">Inzira Labs</a>
@@ -17,7 +17,6 @@
         <li><a href="#" onclick="showPage('home'); closeMenu();">Home</a></li>
         <li><a href="#" onclick="showPage('rd'); closeMenu();">R&amp;D</a></li>
         <li><a href="#" onclick="showPage('platforms'); closeMenu();">Platforms</a></li>
-        <li><a href="#" onclick="showPage('downloads'); closeMenu();">Downloads</a></li>
         <li><a href="#" onclick="showPage('team'); closeMenu();">Our Team</a></li>
         <li><a href="#" onclick="showPage('join'); closeMenu();">Join Us</a></li>
         <li><a href="#" onclick="showPage('news'); closeMenu();">News</a></li>
@@ -109,7 +108,10 @@
     <section class="projects">
       <div class="section-inner">
         <h2>Platform Catalog</h2>
-        <p class="section-subtitle">Choose a platform to start its license-gated download flow.</p>
+        <p class="section-subtitle">
+          Choose a platform to start the license request. After approval, verified installers and links appear in the
+          <strong>Installers</strong> block below.
+        </p>
         <div class="projects-grid">
           <div class="project-card">
             <h3>NeuroInsight Research (NIR)</h3>
@@ -128,26 +130,21 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
 
-  <div id="downloads" class="page">
-    <section class="services-full">
-      <div class="section-inner">
-        <h2>Downloads</h2>
-        <p class="section-subtitle">A license request is required before downloading platform installers.</p>
-
-        <div class="download-card">
-          <h3>NIR Desktop</h3>
-          <p>Linux, Windows, and macOS installers are distributed through GitHub releases after license approval.</p>
-          <div class="download-actions">
-            <button class="cta-button" onclick="openLicenseModal('nir-desktop', 'NIR Desktop')">Request License and Download</button>
+        <div class="platform-installers">
+          <h3 class="platform-installers-title">Installers &amp; download links</h3>
+          <p class="section-subtitle platform-installers-lead">A license is required before downloading. Submit the form from a platform card above, or use the button here.</p>
+          <div class="download-card">
+            <h3>NIR Desktop</h3>
+            <p>Linux, Windows, and macOS installers are distributed through GitHub releases after license approval.</p>
+            <div class="download-actions">
+              <button class="cta-button" onclick="openLicenseModal('nir-desktop', 'NIR Desktop')">Request License and Download</button>
+            </div>
+            <p id="downloads-gate-status" class="downloads-gate-status locked">
+              Downloads are locked until license form submission succeeds.
+            </p>
+            <div id="downloads-unlocked-links" class="recommended-downloads hidden"></div>
           </div>
-          <p id="downloads-gate-status" class="downloads-gate-status locked">
-            Downloads are locked until license form submission succeeds.
-          </p>
-          <div id="downloads-unlocked-links" class="recommended-downloads hidden"></div>
         </div>
       </div>
     </section>
@@ -292,6 +289,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=6"></script>
+  <script src="js/script.js?v=7"></script>
 </body>
 </html>

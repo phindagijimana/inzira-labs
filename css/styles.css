@@ -158,6 +158,27 @@ section h2 {
   background: #fff;
 }
 
+.platform-installers {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.platform-installers-title {
+  text-align: center;
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.platform-installers-lead {
+  font-size: 0.98rem;
+  margin-bottom: 1.25rem;
+}
+
 .download-actions {
   margin-top: 1rem;
 }

@@ -8,7 +8,7 @@ It is modeled after the structure/style used in the ZeroGap landing repo and is 
 
 ## What it does
 
-- shows Inzira Labs pages (`Home`, `Platforms`, `Downloads`)
+- shows Inzira Labs pages (`Home`, `R&D`, `Platforms`, and more)
 - lists NIR as one of the platform services
 - enforces a **pre-download license request form** before redirecting users to NIR downloads
 - collects:
