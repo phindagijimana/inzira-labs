@@ -227,7 +227,46 @@ document.addEventListener("click", (event) => {
   }
 });
 
+function initBuilderReviewFullMd() {
+  const details = document.getElementById("builder-review-ebm-doc");
+  const pre = document.getElementById("builder-review-ebm-md");
+  const loading = document.getElementById("builder-review-loading");
+  const fallback = document.getElementById("builder-review-md-fallback");
+  if (!details || !pre) return;
+  const load = () => {
+    if (details.dataset.ebmBrLoaded) return;
+    if (details.dataset.ebmBrLoading) return;
+    details.dataset.ebmBrLoading = "1";
+    if (loading) {
+      loading.hidden = false;
+    }
+    fetch("content/EBM_TLE_br.md", { cache: "no-cache" })
+      .then((r) => {
+        if (!r.ok) throw new Error("load failed");
+        return r.text();
+      })
+      .then((text) => {
+        pre.textContent = text;
+        pre.hidden = false;
+        details.dataset.ebmBrLoaded = "1";
+        delete details.dataset.ebmBrLoading;
+        if (loading) loading.hidden = true;
+        if (fallback) fallback.hidden = true;
+      })
+      .catch(() => {
+        delete details.dataset.ebmBrLoading;
+        if (loading) loading.hidden = true;
+        if (fallback) fallback.hidden = false;
+      });
+  };
+  if (details.open) load();
+  details.addEventListener("toggle", () => {
+    if (details.open) load();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initBuilderReviewFullMd();
   const rawHash = (location.hash || "").replace(/^#/, "");
   if (rawHash === "join") {
     showPage("team");

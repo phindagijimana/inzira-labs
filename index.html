@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=30" />
+  <link rel="stylesheet" href="css/styles.css?v=31" />
 </head>
-<body data-inzira-rev="30">
-  <!-- site revision 30 -->
+<body data-inzira-rev="31">
+  <!-- site revision 31 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -180,91 +180,75 @@
           On the Inzira Labs site, Builder Review is published in a <strong>concise, presentable</strong> format—always with
           respect for the underlying research. It foregrounds a builder&rsquo;s read on
           <strong>reproducibility</strong>, <strong>interpretability</strong>, and <strong>practical insight</strong> from
-          implementation; longer notes may also live in the repository with the code.
+          implementation. The full write-up (same <code>*.md</code> as in the code repo) is below; in repositories, reviews are often
+          named with the <code>_br.md</code> suffix.
         </p>
 
-        <article class="join-card builder-review-feature" aria-labelledby="builder-review-ebm-title">
-          <h3 id="builder-review-ebm-title">Builder Review — EBM / TLE (Lopez et al., 2022)</h3>
-          <p class="builder-review-feature-ref">
-            Paper: Lopez SM, Aksman LM, Oxtoby NP, et al.
-            <cite>Event-based modeling in temporal lobe epilepsy demonstrates progressive atrophy from cross-sectional data.</cite>
-            <em>Epilepsia</em>. 2022;63(8):2081&ndash;2095.
-            <a href="https://doi.org/10.1111/epi.17316" target="_blank" rel="noopener noreferrer">DOI</a>
-            &middot;
-            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9540015/" target="_blank" rel="noopener noreferrer">PMC</a>
-          </p>
-          <div class="builder-review-feature-body">
-            <p>
-              <strong>Context.</strong> The work uses cross-sectional T1 morphometry (ENIGMA-style features) to infer a KDE
-              event-based model sequence and per-subject stages, in the <strong>UCL POND</strong> lineage
-              (<strong>kde_ebm</strong> + <strong>pySuStaIn</strong> / <strong>MixtureSustain</strong>).
-            </p>
-            <p>
-              <strong>What the repo adds.</strong> The
-              <a href="https://github.com/phindagijimana/EBM_implement" target="_blank" rel="noopener noreferrer">EBM_implement</a>
-              workspace is a <strong>deployment shell</strong>: venv, <code>./ebm</code> (<code>install</code>, <code>check</code>,
-              <code>demo</code>, <code>fit</code>, lifecycle), and thin wrappers around upstream packages—not a reimplementation
-              of ENIGMA extraction or the paper&rsquo;s full multi-site analysis.
-            </p>
-            <p>
-              <strong>Reproducibility.</strong> You get <strong>runnable</strong> infrastructure (imports, demo, fit on your CSV);
-              the paper&rsquo;s exact figures and metrics require ENIGMA-scale data and pipelines, and there is <strong>no</strong> bundled
-              pretrained model from the publication—you retrain on your features or source artifacts from the authors.
-            </p>
-            <p>
-              <strong>Interpretation &amp; scope.</strong> Stages and ordering are <strong>dataset-specific</strong>. Outputs
-              (e.g. stage estimates, upstream pickles) support <strong>research</strong> description and follow-on analysis; the
-              paper emphasizes limits for fine-grained stage&ndash;outcome use, and this repo is <strong>not</strong> a clinical product.
-            </p>
-            <p>
-              <strong>Builder insight.</strong> The implementation shines at <strong>wiring the same open stack the methods imply</strong>
-              into a small, operable CLI. The main lift for serious use remains <strong>feature engineering and validation</strong>
-              (building ENIGMA-like tables, biomarker and threshold choices, site effects)—the same class of work as the original study,
-              not the pip install.
-            </p>
-          </div>
-          <p class="builder-review-feature-footer">
-            <a
-              href="https://github.com/phindagijimana/EBM_implement/blob/main/EBM_TLE_br.md"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="rd-link-ghost"
-              >Full Builder Review in the repository (<code>EBM_TLE_br.md</code>)</a
+        <details class="builder-review-details" id="builder-review-ebm-doc">
+          <summary class="builder-review-summary builder-review-paper-summary">
+            <span class="builder-review-paper-title"
+              >Event-based modeling in temporal lobe epilepsy demonstrates progressive atrophy from cross-sectional data</span
             >
-          </p>
-        </article>
-
-        <details class="builder-review-details">
-          <summary class="builder-review-summary">
-            Expand: <code class="builder-review-summary-code">_br.md</code> in repos &amp; an example
+            <span class="builder-review-paper-byline"
+              >Lopez et al. · <em>Epilepsia</em> 2022 · full Builder Review (<code>EBM_TLE_br.md</code>)</span
+            >
           </summary>
-          <div class="builder-review-details-body">
-            <p class="section-subtitle builder-review-details-lead">
-              Repositories often include a full Builder Review as markdown next to the implementation, usually named
-              <code>_br.md</code> (&ldquo;br&rdquo; = Builder Review).
+          <div class="builder-review-doc">
+            <p class="builder-review-doc-lead">
+              The preformatted block is the <strong>same Markdown</strong> as
+              <a
+                href="https://github.com/phindagijimana/EBM_implement/blob/main/EBM_TLE_br.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                >EBM_TLE_br.md</a
+              >
+              in
+              <a
+                href="https://github.com/phindagijimana/EBM_implement"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                >EBM_implement</a
+              >. A copy is also
+              <a href="content/EBM_TLE_br.md" class="rd-link-ghost" download>bundled on this site</a> and loads here when you expand the
+              paper header (or use the no-JavaScript / download link).
             </p>
-            <div class="join-card">
-              <h3 class="builder-review-example-title">Example</h3>
-              <ul class="builder-review-list">
-                <li>
-                  <a
-                    href="https://github.com/phindagijimana/EBM_implement"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="rd-link-ghost"
-                    >EBM_implement</a
-                  >
-                  (TLE event-based modeling) &middot;
-                  <a
-                    href="https://github.com/phindagijimana/EBM_implement/blob/main/EBM_TLE_br.md"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="rd-link-ghost"
-                    >full review: <code>EBM_TLE_br.md</code></a
-                  >
-                </li>
-              </ul>
-            </div>
+            <p id="builder-review-loading" class="builder-review-loading" hidden aria-live="polite">Loading full review&hellip;</p>
+            <p id="builder-review-md-fallback" class="builder-review-md-fallback" hidden>
+              Full text could not be loaded from this site. Open
+              <a
+                href="https://raw.githubusercontent.com/phindagijimana/EBM_implement/main/EBM_TLE_br.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                >the raw file on GitHub</a
+              >
+              or
+              <a
+                href="https://github.com/phindagijimana/EBM_implement/blob/main/EBM_TLE_br.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                >view the rendered page</a
+              >.
+            </p>
+            <pre
+              class="builder-review-raw"
+              id="builder-review-ebm-md"
+              hidden
+              role="region"
+              aria-label="EBM TLE full Builder Review, Markdown source (same as GitHub)"
+            ></pre>
+            <noscript>
+              <p>
+                <a href="https://github.com/phindagijimana/EBM_implement/blob/main/EBM_TLE_br.md" class="rd-link-ghost"
+                  >View full Builder Review on GitHub</a
+                >
+                or open
+                <a href="content/EBM_TLE_br.md" class="rd-link-ghost" download>content/EBM_TLE_br.md</a> from this site.
+              </p>
+            </noscript>
           </div>
         </details>
       </div>
@@ -479,6 +463,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=30"></script>
+  <script src="js/script.js?v=31"></script>
 </body>
 </html>
