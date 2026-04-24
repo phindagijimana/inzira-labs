@@ -1,127 +1,133 @@
-# Builder Review — EBM_TLE (Lopez et al. 2022) + local deployment
+# Builder Review — *Epilepsia* KDE EBM in MTLE-HS (Lopez et al. 2022)
 
-Evaluation of the *Epilepsia* EBM/MTLE-HS methods paper and this workspace’s implementation, using the **Inzira Labs Builder Review** style (usability, reproducibility, performance, generalization, clinical use, interpretability, integration, limitations, and builder-oriented conclusions). Full criteria **Word** templates, if you use them, can stay **local** only; this Markdown review is what ships in-repo alongside [USER_GUIDE.md](USER_GUIDE.md).
+This document is a **Builder Review of the research paper** below—its design, evidence, and what a builder should expect when engaging with the same methods. A **local deployment** in this repository (`EBM_TLE/`, `./ebm` CLI, `src/ebm_tle/`) is used to **ground** notes on reproducibility, runtime, and integration. That stack **helps us write the review**; it is **not** what is being “reviewed” in the product sense. The write-up uses the **Inzira Labs Builder Review** style (e.g. usability, reproducibility, performance, generalization, clinical use, interpretability, integration, limitations, builder-oriented conclusions). Optional full-criteria **Word** templates, if you use them, can stay local; this file ships in-repo with [USER_GUIDE.md](USER_GUIDE.md).
 
-**Primary reference:** Lopez SM, Aksman LM, Oxtoby NP, et al. *Event-based modeling in temporal lobe epilepsy demonstrates progressive atrophy from cross-sectional data.* Epilepsia. 2022;63(8):2081–2095. https://doi.org/10.1111/epi.17316 (PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC9540015/)
+> **Object of the review:** the **publication** (Lopez et al. 2022). **Supporting material:** how we **instantiated the paper’s implied stack** in a small, internal shell—narrated only to clarify the paper, not to score a product.
 
-**Typical local layout:** `EBM_TLE/` (`./ebm` CLI, `src/ebm_tle/`, `requirements.txt`, `pyproject.toml`); **`pySuStaIn` / `kde_ebm` from GitHub** via pip; optional `runs/`, `.ebm/logs/`; paper summary in `EBM_TLE.md`.
+**Primary reference:** Lopez SM, Aksman LM, Oxtoby NP, et al. *Event-based modeling in temporal lobe epilepsy demonstrates progressive atrophy from cross-sectional data.* Epilepsia. 2022;63(8):2081–2095. [https://doi.org/10.1111/epi.17316](https://doi.org/10.1111/epi.17316) (PMC: [https://pmc.ncbi.nlm.nih.gov/articles/PMC9540015/](https://pmc.ncbi.nlm.nih.gov/articles/PMC9540015/))
+
+**Related in-repo file:** [EBM_TLE.md](EBM_TLE.md) — short paper summary. **Typical layout of the grounding code:** `EBM_TLE/` (CLI, `pyproject.toml`, `requirements.txt`); `pySuStaIn` / `kde_ebm` from GitHub; optional `runs/`, `.ebm/logs/`.
 
 ---
 
-## Context
+## Context: what the paper does
 
 Lopez et al. use **cross-sectional** T1 morphometry from **ENIGMA-Epilepsy** to infer a **KDE event-based model (EBM)** sequence (hippocampus → neocortex → thalamus → ventricle) and per-subject **stages**, with clinical associations strongest for **Stage 0 vs non-0** on T1. The statistical stack is in the **UCL POND** lineage: **`kde_ebm`** (mixtures) + **`MixtureSustain`** in **pySuStaIn**—overlapping authorship with the tooling.
 
-This workspace adds a **deployment shell**: venv + **`./ebm`** (`install`, `check`, `demo`, `fit`, `start`, `stop`, `logs`) and thin wrappers—not a reimplementation of ENIGMA extraction or the paper’s exact mega-analysis.
+**Builder read:** the contribution is a clear **disease–progression** story and staging narrative from **cross-sectional** structure, with uncertainty handled as in the publication—not a generic “tool release.”
 
-| Piece | Location | Role |
+**Grounding (not a second review object):** we use a small **deployment shell** here—venv + **`./ebm`** (`install`, `check`, `demo`, `fit`, `start`, `stop`, `logs`) and thin wrappers—to touch the *same* open stack the paper’s methods point to, not to reproduce ENIGMA extraction or the paper’s full mega-analysis. The next table is **only** “where the bits live” when a reader wants to line up the paper with a concrete tree.
+
+| Piece | Location | Role (grounding) |
 |--------|-----------|------|
 | CLI driver | `./ebm` | Bash: `install` creates `.venv`; other commands call `python -m ebm_tle`. |
-| Python package | `src/ebm_tle/` | `demo`, `fit`, lifecycle commands; `synthetic.py` avoids broken `sim` package imports in upstream pySuStaIn. |
-| Upstream | [ucl-pond/pySuStaIn](https://github.com/ucl-pond/pySuStaIn), [kde_ebm](https://github.com/ucl-pond/kde_ebm) | Pinned in `requirements.txt` (Git installs). |
-| Dependencies | `requirements.txt` | `kde_ebm`, `awkde`, numpy/scipy/sklearn, etc. (git + network on first install). |
+| Python package | `src/ebm_tle/` | `demo`, `fit`, lifecycle; `synthetic.py` works around vendored `sim` import issues in upstream pySuStaIn. |
+| Upstream | [pySuStaIn](https://github.com/ucl-pond/pySuStaIn), [kde_ebm](https://github.com/ucl-pond/kde_ebm) | Pinned in `requirements.txt` (git installs), matching the paper’s tooling lineage. |
+| Dependencies | `requirements.txt` | `kde_ebm`, `awkde`, numpy/scipy/sklearn, etc. |
 | Run state | `.ebm/run/pid`, `.ebm/logs/fit.log` | Background `start` / `stop` / `logs`. |
 
 ---
 
-## Platform fit and reproducibility
+## Platform fit and reproducibility (paper first)
 
-### Usability
+### What the *paper* offers
 
-**Published offering**
+**Published study design and claims**
 
 - Large multi-site case–control cohort; feature screen (e.g. |Cohen’s *d*| ≥ 0.5); KDE mixtures + MCMC ordering + bootstrap narrative; staging 0…*k*.
 
-**This implementation**
+**What a builder can expect when mirroring the *methods* in code** *(illustrative, from our grounding shell; not a product review)*
 
-- **Strength:** One surface after `./ebm install`: `./ebm check`, `./ebm demo` (synthetic sanity), `./ebm fit cohort.csv` (your biomarker table), plus `./ebm start|stop|logs` for background demo runs.
-- **Friction:** First install pulls **`kde_ebm`** and **`awkde`** from GitHub; **MCMC wall time** grows with `--mcmc` and pySuStaIn’s internal phases—plan for HPC for research-scale iterations.
-- **Hidden steps:** Real Lopez-style work still needs **ENIGMA-compatible** regional features (FreeSurfer or equivalent) merged into CSV; this repo does **not** run recon-all.
+- **Accessible surface:** after `./ebm install`, the paper-relevant path can be probed with `./ebm check`, `./ebm demo` (synthetic sanity), `./ebm fit cohort.csv` (your table), and lifecycle helpers. That informs **reproducibility and operability of the *methods story***, not a rating of the wrapper as software.
+- **Cost / friction the paper implies in practice:** first install reaches **`kde_ebm`** and **`awkde`**; **MCMC** cost scales with `--mcmc` and pySuStaIn’s phases—i.e. the *paper*’s analysis family is **compute-heavy** relative to a single GLM.
+- **Data path the paper still assumes (not replaced here):** Lopez-style work needs **ENIGMA-compatible** regional features (e.g. FreeSurfer) merged to CSV; that **feature engineering** is where real studies spend effort—the publication’s limits apply, not a limitation “of the review.”
 
 ### Reproducibility
 
-**What the paper supports**
+**What the paper *supports* for replication**
 
-- Fixed methodological story (KDE EBM, ENIGMA features, bootstrap uncertainty in the publication).
+- Fixed methodological account (KDE EBM, ENIGMA features, bootstrap treatment as published).
 
-**Gaps for an external builder**
+**What the paper does *not* ship to an external team**
 
-- No bundled **pretrained pickle** from the paper; you **retrain** on your CSV/cohort or obtain artifacts from authors if ever shared.
-- End-to-end replication of paper figures requires **ENIGMA-Epilepsy** data access and their pipelines—not shipped here.
+- No bundled **pretrained** artifact in the public record as a turnkey drop-in; retraining on your table/cohort or author-shared assets is expected.
+- **Figure-level** match to the original paper needs **ENIGMA-Epilepsy** data access and their pipelines.
 
-**Observed**
+**Builder observation when wiring the *same stack* the paper presupposes**
 
-- **Our deployment** reproduces *runnable infrastructure* (imports, demo fit, `fit` path); it does not re-validate paper metrics on ENIGMA data.
-- **`ebm_tle/synthetic.py`** replaces vendored `sim` package imports (`from simfuncs import *` fails when `sim` is installed as a package).
+- A minimal path can be made **runnable** (imports, **demo** + **`fit`**) to **stress-test** the paper’s *implicit* build burden; that does not re-validate the publication’s *numerical* results on ENIGMA data.
+- A small `ebm_tle/synthetic.py` workaround addresses vendored `sim` import fragility in upstream pySuStaIn when installed as a package—**upstream ergonomics**, not a critique of the *paper*.
 
 ---
 
 ## Performance, generalization, and comparison
 
-### Performance (real vs reported)
+### Performance (as described vs. as experienced when reproducing the *method*)
 
 **Paper**
 
-- Heavy MCMC + bootstrap; multicenter *N*; staging and sequence inference are compute-intensive relative to a single GLM.
+- Heavy MCMC + bootstrap; multi-site *N*; staging/sequence are compute-intensive vs. a simple regression.
 
-**Builder expectation**
+**When exercising a demo aligned with the paper’s stack**
 
-- Default **`demo`** uses modest `--mcmc` for smoke tests; raise **`--mcmc`** for analyses meant to align with published practice (longer runs).
-- **`./ebm check`** does **not** benchmark MCMC; it validates environment and paths.
+- **Demo** uses modest `--mcmc` for **smoke** tests; **longer** runs are needed to approach published practice. `./ebm check` validates environment, not a bench of the *paper*’s full MCMC.
 
-### Generalization
+### Generalization (from the paper)
 
-- Model ordering and mixtures are **dataset-specific**; applying a model trained elsewhere requires **matched** biomarker definitions and preprocessing.
-- **Site/scanner** effects in real morphometry still matter; the paper discusses center heterogeneity (e.g. Stage 0 rates).
+- Orderings and mixtures are **cohort-specific**; transport requires **aligned** biomarkers and preprocessing. **Site / scanner** effects in morphometry are discussed in the publication (e.g. Stage 0 rates).
 
-### Comparison to existing methods
+### Comparison to other approaches
 
-- **Granger / longitudinal** approaches differ; EBM here is **cross-sectional ordering** under mixture + monotonicity assumptions. **Builder takeaway:** same tooling family as other **pySuStaIn** / **kde_ebm** disease-progression work (e.g. AD), adapted to MTLE-HS morphometry in the publication.
+- **Granger / longitudinal** paths differ; this EBM is **cross-sectional ordering** under the paper’s mixture + monotonicity framing. The **publication** situates the work in the same broad **pySuStaIn** / **kde_ebm** line as other progression modeling (e.g. AD) applied here to MTLE-HS.
 
 ---
 
 ## Clinical relevance, interpretability, and integration
 
-### Clinical relevance
+*All points below are about how the **paper** positions staging and use—not an endorsement of any local shell for care.*
 
-- **Research:** Staging and sequence support **hypothesis generation** and cohort description; the paper emphasizes limits of fine-stage vs clinical variables (much of the signal in **Stage 0 vs not**).
-- **Clinical production** (diagnosis, prognosis, surgical candidacy) is **out of scope** for this repo and under-supported by fine-grained stage–outcome links in that paper.
+### Clinical relevance (from the paper)
 
-### Interpretability and trust
+- **Research:** Staging/sequence for **hypothesis generation** and description; the paper highlights limits relating fine stages to **clinical** endpoints (much of the signal in **Stage 0 vs not**).
+- **Clinical production** (diagnosis, surgery selection, etc.) is **not** the claim of Lopez et al. in the sense of a regulated device; fine stage–outcome links remain limited in that report.
 
-- **Strength:** Outputs include **`ml_stage`**, subtype/stage probabilities, and pySuStaIn **`pickle_files/`** for inspection with upstream tooling.
-- **Trust limits:** Stages depend on **KDE separation** and chosen biomarkers; bad segmentation or wrong columns in CSV dominate failures.
+### Interpretability and trust (methods-level)
 
-### Integration potential
+- **What’s interpretable in the *paper’s* outputs:** e.g. **`ml_stage`**, subtype/stage structure, and companion artifacts the methods describe (e.g. **`pickle_files/`** in the SuStaIn pattern).
+- **What dominates failure modes:** feature quality, segmentation, and table semantics—i.e. **measurement and cohort** issues, not just “code bugs.”
 
-- **Research integration:** Natural downstream of **BIDS + FreeSurfer/ENIGMA-style** summary tables → **`ebm fit`**.
-- **Clinical integration:** Not provided; governance and intended-use labeling remain with the deploying institution.
+### Integration (where the *paper* points research workflows)
 
----
-
-## Limitations and failure modes
-
-- **No imaging pipeline** in-repo; CSV quality is the builder’s responsibility.
-- **`./ebm install`** needs network access to clone **`pySuStaIn`** / **`kde_ebm`** / **`awkde`** from GitHub.
-- **Background `start`** runs the **synthetic demo** by default—not a generic job queue; change `cli.cmd_start` to background **`fit`** if needed.
-- **Headless:** set `MPLBACKEND=Agg` (default in `./ebm`); plotting in SuStaIn may still touch matplotlib.
-- **NFS/home latency** can slow venv I/O and large pickle writes; local SSD may help heavy runs.
+- **Natural research path:** BIDS + FreeSurfer/ENIGMA-style summaries **→** a cohort `fit` step on a table—consistent with the *paper*’s data choice.
+- **Regulated / clinical** deployment is a separate design and governance problem from **reporting** the *Epilepsia* methods.
 
 ---
 
-## Builder insight
+## Limitations: paper vs. operational asides
 
-EBM_TLE is **strong on wiring the same open stack** the paper’s methods imply (**`kde_ebm` + `MixtureSustain`**) into a **small, operable CLI** for internal research. The **builder gap** is **feature engineering and validation**: building ENIGMA-like tables, choosing biomarkers and |*d*| thresholds, and interpreting stages in light of the paper’s **Stage 0** findings—not installing Python packages.
+**From the *paper* and the methods family**
 
-**Potential extensions (system-level)**
+- Interpreting stages requires sound **KDE** separation and defensible **biomarkers**; the publication discusses heterogeneity and limitations on fine clinical mapping.
 
-- Example **`examples/cohort_template.csv`** and a **Makefile** target for smoke `fit`.
-- **Slurm wrapper** for long `fit` jobs with frozen `requirements.txt` hash in logs.
-- **Optional** patch or upstream PR for vendored **`sim`** package imports (use relative `from .simfuncs import *`) so `synthetic.py` could be retired.
+**Operational notes (from our *grounding* exercise; illustrative)**
+
+- **No in-repo imaging pipeline;** table construction is the researcher’s job—again aligning with the **paper**’s reliance on pre-derived ENIGMA-style features.
+- **Networked install** to pull `pySuStaIn` / `kde_ebm` / `awkde` as in `requirements.txt`.
+- **Background** `start` in this tree runs the **synthetic** demo by default; not a production job scheduler. **Headless** runs may need `MPLBACKEND=Agg` (as in our wrapper). **I/O** on shared filesystems can hurt large **pickle** writes—these are **deployment hygiene** observations, not central to scoring the *article*.
 
 ---
 
-## Commands (quick reference)
+## Builder insight (synthesis: **paper** in focus)
+
+Lopez et al. give a defensible **cross-sectional EBM** account on **T1** morphometry in **TLE** with a clear **Stage 0** message and an honest discussion of **limits vs. fine clinical staging**. The **open stack** (`kde_ebm` + **MixtureSustain** / pySuStaIn) is the one the **publication**’s method story assumes; our **small shell** was only to **get hands on that same stack** to write this review, not to replace **ENIGMA** feature work or the **original study’s** validation. The real **builder gap**—for the *paper’s* use cases—is still **biomarker tables, |*d*| / screening, and biologically coherent staging interpretation**, not pip wiring alone.
+
+**If extending *research plumbing* (optional; not a review of our repo as a product)**:
+
+- e.g. `examples/cohort_template.csv`, `Makefile` smoke `fit`, **Slurm** wrappers for long jobs, or upstream `sim` import cleanups in pySuStaIn.
+
+---
+
+## Commands (appendix: local grounding)
 
 ```bash
 chmod +x ./ebm          # once
@@ -134,17 +140,17 @@ chmod +x ./ebm          # once
 ./ebm stop
 ```
 
-**Outputs:** `demo_stages.csv` / `*_stages.csv`, `demo_meta.json` / `fit_meta.json`, **`pickle_files/`** under `--output`. Package version **0.1.0** (`pyproject.toml`).
+**Outputs of that path:** e.g. `demo_stages.csv` / `*_stages.csv`, `demo_meta.json` / `fit_meta.json`, `pickle_files/` under `--output` (see `pyproject.toml` for version).
 
 ---
 
 ## References (selected)
 
 - Lopez et al. 2022 *Epilepsia* — MTLE-HS KDE EBM (DOI above).
-- `EBM_TLE.md` — concise paper summary in this folder.
-- pySuStaIn / kde_ebm — UCL POND tooling (installed via `requirements.txt`, GitHub).
-- Builder Review criteria (local or internal docs) — full dimension list if needed for alignment with other reviews.
+- [EBM_TLE.md](EBM_TLE.md) — short paper summary in this folder.
+- pySuStaIn / kde_ebm — UCL POND tooling (via `requirements.txt`, GitHub).
+- Builder Review criteria (local or internal) — for alignment with other *paper* reviews in this style.
 
 ---
 
-*Last updated: 2026-04-14.*
+*Last updated: 2026-04-24.*
