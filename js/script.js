@@ -190,7 +190,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("platforms")?.scrollIntoView({ behavior: "smooth" });
       history.replaceState(null, "", `${location.pathname}${location.search}#platforms`);
     });
-  } else if (rawHash === "rd" || rawHash === "team" || rawHash === "news" || rawHash === "builder-review" || rawHash === "home") {
+  } else if (
+    rawHash === "rd" ||
+    rawHash === "publications" ||
+    rawHash === "team" ||
+    rawHash === "news" ||
+    rawHash === "builder-review" ||
+    rawHash === "home"
+  ) {
     showPage(rawHash);
   }
   setDownloadsGate(loadStoredRecommendedLinks());

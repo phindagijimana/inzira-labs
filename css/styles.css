@@ -302,13 +302,15 @@ section h2 {
   text-align: center;
 }
 
-.news-list {
+.news-list,
+.publications-list {
   list-style: none;
   max-width: 720px;
   margin: 0 auto 1.5rem;
 }
 
-.news-item {
+.news-item,
+.publications-item {
   border: 1px solid #e5e5e5;
   border-radius: 10px;
   padding: 1.25rem 1.5rem;
