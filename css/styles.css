@@ -157,12 +157,14 @@ section h2 {
   background: #fff;
 }
 
-.project-card-nir .installers-gate-status {
+.project-card-nir .installers-gate-status,
+.project-card-bidshub .installers-gate-status {
   text-align: left;
   margin-top: 1rem;
 }
 
-.project-card-nir .recommended-downloads {
+.project-card-nir .recommended-downloads,
+.project-card-bidshub .recommended-downloads {
   text-align: left;
   margin-top: 0.75rem;
 }

@@ -1,4 +1,46 @@
 const RECOMMENDED_LINKS_KEY = "inziraLabsRecommendedLinks";
+const PLATFORM_LINK_SETS = "inziraLabsPlatformLinkSetsV1";
+
+const PLATFORM_GATES = {
+  "nir-desktop": {
+    statusId: "downloads-gate-status",
+    boxId: "downloads-unlocked-links",
+    product: "NIR",
+  },
+  bidshub: {
+    statusId: "bidshub-gate-status",
+    boxId: "bidshub-unlocked-links",
+    product: "BIDSHub",
+  },
+};
+
+function loadAllPlatformLinks() {
+  try {
+    const raw = localStorage.getItem(PLATFORM_LINK_SETS);
+    if (raw) {
+      const o = JSON.parse(raw);
+      return {
+        "nir-desktop": Array.isArray(o["nir-desktop"]) ? o["nir-desktop"] : [],
+        bidshub: Array.isArray(o.bidshub) ? o.bidshub : [],
+      };
+    }
+    const oldRaw = localStorage.getItem(RECOMMENDED_LINKS_KEY);
+    if (oldRaw) {
+      const o = JSON.parse(oldRaw);
+      const links = Array.isArray(o.links) ? o.links : [];
+      const next = { "nir-desktop": links, bidshub: [] };
+      localStorage.setItem(PLATFORM_LINK_SETS, JSON.stringify(next));
+      return next;
+    }
+  } catch (_e) {
+    /* ignore */
+  }
+  return { "nir-desktop": [], bidshub: [] };
+}
+
+function saveAllPlatformLinks(sets) {
+  localStorage.setItem(PLATFORM_LINK_SETS, JSON.stringify(sets));
+}
 
 function getLicenseServiceEndpoints() {
   if (Array.isArray(window.INZIRA_LICENSE_ENDPOINTS) && window.INZIRA_LICENSE_ENDPOINTS.length) {
@@ -47,37 +89,38 @@ function renderRecommendedLinksBox(targetEl, links, titleText) {
     .join("");
   targetEl.innerHTML = `
     <h4>${titleText}</h4>
-    <p>Use the platform helper first. It verifies checksums, then starts installation.</p>
+    <p>Follow any verification or checksum steps sent with these links before use.</p>
     <ul>${items}</ul>
   `;
   targetEl.classList.remove("hidden");
 }
 
-function setDownloadsGate(links) {
-  const statusEl = document.getElementById("downloads-gate-status");
-  const linksEl = document.getElementById("downloads-unlocked-links");
-  const unlocked = Array.isArray(links) && links.length > 0;
+function setPlatformGate(platformId, links) {
+  const g = PLATFORM_GATES[platformId];
+  if (!g) return;
+  const statusEl = document.getElementById(g.statusId);
+  const linksEl = document.getElementById(g.boxId);
   if (!statusEl || !linksEl) return;
+  const unlocked = Array.isArray(links) && links.length > 0;
+  const lockedMessage =
+    g.product === "BIDSHub"
+      ? "Verified download links are locked until a license request succeeds."
+      : "Verified install links are locked until a license request succeeds.";
   if (!unlocked) {
-    statusEl.textContent = "Verified install links are locked until a license request succeeds.";
+    statusEl.textContent = lockedMessage;
     statusEl.className = "installers-gate-status locked";
-    renderRecommendedLinksBox(linksEl, [], "Verified NIR install links");
+    renderRecommendedLinksBox(linksEl, [], `${g.product} — verified links`);
     return;
   }
-  statusEl.textContent = "NIR install links are unlocked for this request. Use verified links below.";
+  statusEl.textContent = `${g.product} links are unlocked for this request. Use verified links below.`;
   statusEl.className = "installers-gate-status unlocked";
-  renderRecommendedLinksBox(linksEl, links, "Verified NIR install links");
+  renderRecommendedLinksBox(linksEl, links, `Verified ${g.product} (verify, then use)`);
 }
 
-function loadStoredRecommendedLinks() {
-  try {
-    const raw = localStorage.getItem(RECOMMENDED_LINKS_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed.links) ? parsed.links : [];
-  } catch (_err) {
-    return [];
-  }
+function applyAllPlatformGates() {
+  const all = loadAllPlatformLinks();
+  setPlatformGate("nir-desktop", all["nir-desktop"]);
+  setPlatformGate("bidshub", all.bidshub);
 }
 
 function openLicenseModal(platformId, platformLabel = "Selected Platform") {
@@ -154,17 +197,22 @@ async function submitLicenseRequest(event) {
       "License generated and emailed. Check your inbox for secure download links.";
     statusEl.className = "form-status success";
     const recommendedLinks = Array.isArray(result.recommendedLinks) ? result.recommendedLinks : [];
+    const platform = (payload.requestedPlatform || "").toString();
+    const sets = loadAllPlatformLinks();
+    if (platform === "nir-desktop") sets["nir-desktop"] = recommendedLinks;
+    if (platform === "bidshub") sets.bidshub = recommendedLinks;
+    saveAllPlatformLinks(sets);
     localStorage.setItem(
       RECOMMENDED_LINKS_KEY,
-      JSON.stringify({ links: recommendedLinks, savedAt: new Date().toISOString() })
+      JSON.stringify({ links: recommendedLinks, platform, savedAt: new Date().toISOString() })
     );
     const osLabel = (payload.targetOS || "").toString().trim().toLowerCase();
     const osMap = { linux: "Linux", windows: "Windows", macos: "macOS" };
-    const osTitle = osMap[osLabel]
-      ? `${osMap[osLabel]} — verified NIR installers (verify, then install)`
-      : "Verified NIR installers (verify, then install)";
+    const productLabel = platform === "bidshub" ? "BIDSHub" : "NIR";
+    const baseTitle = `verified ${productLabel} (verify, then use)`;
+    const osTitle = osMap[osLabel] ? `${osMap[osLabel]} — ${baseTitle}` : `Verified ${productLabel} (verify, then use)`;
     renderRecommendedLinksBox(recEl, recommendedLinks, osTitle);
-    setDownloadsGate(recommendedLinks);
+    applyAllPlatformGates();
   } catch (err) {
     statusEl.textContent = `Unable to submit request: ${err.message}`;
     statusEl.className = "form-status error";
@@ -200,5 +248,5 @@ document.addEventListener("DOMContentLoaded", () => {
   ) {
     showPage(rawHash);
   }
-  setDownloadsGate(loadStoredRecommendedLinks());
+  applyAllPlatformGates();
 });

@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=19" />
+  <link rel="stylesheet" href="css/styles.css?v=20" />
 </head>
-<body data-inzira-rev="19">
-  <!-- site revision 19 -->
+<body data-inzira-rev="20">
+  <!-- site revision 20: NIR + BIDSHub platforms -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -114,7 +114,8 @@
       <div class="section-inner">
         <h2>Platforms</h2>
         <p class="section-subtitle">
-          Use <strong>Get NIR</strong> to request a license. After it is approved, verified installer links appear in this card.
+          Use <strong>Get NIR</strong> or <strong>Get BIDSHub</strong> to request a license. After it is approved, verified links
+          for that product appear in its card.
         </p>
         <div class="projects-grid">
           <div class="project-card project-card-nir">
@@ -130,12 +131,19 @@
             </p>
             <div id="downloads-unlocked-links" class="recommended-downloads hidden"></div>
           </div>
-          <div class="project-card">
-            <h3>Future Services</h3>
-            <p>Inzira Labs can host additional translational biomedical tools under the same licensing and distribution controls.</p>
+          <div class="project-card project-card-bidshub">
+            <h3>BIDSHub</h3>
+            <p>
+              Multi-platform neuroimaging dataset management and exploration — browse, filter, and download BIDS datasets from
+              several platforms in one place.
+            </p>
             <div class="download-actions">
-              <button class="cta-button" disabled title="Coming soon">Coming Soon</button>
+              <button class="cta-button" onclick="openLicenseModal('bidshub', 'BIDSHub')">Get BIDSHub</button>
             </div>
+            <p id="bidshub-gate-status" class="installers-gate-status locked" role="status">
+              Verified download links are locked until a license request succeeds.
+            </p>
+            <div id="bidshub-unlocked-links" class="recommended-downloads hidden"></div>
           </div>
         </div>
       </div>
@@ -324,6 +332,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=19"></script>
+  <script src="js/script.js?v=20"></script>
 </body>
 </html>
