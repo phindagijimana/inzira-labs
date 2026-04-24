@@ -5,23 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inzira Labs | Translating Biomedical Research to Usable Tools</title>
   <meta http-equiv="Cache-Control" content="no-cache" />
-  <link rel="stylesheet" href="css/styles.css?v=7" />
+  <link rel="stylesheet" href="css/styles.css?v=8" />
 </head>
-<body data-inzira-rev="7">
-  <!-- inzira-labs static build rev-7 -->
+<body data-inzira-rev="8">
+  <!-- inzira-labs static build rev-8: nav has no Downloads tab; installers live under Platforms only -->
   <nav>
     <div class="container">
-      <a href="#" class="logo" onclick="showPage('home')">Inzira Labs</a>
+      <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
       <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
       <ul id="nav-menu">
-        <li><a href="#" onclick="showPage('home'); closeMenu();">Home</a></li>
-        <li><a href="#" onclick="showPage('rd'); closeMenu();">R&amp;D</a></li>
-        <li><a href="#" onclick="showPage('platforms'); closeMenu();">Platforms</a></li>
-        <li><a href="#" onclick="showPage('team'); closeMenu();">Our Team</a></li>
-        <li><a href="#" onclick="showPage('join'); closeMenu();">Join Us</a></li>
-        <li><a href="#" onclick="showPage('news'); closeMenu();">News</a></li>
-        <li><a href="#" onclick="showPage('builder-review'); closeMenu();">Builder Review</a></li>
-        <li><a href="https://github.com/phindagijimana?tab=repositories" target="_blank" rel="noopener noreferrer" onclick="closeMenu();">GitHub</a></li>
+        <li><a href="#" onclick="goPage('home'); return false;">Home</a></li>
+        <li><a href="#" onclick="goPage('rd'); return false;">R&amp;D</a></li>
+        <li><a href="#" onclick="goPage('platforms'); return false;">Platforms</a></li>
+        <li class="nav-more">
+          <details id="nav-more-details">
+            <summary>More</summary>
+            <ul class="nav-more-list" role="list">
+              <li><a href="#" onclick="goPage('team'); return false;">Our Team</a></li>
+              <li><a href="#" onclick="goPage('join'); return false;">Join Us</a></li>
+              <li><a href="#" onclick="goPage('news'); return false;">News</a></li>
+              <li><a href="#" onclick="goPage('builder-review'); return false;">Builder Review</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <a
+            href="https://github.com/phindagijimana?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            onclick="closeMenu();"
+            >GitHub</a
+          >
+        </li>
       </ul>
     </div>
   </nav>
@@ -41,7 +56,7 @@
         </div>
       </div>
       <div class="hero-cta">
-        <a href="#" onclick="showPage('platforms')" class="cta-button">Explore Platforms</a>
+        <a href="#" onclick="goPage('platforms'); return false;" class="cta-button">Explore Platforms</a>
       </div>
     </section>
 
@@ -91,7 +106,7 @@
           </div>
         </div>
         <p class="rd-cta">
-          <a href="#" onclick="showPage('platforms'); return false;" class="cta-button">See platforms</a>
+          <a href="#" onclick="goPage('platforms'); return false;" class="cta-button">See platforms</a>
           <a
             href="https://github.com/phindagijimana?tab=repositories"
             target="_blank"
@@ -132,16 +147,16 @@
         </div>
 
         <div class="platform-installers">
-          <h3 class="platform-installers-title">Installers &amp; download links</h3>
-          <p class="section-subtitle platform-installers-lead">A license is required before downloading. Submit the form from a platform card above, or use the button here.</p>
+          <h3 class="platform-installers-title">NIR Desktop installers</h3>
+          <p class="section-subtitle platform-installers-lead">A license is required before you can use verified installers. Request access from a platform card above, or use the button here.</p>
           <div class="download-card">
             <h3>NIR Desktop</h3>
-            <p>Linux, Windows, and macOS installers are distributed through GitHub releases after license approval.</p>
+            <p>Linux, Windows, and macOS packages are available from approved releases after your license is issued.</p>
             <div class="download-actions">
-              <button class="cta-button" onclick="openLicenseModal('nir-desktop', 'NIR Desktop')">Request License and Download</button>
+              <button class="cta-button" onclick="openLicenseModal('nir-desktop', 'NIR Desktop')">Request license for installers</button>
             </div>
-            <p id="downloads-gate-status" class="downloads-gate-status locked">
-              Downloads are locked until license form submission succeeds.
+            <p id="downloads-gate-status" class="installers-gate-status locked" role="status">
+              Verified install links are locked until a license request succeeds.
             </p>
             <div id="downloads-unlocked-links" class="recommended-downloads hidden"></div>
           </div>
@@ -234,7 +249,7 @@
     <div class="modal-content">
       <button class="modal-close" onclick="closeLicenseModal()" aria-label="Close modal">x</button>
       <h3 id="license-modal-title">License Request</h3>
-      <p class="modal-subtitle">Complete this form to request a license before download.</p>
+      <p class="modal-subtitle">Complete this form to request a license before accessing installers.</p>
 
       <form id="license-form" onsubmit="submitLicenseRequest(event)">
         <input type="hidden" id="requested-platform" name="requestedPlatform" />
@@ -289,6 +304,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=7"></script>
+  <script src="js/script.js?v=8"></script>
 </body>
 </html>

@@ -20,6 +20,13 @@ function showPage(pageId) {
   window.scrollTo(0, 0);
 }
 
+function goPage(pageId) {
+  showPage(pageId);
+  closeMenu();
+  const more = document.getElementById("nav-more-details");
+  if (more) more.removeAttribute("open");
+}
+
 function toggleMenu() {
   const menu = document.getElementById("nav-menu");
   menu.classList.toggle("active");
@@ -54,14 +61,14 @@ function setDownloadsGate(links) {
   const unlocked = Array.isArray(links) && links.length > 0;
   if (!statusEl || !linksEl) return;
   if (!unlocked) {
-    statusEl.textContent = "Downloads are locked until license form submission succeeds.";
-    statusEl.className = "downloads-gate-status locked";
-    renderRecommendedLinksBox(linksEl, [], "Verified NIR Install Links");
+    statusEl.textContent = "Verified install links are locked until a license request succeeds.";
+    statusEl.className = "installers-gate-status locked";
+    renderRecommendedLinksBox(linksEl, [], "Verified NIR install links");
     return;
   }
-  statusEl.textContent = "NIR downloads unlocked for this request. Use verified install links below.";
-  statusEl.className = "downloads-gate-status unlocked";
-  renderRecommendedLinksBox(linksEl, links, "Verified NIR Install Links");
+  statusEl.textContent = "NIR install links are unlocked for this request. Use verified links below.";
+  statusEl.className = "installers-gate-status unlocked";
+  renderRecommendedLinksBox(linksEl, links, "Verified NIR install links");
 }
 
 function loadStoredRecommendedLinks() {
@@ -156,8 +163,8 @@ async function submitLicenseRequest(event) {
     const osLabel = (payload.targetOS || "").toString().trim().toLowerCase();
     const osMap = { linux: "Linux", windows: "Windows", macos: "macOS" };
     const osTitle = osMap[osLabel]
-      ? `${osMap[osLabel]} Recommended NIR Downloads (Verify then Install)`
-      : "Recommended NIR Downloads (Verify then Install)";
+      ? `${osMap[osLabel]} — verified NIR installers (verify, then install)`
+      : "Verified NIR installers (verify, then install)";
     renderRecommendedLinksBox(recEl, recommendedLinks, osTitle);
     setDownloadsGate(recommendedLinks);
   } catch (err) {
@@ -175,5 +182,10 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const rawHash = (location.hash || "").replace(/^#/, "");
+  if (rawHash === "downloads") {
+    showPage("platforms");
+    history.replaceState(null, "", `${location.pathname}${location.search}#platforms`);
+  }
   setDownloadsGate(loadStoredRecommendedLinks());
 });
