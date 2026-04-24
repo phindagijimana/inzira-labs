@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=29" />
+  <link rel="stylesheet" href="css/styles.css?v=30" />
 </head>
-<body data-inzira-rev="29">
-  <!-- site revision 29 -->
+<body data-inzira-rev="30">
+  <!-- site revision 30 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -182,6 +182,58 @@
           <strong>reproducibility</strong>, <strong>interpretability</strong>, and <strong>practical insight</strong> from
           implementation; longer notes may also live in the repository with the code.
         </p>
+
+        <article class="join-card builder-review-feature" aria-labelledby="builder-review-ebm-title">
+          <h3 id="builder-review-ebm-title">Builder Review — EBM / TLE (Lopez et al., 2022)</h3>
+          <p class="builder-review-feature-ref">
+            Paper: Lopez SM, Aksman LM, Oxtoby NP, et al.
+            <cite>Event-based modeling in temporal lobe epilepsy demonstrates progressive atrophy from cross-sectional data.</cite>
+            <em>Epilepsia</em>. 2022;63(8):2081&ndash;2095.
+            <a href="https://doi.org/10.1111/epi.17316" target="_blank" rel="noopener noreferrer">DOI</a>
+            &middot;
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9540015/" target="_blank" rel="noopener noreferrer">PMC</a>
+          </p>
+          <div class="builder-review-feature-body">
+            <p>
+              <strong>Context.</strong> The work uses cross-sectional T1 morphometry (ENIGMA-style features) to infer a KDE
+              event-based model sequence and per-subject stages, in the <strong>UCL POND</strong> lineage
+              (<strong>kde_ebm</strong> + <strong>pySuStaIn</strong> / <strong>MixtureSustain</strong>).
+            </p>
+            <p>
+              <strong>What the repo adds.</strong> The
+              <a href="https://github.com/phindagijimana/EBM_implement" target="_blank" rel="noopener noreferrer">EBM_implement</a>
+              workspace is a <strong>deployment shell</strong>: venv, <code>./ebm</code> (<code>install</code>, <code>check</code>,
+              <code>demo</code>, <code>fit</code>, lifecycle), and thin wrappers around upstream packages—not a reimplementation
+              of ENIGMA extraction or the paper&rsquo;s full multi-site analysis.
+            </p>
+            <p>
+              <strong>Reproducibility.</strong> You get <strong>runnable</strong> infrastructure (imports, demo, fit on your CSV);
+              the paper&rsquo;s exact figures and metrics require ENIGMA-scale data and pipelines, and there is <strong>no</strong> bundled
+              pretrained model from the publication—you retrain on your features or source artifacts from the authors.
+            </p>
+            <p>
+              <strong>Interpretation &amp; scope.</strong> Stages and ordering are <strong>dataset-specific</strong>. Outputs
+              (e.g. stage estimates, upstream pickles) support <strong>research</strong> description and follow-on analysis; the
+              paper emphasizes limits for fine-grained stage&ndash;outcome use, and this repo is <strong>not</strong> a clinical product.
+            </p>
+            <p>
+              <strong>Builder insight.</strong> The implementation shines at <strong>wiring the same open stack the methods imply</strong>
+              into a small, operable CLI. The main lift for serious use remains <strong>feature engineering and validation</strong>
+              (building ENIGMA-like tables, biomarker and threshold choices, site effects)—the same class of work as the original study,
+              not the pip install.
+            </p>
+          </div>
+          <p class="builder-review-feature-footer">
+            <a
+              href="https://github.com/phindagijimana/EBM_implement/blob/main/EBM_TLE_br.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rd-link-ghost"
+              >Full Builder Review in the repository (<code>EBM_TLE_br.md</code>)</a
+            >
+          </p>
+        </article>
+
         <details class="builder-review-details">
           <summary class="builder-review-summary">
             Expand: <code class="builder-review-summary-code">_br.md</code> in repos &amp; an example
@@ -427,6 +479,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=29"></script>
+  <script src="js/script.js?v=30"></script>
 </body>
 </html>

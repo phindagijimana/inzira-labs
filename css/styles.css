@@ -464,6 +464,51 @@ section h2 {
   line-height: 1.55;
 }
 
+.builder-review-feature {
+  margin-top: 0.5rem;
+  text-align: left;
+  max-width: 720px;
+}
+
+.builder-review-feature h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.65rem;
+  line-height: 1.3;
+}
+
+.builder-review-feature-ref {
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.builder-review-feature-ref cite {
+  font-style: italic;
+}
+
+.builder-review-feature-body p {
+  margin: 0 0 0.85rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #222;
+}
+
+.builder-review-feature-body p:last-of-type {
+  margin-bottom: 0;
+}
+
+.builder-review-feature-footer {
+  margin: 1.1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid #e8e8e8;
+  font-size: 0.95rem;
+}
+
+.join-card.builder-review-meta-card {
+  margin-top: 0.35rem;
+}
+
 .builder-review-details {
   max-width: 800px;
   margin: 0 auto 1.5rem;
