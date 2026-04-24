@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=12" />
+  <link rel="stylesheet" href="css/styles.css?v=13" />
 </head>
-<body data-inzira-rev="12">
-  <!-- site revision 12 — if nav looks old, hard-refresh (Ctrl+Shift+R) or add ?r=12 to the URL -->
+<body data-inzira-rev="13">
+  <!-- site revision 13 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -113,11 +113,10 @@
       <div class="section-inner">
         <h2>Platforms</h2>
         <p class="section-subtitle">
-          Choose a platform to start the license request. After approval, verified installers and links appear in the
-          <strong>Installers</strong> block below.
+          Use <strong>Get NIR</strong> to request a license. After it is approved, verified installer links appear in this card.
         </p>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card project-card-nir">
             <h3>NeuroInsight Research (NIR)</h3>
             <p>Self-hosted neuroimaging orchestration platform for secure data connectors, workflow execution, and reproducible analysis.</p>
             <div class="download-actions">
@@ -125,6 +124,10 @@
                 Get NIR
               </button>
             </div>
+            <p id="downloads-gate-status" class="installers-gate-status locked" role="status">
+              Verified install links are locked until a license request succeeds.
+            </p>
+            <div id="downloads-unlocked-links" class="recommended-downloads hidden"></div>
           </div>
           <div class="project-card">
             <h3>Future Services</h3>
@@ -132,22 +135,6 @@
             <div class="download-actions">
               <button class="cta-button" disabled title="Coming soon">Coming Soon</button>
             </div>
-          </div>
-        </div>
-
-        <div class="platform-installers">
-          <h3 class="platform-installers-title">NIR Desktop installers</h3>
-          <p class="section-subtitle platform-installers-lead">A license is required before you can use verified installers. Request access from a platform card above, or use the button here.</p>
-          <div class="download-card">
-            <h3>NIR Desktop</h3>
-            <p>Linux, Windows, and macOS packages are available from approved releases after your license is issued.</p>
-            <div class="download-actions">
-              <button class="cta-button" onclick="openLicenseModal('nir-desktop', 'NIR Desktop')">Request license for installers</button>
-            </div>
-            <p id="downloads-gate-status" class="installers-gate-status locked" role="status">
-              Verified install links are locked until a license request succeeds.
-            </p>
-            <div id="downloads-unlocked-links" class="recommended-downloads hidden"></div>
           </div>
         </div>
       </div>
@@ -287,6 +274,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=12"></script>
+  <script src="js/script.js?v=13"></script>
 </body>
 </html>
