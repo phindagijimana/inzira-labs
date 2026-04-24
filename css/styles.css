@@ -211,8 +211,17 @@ section h2 {
   border-top: 1px solid #e0e0e0;
 }
 
+#rd > .rd-platforms:first-child {
+  border-top: none;
+}
+
 .research-publications {
   border-top: 1px solid #e0e0e0;
+}
+
+#research > .research-publications:only-of-type,
+#research > .research-publications:first-child {
+  border-top: none;
 }
 
 .team-alumni {
