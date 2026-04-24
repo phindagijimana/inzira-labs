@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=36" />
+  <link rel="stylesheet" href="css/styles.css?v=37" />
 </head>
-<body data-inzira-rev="36">
-  <!-- site revision 36 -->
+<body data-inzira-rev="37">
+  <!-- site revision 37 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -201,7 +201,7 @@
             >
           </summary>
           <div class="builder-review-doc">
-            <p class="builder-review-doc-brief">Same file as the downloads above, shown here in a scrollable view when this section is open.</p>
+            <p class="builder-review-doc-brief">Same content as the downloads above, <strong>rendered</strong> for reading when this section is open (headings, tables, lists, and code blocks).</p>
             <p id="builder-review-loading" class="builder-review-loading" hidden aria-live="polite">Loading full review&hellip;</p>
             <p id="builder-review-md-fallback" class="builder-review-md-fallback" hidden>
               Full text could not be loaded from this site. Open
@@ -221,13 +221,13 @@
                 >view the rendered page</a
               >.
             </p>
-            <pre
-              class="builder-review-raw"
+            <div
+              class="builder-review-article"
               id="builder-review-ebm-md"
               hidden
               role="region"
-              aria-label="EBM TLE Builder Review: paper-focused Markdown, same as EBM_TLE_br.md on GitHub"
-            ></pre>
+              aria-label="EBM TLE Builder Review, rendered from EBM_TLE_br.md"
+            ></div>
             <noscript>
               <p>
                 <a href="https://github.com/phindagijimana/EBM_implement/blob/main/EBM_TLE_br.md" class="rd-link-ghost"
@@ -452,6 +452,8 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=36"></script>
+  <script src="js/vendor/purify.min.js"></script>
+  <script src="js/vendor/marked.min.js"></script>
+  <script src="js/script.js?v=37"></script>
 </body>
 </html>

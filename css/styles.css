@@ -595,20 +595,165 @@ section h2 {
   color: #444;
 }
 
-.builder-review-raw {
-  white-space: pre-wrap;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  max-height: min(70vh, 48rem);
+.builder-review-article {
+  text-align: left;
+  color: #1a1a1a;
+  max-height: min(72vh, 50rem);
   overflow: auto;
   margin: 0;
-  padding: 1rem 1.1rem;
+  padding: 1.15rem 1.35rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.58;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.builder-review-article h1,
+.builder-review-article h2,
+.builder-review-article h3,
+.builder-review-article h4 {
+  font-weight: 700;
+  line-height: 1.28;
+  color: #111;
+  margin: 1.15rem 0 0.5rem;
+}
+
+.builder-review-article h1 {
+  font-size: 1.35rem;
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.builder-review-article h2 {
+  font-size: 1.2rem;
+  margin-top: 1.4rem;
+}
+
+.builder-review-article h3 {
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+.builder-review-article h4 {
+  font-size: 1rem;
+}
+
+.builder-review-article p {
+  margin: 0 0 0.8rem;
+}
+
+.builder-review-article ul,
+.builder-review-article ol {
+  margin: 0 0 0.9rem;
+  padding-left: 1.35rem;
+}
+
+.builder-review-article li {
+  margin: 0.25rem 0;
+}
+
+.builder-review-article li > p {
+  margin: 0.2rem 0;
+}
+
+.builder-review-article table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.builder-review-article th,
+.builder-review-article td {
+  border: 1px solid #e8e8e8;
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.builder-review-article th {
+  background: #f6f6f6;
+  font-weight: 600;
+}
+
+.builder-review-article tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+.builder-review-article hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 1.1rem 0;
+}
+
+.builder-review-article pre {
+  margin: 0.6rem 0 0.9rem;
+  padding: 0.85rem 1rem;
+  background: #f4f4f4;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  overflow: auto;
   font-size: 0.8rem;
   line-height: 1.45;
   font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
-  background: #fafafa;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
+}
+
+.builder-review-article code {
+  font-size: 0.88em;
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  background: #f0f0f0;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.builder-review-article pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  border-radius: 0;
+}
+
+.builder-review-article a {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.builder-review-article a:hover {
+  opacity: 0.75;
+}
+
+.builder-review-article em {
+  font-style: italic;
+}
+
+.builder-review-article strong {
+  font-weight: 600;
+}
+
+.builder-review-article blockquote {
+  margin: 0.5rem 0 0.8rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid #ccc;
+  color: #333;
+}
+
+.builder-review-fallback-pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: inherit;
 }
 
 .builder-review-summary:focus-visible {

@@ -229,10 +229,27 @@ document.addEventListener("click", (event) => {
 
 function initBuilderReviewFullMd() {
   const details = document.getElementById("builder-review-ebm-doc");
-  const pre = document.getElementById("builder-review-ebm-md");
+  const article = document.getElementById("builder-review-ebm-md");
   const loading = document.getElementById("builder-review-loading");
   const fallback = document.getElementById("builder-review-md-fallback");
-  if (!details || !pre) return;
+  if (!details || !article) return;
+
+  const renderMarkdown = (md) => {
+    const m = window.marked;
+    if (m && typeof m.setOptions === "function") {
+      m.setOptions({ gfm: true, breaks: false });
+    }
+    const parse = m && (typeof m.parse === "function" ? m.parse.bind(m) : typeof m === "function" ? m : null);
+    if (!parse) {
+      return null;
+    }
+    const raw = parse(md);
+    if (window.DOMPurify && typeof window.DOMPurify.sanitize === "function") {
+      return window.DOMPurify.sanitize(raw);
+    }
+    return raw;
+  };
+
   const load = () => {
     if (details.dataset.ebmBrLoaded) return;
     if (details.dataset.ebmBrLoading) return;
@@ -246,8 +263,14 @@ function initBuilderReviewFullMd() {
         return r.text();
       })
       .then((text) => {
-        pre.textContent = text;
-        pre.hidden = false;
+        const html = renderMarkdown(text);
+        if (html) {
+          article.innerHTML = html;
+        } else {
+          const esc = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+          article.innerHTML = `<pre class="builder-review-fallback-pre">${esc}</pre>`;
+        }
+        article.hidden = false;
         details.dataset.ebmBrLoaded = "1";
         delete details.dataset.ebmBrLoading;
         if (loading) loading.hidden = true;
