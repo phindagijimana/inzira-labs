@@ -480,6 +480,15 @@ section h2 {
   margin: 0 0.5rem;
 }
 
+.builder-review-downloads-hint {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin: -0.5rem auto 1.1rem;
+  max-width: 720px;
+  line-height: 1.45;
+}
+
 .builder-review-details {
   max-width: 800px;
   margin: 0 auto 1.5rem;
