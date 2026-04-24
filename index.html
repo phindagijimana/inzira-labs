@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inzira Labs | Translating Biomedical Research to Usable Tools</title>
   <meta http-equiv="Cache-Control" content="no-cache" />
-  <link rel="stylesheet" href="css/styles.css?v=3" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
 </head>
-<body data-inzira-rev="3">
-  <!-- inzira-labs static build rev-3 (cache-bust css/js; hard-refresh if nav looks stale) -->
+<body data-inzira-rev="6">
+  <!-- inzira-labs static build rev-6 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="showPage('home')">Inzira Labs</a>
       <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
       <ul id="nav-menu">
         <li><a href="#" onclick="showPage('home'); closeMenu();">Home</a></li>
+        <li><a href="#" onclick="showPage('rd'); closeMenu();">R&amp;D</a></li>
         <li><a href="#" onclick="showPage('platforms'); closeMenu();">Platforms</a></li>
         <li><a href="#" onclick="showPage('downloads'); closeMenu();">Downloads</a></li>
+        <li><a href="#" onclick="showPage('team'); closeMenu();">Our Team</a></li>
+        <li><a href="#" onclick="showPage('join'); closeMenu();">Join Us</a></li>
+        <li><a href="#" onclick="showPage('news'); closeMenu();">News</a></li>
+        <li><a href="#" onclick="showPage('builder-review'); closeMenu();">Builder Review</a></li>
         <li><a href="https://github.com/phindagijimana?tab=repositories" target="_blank" rel="noopener noreferrer" onclick="closeMenu();">GitHub</a></li>
       </ul>
     </div>
@@ -59,6 +64,43 @@
             <p>Checksum-backed installer downloads with operational traceability.</p>
           </div>
         </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="rd" class="page">
+    <section class="rd-section">
+      <div class="section-inner">
+        <h2>Research &amp; Development</h2>
+        <p class="section-subtitle">
+          We develop tools at the intersection of <strong>artificial intelligence</strong>, <strong>biomedical research</strong>,
+          and <strong>neuroimaging</strong> to strengthen <strong>clinical translational research</strong>—from methods and
+          software design through validation to deployment in real-world research settings.
+        </p>
+        <div class="rd-pillars">
+          <div class="rd-pillar">
+            <h3>AI &amp; methods</h3>
+            <p>Machine learning, foundation models, and robust pipelines for imaging and multi-modal data.</p>
+          </div>
+          <div class="rd-pillar">
+            <h3>Biomedical &amp; neuroimaging</h3>
+            <p>Methods grounded in disease biology, study design, and neuroimaging workflow constraints.</p>
+          </div>
+          <div class="rd-pillar">
+            <h3>Clinical translation</h3>
+            <p>Reproducible, interpretable, and operable research tools aligned with compliance and end-user needs.</p>
+          </div>
+        </div>
+        <p class="rd-cta">
+          <a href="#" onclick="showPage('platforms'); return false;" class="cta-button">See platforms</a>
+          <a
+            href="https://github.com/phindagijimana?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rd-link-ghost"
+            >Open-source work on GitHub</a
+          >
+        </p>
       </div>
     </section>
   </div>
@@ -106,6 +148,86 @@
             Downloads are locked until license form submission succeeds.
           </p>
           <div id="downloads-unlocked-links" class="recommended-downloads hidden"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="team" class="page">
+    <section class="projects">
+      <div class="section-inner">
+        <h2>Our Team</h2>
+        <p class="section-subtitle">People building translational biomedical software and research data systems at Inzira Labs.</p>
+        <div class="team-grid">
+          <article class="team-card">
+            <h3>Philbert Ndagijimana</h3>
+            <p class="team-role">Research Data Engineer</p>
+            <p class="team-affil">University of Rochester Medical Center (URMC)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="join" class="page">
+    <section class="projects">
+      <div class="section-inner">
+        <h2>Join Us</h2>
+        <p class="section-subtitle">
+          We collaborate with research teams, engineers, and clinicians who care about rigorous methods, open science, and
+          tools that survive real-world use. If that sounds like you, we would like to hear from you.
+        </p>
+        <div class="join-card">
+          <p>
+            Share your background, interests, and how you would like to contribute—whether through collaboration, software,
+            or translational projects. We review messages as capacity allows.
+          </p>
+          <p class="join-contact">
+            <a href="mailto:inzira-labs@zerogap.tech" class="cta-button">Contact inzira-labs@zerogap.tech</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="news" class="page">
+    <section class="projects">
+      <div class="section-inner">
+        <h2>News</h2>
+        <p class="section-subtitle">Updates on platforms, releases, and research translation from Inzira Labs.</p>
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="news-date">Updates</span>
+            <p>More announcements will appear here as we publish releases and milestones. Watch this space or follow our work on GitHub.</p>
+          </li>
+        </ul>
+        <p class="news-github">
+          <a
+            href="https://github.com/phindagijimana?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rd-link-ghost"
+            >Repositories on GitHub</a
+          >
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div id="builder-review" class="page">
+    <section class="projects">
+      <div class="section-inner">
+        <h2>Builder Review</h2>
+        <p class="section-subtitle">
+          A structured look at how we design, ship, and evaluate research software: architecture choices, validation, security,
+          and what we learn when tools meet real studies and clinical-adjacent workflows.
+        </p>
+        <div class="join-card">
+          <p>
+            Builder Review posts and notes will highlight trade-offs, benchmarks, and lessons from building platforms like
+            NeuroInsight Research and related pipelines. Content will be linked here as it is published.
+          </p>
+          <p class="builder-placeholder">No published reviews yet—check back soon.</p>
         </div>
       </div>
     </section>
@@ -170,6 +292,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=3"></script>
+  <script src="js/script.js?v=6"></script>
 </body>
 </html>

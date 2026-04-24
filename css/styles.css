@@ -38,13 +38,17 @@ nav .container {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.1rem;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 nav a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 nav a:hover {
@@ -173,6 +177,130 @@ section h2 {
 
 .projects {
   background: #f5f5f5;
+}
+
+.rd-section {
+  background: #f5f5f5;
+}
+
+.rd-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.rd-pillar {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 1.4rem;
+  background: #fff;
+}
+
+.rd-pillar h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.rd-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.rd-link-ghost {
+  color: #000;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.rd-link-ghost:hover {
+  opacity: 0.7;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.team-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #fff;
+  text-align: left;
+}
+
+.team-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.team-role {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.25rem;
+}
+
+.team-affil {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.join-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #fff;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.join-contact {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.news-list {
+  list-style: none;
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+}
+
+.news-item {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  text-align: left;
+}
+
+.news-date {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.news-github {
+  text-align: center;
+}
+
+.builder-placeholder {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
 }
 
 footer {
