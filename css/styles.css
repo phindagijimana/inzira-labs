@@ -437,6 +437,29 @@ section h2 {
   font-style: italic;
 }
 
+.join-card .builder-review-example-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 1.35rem 0 0.5rem;
+}
+
+.join-card .builder-review-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.25rem;
+  line-height: 1.55;
+}
+
+.join-card .builder-review-list li {
+  margin-bottom: 0.45rem;
+}
+
+.join-card code {
+  font-size: 0.92em;
+  background: #f0f0f0;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
 footer {
   background: #111;
   color: rgba(255, 255, 255, 0.9);
