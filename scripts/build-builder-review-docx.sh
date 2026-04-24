@@ -21,3 +21,5 @@ build_one() {
 
 build_one "$ROOT/content/EBM_TLE_br.md" "$ROOT/content/EBM_TLE_br.docx"
 build_one "$ROOT/content/sustain_br.md" "$ROOT/content/sustain_br.docx"
+build_one "$ROOT/content/autoDDPM_br.md" "$ROOT/content/autoDDPM_br.docx"
+build_one "$ROOT/content/hipp_br.md" "$ROOT/content/hipp_br.docx"

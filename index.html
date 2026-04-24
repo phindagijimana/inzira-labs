@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=40" />
+  <link rel="stylesheet" href="css/styles.css?v=43" />
 </head>
-<body data-inzira-rev="40">
-  <!-- site revision 40 -->
+<body data-inzira-rev="43">
+  <!-- site revision 43 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -177,10 +177,8 @@
       <div class="section-inner">
         <h2>Builder Review</h2>
         <p class="section-subtitle builder-review-tagline">
-          A <strong>Builder Review</strong> is a <strong>builder&rsquo;s</strong> read of a <strong>published paper</strong>—on
-          <strong>reproducibility</strong>, <strong>interpretability</strong>, and <strong>reusability</strong>, with respect for the
-          authors&rsquo; work. <strong>Implementation</strong> can <strong>ground</strong> the write-up; the <strong>paper</strong> is
-          what we review, not a software product.
+          Short, practical reads of <strong>published work</strong>—reproducibility, what transfers, and what doesn&rsquo;t. Open a
+          paper below; the full text loads when you expand it.
         </p>
 
         <details
@@ -189,9 +187,7 @@
           data-br-src="content/EBM_TLE_br.md"
         >
           <summary class="builder-review-summary builder-review-paper-summary">
-            <span class="builder-review-paper-title"
-              >Event-based modeling in temporal lobe epilepsy demonstrates progressive atrophy from cross-sectional data</span
-            >
+            <span class="builder-review-paper-title">KDE event-based model in MTLE (cross-sectional T1)</span>
             <span class="builder-review-paper-byline"
               >Lopez et al. · <em>Epilepsia</em> 2022 · <code>EBM_TLE_br.md</code></span
             >
@@ -241,11 +237,9 @@
           data-br-src="content/sustain_br.md"
         >
           <summary class="builder-review-summary builder-review-paper-summary">
-            <span class="builder-review-paper-title"
-              >Identification of four biotypes in temporal lobe epilepsy via machine learning on brain images</span
-            >
+            <span class="builder-review-paper-title">Four MRI biotypes in TLE (SuStaIn + morphometry)</span>
             <span class="builder-review-paper-byline"
-              >Jiang et al. · <em>Nat Commun</em> 2024 · <code>sustain_br.md</code> ·
+              >Jiang et al. · <em>Nat Commun</em> 2024 ·
               <a
                 href="https://github.com/phindagijimana/predict_epi"
                 target="_blank"
@@ -253,7 +247,8 @@
                 class="rd-link-ghost"
                 onclick="event.stopPropagation();"
                 >predict_epi</a
-              ></span
+              >
+              · <code>sustain_br.md</code></span
             >
           </summary>
           <div class="builder-review-doc">
@@ -292,6 +287,130 @@
                 >
                 ·
                 <a href="content/sustain_br.md" class="rd-link-ghost" download>Download Markdown</a>
+              </p>
+            </noscript>
+          </div>
+        </details>
+
+        <details
+          class="builder-review-details"
+          id="builder-review-autoddpm-doc"
+          data-br-src="content/autoDDPM_br.md"
+        >
+          <summary class="builder-review-summary builder-review-paper-summary">
+            <span class="builder-review-paper-title"
+              >autoDDPM: mask, stitch, re-sample (diffusion anomaly detection)</span
+            >
+            <span class="builder-review-paper-byline"
+              >Bercea et al. · arXiv 2023 ·
+              <a
+                href="https://github.com/phindagijimana/AutoDDPM_implement"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                onclick="event.stopPropagation();"
+                >AutoDDPM_implement</a
+              >
+              · <code>autoDDPM_br.md</code></span
+            >
+          </summary>
+          <div class="builder-review-doc">
+            <p class="builder-review-loading" hidden aria-live="polite">Loading full review&hellip;</p>
+            <p class="builder-review-md-fallback" hidden>
+              Full text could not be loaded. Open
+              <a
+                href="https://raw.githubusercontent.com/phindagijimana/AutoDDPM_implement/main/autoDDPM_br.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                >the raw file on GitHub</a
+              >
+              or
+              <a
+                href="https://github.com/phindagijimana/AutoDDPM_implement/blob/main/autoDDPM_br.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                >view the file on GitHub</a
+              >.
+            </p>
+            <div
+              class="builder-review-article"
+              id="builder-review-autoddpm-md"
+              hidden
+              role="region"
+              aria-label="Bercea et al. autoDDPM arXiv 2023, Builder Review"
+            ></div>
+            <noscript>
+              <p>
+                <a
+                  href="https://github.com/phindagijimana/AutoDDPM_implement/blob/main/autoDDPM_br.md"
+                  class="rd-link-ghost"
+                  >View on GitHub</a
+                >
+                ·
+                <a href="content/autoDDPM_br.md" class="rd-link-ghost" download>Download Markdown</a>
+              </p>
+            </noscript>
+          </div>
+        </details>
+
+        <details
+          class="builder-review-details"
+          id="builder-review-hipp-doc"
+          data-br-src="content/hipp_br.md"
+        >
+          <summary class="builder-review-summary builder-review-paper-summary">
+            <span class="builder-review-paper-title">HippUnfold (hippocampal unfolding, BIDS App)</span>
+            <span class="builder-review-paper-byline"
+              >DeKraker et al. · <em>eLife</em> 2022 ·
+              <a
+                href="https://github.com/phindagijimana/HippUnfold_implement"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                onclick="event.stopPropagation();"
+                >HippUnfold_implement</a
+              >
+              · <code>hipp_br.md</code></span
+            >
+          </summary>
+          <div class="builder-review-doc">
+            <p class="builder-review-loading" hidden aria-live="polite">Loading full review&hellip;</p>
+            <p class="builder-review-md-fallback" hidden>
+              Full text could not be loaded. Open
+              <a
+                href="https://raw.githubusercontent.com/phindagijimana/HippUnfold_implement/main/hipp_br.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                >the raw file on GitHub</a
+              >
+              or
+              <a
+                href="https://github.com/phindagijimana/HippUnfold_implement/blob/main/hipp_br.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rd-link-ghost"
+                >view the file on GitHub</a
+              >.
+            </p>
+            <div
+              class="builder-review-article"
+              id="builder-review-hipp-md"
+              hidden
+              role="region"
+              aria-label="DeKraker et al. HippUnfold eLife 2022, Builder Review"
+            ></div>
+            <noscript>
+              <p>
+                <a
+                  href="https://github.com/phindagijimana/HippUnfold_implement/blob/main/hipp_br.md"
+                  class="rd-link-ghost"
+                  >View on GitHub</a
+                >
+                ·
+                <a href="content/hipp_br.md" class="rd-link-ghost" download>Download Markdown</a>
               </p>
             </noscript>
           </div>
@@ -510,6 +629,6 @@
   </script>
   <script src="js/vendor/purify.min.js"></script>
   <script src="js/vendor/marked.min.js"></script>
-  <script src="js/script.js?v=40"></script>
+  <script src="js/script.js?v=43"></script>
 </body>
 </html>
