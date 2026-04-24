@@ -76,7 +76,9 @@ Deployment behavior:
 After first workflow run, enable Pages in repository settings:
 
 1. GitHub repository -> Settings -> Pages
-2. Source: `GitHub Actions`
+2. Source: **`GitHub Actions`** (not “Deploy from a branch”, or an old build may keep showing)
+
+If the public site looks outdated after a push, check the **Actions** tab for a failed deploy, then try a **hard refresh** in the browser (e.g. Ctrl+Shift+R).
 
 Your site URL will be:
 
