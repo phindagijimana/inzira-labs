@@ -460,6 +460,77 @@ section h2 {
   border-radius: 4px;
 }
 
+.builder-review-details {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+}
+
+.builder-review-summary {
+  cursor: pointer;
+  list-style: none;
+  display: block;
+  padding: 0.9rem 1.15rem 0.9rem 2.4rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.4;
+  position: relative;
+  user-select: none;
+}
+
+.builder-review-summary::-webkit-details-marker {
+  display: none;
+}
+
+.builder-review-summary::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  width: 0.45em;
+  height: 0.45em;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: translateY(-60%) rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.builder-review-details[open] .builder-review-summary::before {
+  transform: translateY(-20%) rotate(-135deg);
+}
+
+.builder-review-summary:hover {
+  border-color: #ccc;
+  background: #fafafa;
+}
+
+.builder-review-summary-code {
+  font-size: 0.88em;
+  font-weight: 600;
+  background: #f0f0f0;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.builder-review-details-body {
+  margin-top: 1rem;
+  padding-top: 0.15rem;
+}
+
+.builder-review-details-lead {
+  text-align: left;
+  max-width: none;
+  margin: 0 0 1.25rem;
+}
+
+.builder-review-summary:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
 footer {
   background: #111;
   color: rgba(255, 255, 255, 0.9);
