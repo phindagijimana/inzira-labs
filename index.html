@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=21" />
+  <link rel="stylesheet" href="css/styles.css?v=22" />
 </head>
-<body data-inzira-rev="21">
-  <!-- site revision 21 -->
+<body data-inzira-rev="22">
+  <!-- site revision 22 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -113,6 +113,11 @@
     <section class="projects rd-platforms" id="platforms">
       <div class="section-inner">
         <h2>Platforms</h2>
+        <p class="section-subtitle platform-stack-lead">
+          <strong>Veritas &amp; Atlas Data API</strong> — clinical AI validation stack: Atlas exposes dataset access, staging, and
+          policy; Veritas runs biomarker pipeline evaluation, HPC/Slurm jobs, and reporting—with optional integration between the
+          two. Website links below are placeholders until production URLs are set.
+        </p>
         <p class="section-subtitle">
           <strong>NIR</strong> and <strong>BIDSHub</strong>: use the buttons to request a license; after approval, verified links
           show in each card. <strong>medAI</strong> is open on GitHub — use the repository link (no license request on this site).
@@ -159,6 +164,41 @@
                 >View on GitHub</a
               >
             </div>
+          </div>
+          <!-- Placeholder site URLs: replace with live Veritas / Atlas homepages when ready -->
+          <div class="project-card project-card-veritas">
+            <h3>Veritas</h3>
+            <p>
+              Biomarker pipeline evaluation, HPC/Slurm job orchestration, and reporting for clinical AI validation. Integrates
+              optionally with Atlas for data access and policy upstream.
+            </p>
+            <div class="download-actions">
+              <a
+                class="cta-button"
+                href="https://veritas.inzira-labs.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit website</a
+              >
+            </div>
+            <p class="platform-link-note">Placeholder URL — update to the public Veritas site.</p>
+          </div>
+          <div class="project-card project-card-atlas">
+            <h3>Atlas Data API</h3>
+            <p>
+              Dataset access, staging, and policy for clinical AI workflows. Pairs with Veritas for validation runs and
+              reporting when you use both in one stack.
+            </p>
+            <div class="download-actions">
+              <a
+                class="cta-button"
+                href="https://atlas.inzira-labs.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit website</a
+              >
+            </div>
+            <p class="platform-link-note">Placeholder URL — update to the public Atlas / API site.</p>
           </div>
         </div>
       </div>
@@ -347,6 +387,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=21"></script>
+  <script src="js/script.js?v=22"></script>
 </body>
 </html>

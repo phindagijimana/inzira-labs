@@ -142,6 +142,19 @@ section h2 {
   margin: 0 auto 2rem;
 }
 
+.platform-stack-lead {
+  max-width: 800px;
+  font-size: 0.98rem;
+}
+
+.platform-link-note {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+  text-align: left;
+}
+
 .services-preview,
 .projects-grid {
   display: grid;
