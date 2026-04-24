@@ -196,6 +196,59 @@ section h2 {
   border-top: 1px solid #e0e0e0;
 }
 
+.team-alumni {
+  max-width: 720px;
+  margin: 2.5rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.team-alumni-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.team-alumni-lead {
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  max-width: 520px;
+  margin: 0 auto 0.75rem;
+  line-height: 1.5;
+}
+
+.team-alumni-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.team-alumni-list li {
+  text-align: center;
+  color: #333;
+  font-size: 0.95rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.team-alumni-list li:last-child {
+  border-bottom: none;
+}
+
+.team-alumni-empty {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  font-style: italic;
+  padding: 0.35rem 0 0;
+  margin: 0;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .team-join {
   max-width: 720px;
   margin: 2.5rem auto 0;
