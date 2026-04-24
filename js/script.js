@@ -227,13 +227,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
-function initBuilderReviewFullMd() {
-  const details = document.getElementById("builder-review-ebm-doc");
-  const article = document.getElementById("builder-review-ebm-md");
-  const loading = document.getElementById("builder-review-loading");
-  const fallback = document.getElementById("builder-review-md-fallback");
-  if (!details || !article) return;
-
+function initBuilderReviewMarkdown() {
   const renderMarkdown = (md) => {
     const m = window.marked;
     if (m && typeof m.setOptions === "function") {
@@ -250,46 +244,54 @@ function initBuilderReviewFullMd() {
     return raw;
   };
 
-  const load = () => {
-    if (details.dataset.ebmBrLoaded) return;
-    if (details.dataset.ebmBrLoading) return;
-    details.dataset.ebmBrLoading = "1";
-    if (loading) {
-      loading.hidden = false;
-    }
-    fetch("content/EBM_TLE_br.md", { cache: "no-cache" })
-      .then((r) => {
-        if (!r.ok) throw new Error("load failed");
-        return r.text();
-      })
-      .then((text) => {
-        const html = renderMarkdown(text);
-        if (html) {
-          article.innerHTML = html;
-        } else {
-          const esc = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-          article.innerHTML = `<pre class="builder-review-fallback-pre">${esc}</pre>`;
-        }
-        article.hidden = false;
-        details.dataset.ebmBrLoaded = "1";
-        delete details.dataset.ebmBrLoading;
-        if (loading) loading.hidden = true;
-        if (fallback) fallback.hidden = true;
-      })
-      .catch(() => {
-        delete details.dataset.ebmBrLoading;
-        if (loading) loading.hidden = true;
-        if (fallback) fallback.hidden = false;
-      });
-  };
-  if (details.open) load();
-  details.addEventListener("toggle", () => {
+  const bindOne = (details) => {
+    const src = details.getAttribute("data-br-src");
+    if (!src) return;
+    const article = details.querySelector(".builder-review-article");
+    if (!article) return;
+    const loading = details.querySelector(".builder-review-loading");
+    const fallback = details.querySelector(".builder-review-md-fallback");
+    const load = () => {
+      if (details.dataset.brLoaded) return;
+      if (details.dataset.brLoading) return;
+      details.dataset.brLoading = "1";
+      if (loading) loading.hidden = false;
+      fetch(src, { cache: "no-cache" })
+        .then((r) => {
+          if (!r.ok) throw new Error("load failed");
+          return r.text();
+        })
+        .then((text) => {
+          const html = renderMarkdown(text);
+          if (html) {
+            article.innerHTML = html;
+          } else {
+            const esc = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            article.innerHTML = `<pre class="builder-review-fallback-pre">${esc}</pre>`;
+          }
+          article.hidden = false;
+          details.dataset.brLoaded = "1";
+          delete details.dataset.brLoading;
+          if (loading) loading.hidden = true;
+          if (fallback) fallback.hidden = true;
+        })
+        .catch(() => {
+          delete details.dataset.brLoading;
+          if (loading) loading.hidden = true;
+          if (fallback) fallback.hidden = false;
+        });
+    };
     if (details.open) load();
-  });
+    details.addEventListener("toggle", () => {
+      if (details.open) load();
+    });
+  };
+
+  document.querySelectorAll("details.builder-review-details[data-br-src]").forEach(bindOne);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initBuilderReviewFullMd();
+  initBuilderReviewMarkdown();
   const rawHash = (location.hash || "").replace(/^#/, "");
   if (rawHash === "join") {
     showPage("team");

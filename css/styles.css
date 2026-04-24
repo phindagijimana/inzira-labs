@@ -454,6 +454,10 @@ section h2 {
   text-align: left;
 }
 
+.section-inner .builder-review-details + .builder-review-details {
+  margin-top: 1.25rem;
+}
+
 .builder-review-summary {
   cursor: pointer;
   list-style: none;
