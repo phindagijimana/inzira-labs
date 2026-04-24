@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=28" />
+  <link rel="stylesheet" href="css/styles.css?v=29" />
 </head>
-<body data-inzira-rev="28">
-  <!-- site revision 28 -->
+<body data-inzira-rev="29">
+  <!-- site revision 29 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -176,38 +176,45 @@
     <section class="projects">
       <div class="section-inner">
         <h2>Builder Review</h2>
-        <p class="section-subtitle">
-          Builder Review is an initiative to bring a <strong>builder&rsquo;s perspective</strong> to research papers—with deep
-          respect for the underlying science and the people who did that work. It adds complementary context around
-          <strong>reproducibility</strong>, <strong>interpretability</strong>, and <strong>builder insight</strong> from actually
-          implementing the ideas, and it can be presented in a clear, professional form here.
+        <p class="section-subtitle builder-review-tagline">
+          On the Inzira Labs site, Builder Review is published in a <strong>concise, presentable</strong> format—always with
+          respect for the underlying research. It foregrounds a builder&rsquo;s read on
+          <strong>reproducibility</strong>, <strong>interpretability</strong>, and <strong>practical insight</strong> from
+          implementation; longer notes may also live in the repository with the code.
         </p>
-        <div class="join-card">
-          <p>
-            In practice, the write-up often lives in the same repository as the code, in a document named with the suffix
-            <code>_br.md</code> (&ldquo;br&rdquo; for Builder Review).
-          </p>
-          <h3 class="builder-review-example-title">Implemented examples</h3>
-          <ul class="builder-review-list">
-            <li>
-              <a
-                href="https://github.com/phindagijimana/EBM_implement"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="rd-link-ghost"
-                >EBM_implement</a
-              >
-              (KDE event-based models in temporal lobe epilepsy; see the repo for the paper and setup) —
-              <a
-                href="https://github.com/phindagijimana/EBM_implement/blob/main/EBM_TLE_br.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="rd-link-ghost"
-                >Builder Review: <code>EBM_TLE_br.md</code></a
-              >.
-            </li>
-          </ul>
-        </div>
+        <details class="builder-review-details">
+          <summary class="builder-review-summary">
+            Expand: <code class="builder-review-summary-code">_br.md</code> in repos &amp; an example
+          </summary>
+          <div class="builder-review-details-body">
+            <p class="section-subtitle builder-review-details-lead">
+              Repositories often include a full Builder Review as markdown next to the implementation, usually named
+              <code>_br.md</code> (&ldquo;br&rdquo; = Builder Review).
+            </p>
+            <div class="join-card">
+              <h3 class="builder-review-example-title">Example</h3>
+              <ul class="builder-review-list">
+                <li>
+                  <a
+                    href="https://github.com/phindagijimana/EBM_implement"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="rd-link-ghost"
+                    >EBM_implement</a
+                  >
+                  (TLE event-based modeling) &middot;
+                  <a
+                    href="https://github.com/phindagijimana/EBM_implement/blob/main/EBM_TLE_br.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="rd-link-ghost"
+                    >full review: <code>EBM_TLE_br.md</code></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
   </div>
@@ -420,6 +427,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=28"></script>
+  <script src="js/script.js?v=29"></script>
 </body>
 </html>

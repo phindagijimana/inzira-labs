@@ -460,6 +460,10 @@ section h2 {
   border-radius: 4px;
 }
 
+.builder-review-tagline {
+  line-height: 1.55;
+}
+
 .builder-review-details {
   max-width: 800px;
   margin: 0 auto 1.5rem;
