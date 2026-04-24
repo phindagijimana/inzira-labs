@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inzira Labs | Translating Biomedical Research to Usable Tools</title>
   <meta http-equiv="Cache-Control" content="no-cache" />
-  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
 </head>
-<body data-inzira-rev="8">
-  <!-- inzira-labs static build rev-8: nav has no Downloads tab; installers live under Platforms only -->
+<body data-inzira-rev="11">
+  <!-- Nav: Home, R&amp;D (+platforms in-page), Builder Review, Our Team, News, GitHub. No Platforms/Join tabs. -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -16,18 +16,9 @@
       <ul id="nav-menu">
         <li><a href="#" onclick="goPage('home'); return false;">Home</a></li>
         <li><a href="#" onclick="goPage('rd'); return false;">R&amp;D</a></li>
-        <li><a href="#" onclick="goPage('platforms'); return false;">Platforms</a></li>
-        <li class="nav-more">
-          <details id="nav-more-details">
-            <summary>More</summary>
-            <ul class="nav-more-list" role="list">
-              <li><a href="#" onclick="goPage('team'); return false;">Our Team</a></li>
-              <li><a href="#" onclick="goPage('join'); return false;">Join Us</a></li>
-              <li><a href="#" onclick="goPage('news'); return false;">News</a></li>
-              <li><a href="#" onclick="goPage('builder-review'); return false;">Builder Review</a></li>
-            </ul>
-          </details>
-        </li>
+        <li><a href="#" onclick="goPage('builder-review'); return false;">Builder Review</a></li>
+        <li><a href="#" onclick="goPage('team'); return false;">Our Team</a></li>
+        <li><a href="#" onclick="goPage('news'); return false;">News</a></li>
         <li>
           <a
             href="https://github.com/phindagijimana?tab=repositories"
@@ -56,7 +47,7 @@
         </div>
       </div>
       <div class="hero-cta">
-        <a href="#" onclick="goPage('platforms'); return false;" class="cta-button">Explore Platforms</a>
+        <a href="#" onclick="goPage('rd'); return false;" class="cta-button">Explore R&amp;D &amp; platforms</a>
       </div>
     </section>
 
@@ -106,7 +97,6 @@
           </div>
         </div>
         <p class="rd-cta">
-          <a href="#" onclick="goPage('platforms'); return false;" class="cta-button">See platforms</a>
           <a
             href="https://github.com/phindagijimana?tab=repositories"
             target="_blank"
@@ -117,12 +107,9 @@
         </p>
       </div>
     </section>
-  </div>
-
-  <div id="platforms" class="page">
-    <section class="projects">
+    <section class="projects rd-platforms" id="platforms">
       <div class="section-inner">
-        <h2>Platform Catalog</h2>
+        <h2>Platforms</h2>
         <p class="section-subtitle">
           Choose a platform to start the license request. After approval, verified installers and links appear in the
           <strong>Installers</strong> block below.
@@ -165,6 +152,25 @@
     </section>
   </div>
 
+  <div id="builder-review" class="page">
+    <section class="projects">
+      <div class="section-inner">
+        <h2>Builder Review</h2>
+        <p class="section-subtitle">
+          A structured look at how we design, ship, and evaluate research software: architecture choices, validation, security,
+          and what we learn when tools meet real studies and clinical-adjacent workflows.
+        </p>
+        <div class="join-card">
+          <p>
+            Builder Review posts and notes will highlight trade-offs, benchmarks, and lessons from building platforms like
+            NeuroInsight Research and related pipelines. Content will be linked here as it is published.
+          </p>
+          <p class="builder-placeholder">No published reviews yet—check back soon.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <div id="team" class="page">
     <section class="projects">
       <div class="section-inner">
@@ -177,26 +183,20 @@
             <p class="team-affil">University of Rochester Medical Center (URMC)</p>
           </article>
         </div>
-      </div>
-    </section>
-  </div>
-
-  <div id="join" class="page">
-    <section class="projects">
-      <div class="section-inner">
-        <h2>Join Us</h2>
-        <p class="section-subtitle">
-          We collaborate with research teams, engineers, and clinicians who care about rigorous methods, open science, and
-          tools that survive real-world use. If that sounds like you, we would like to hear from you.
-        </p>
-        <div class="join-card">
-          <p>
-            Share your background, interests, and how you would like to contribute—whether through collaboration, software,
-            or translational projects. We review messages as capacity allows.
+        <div class="team-join" id="join">
+          <p class="team-invite">
+            We collaborate with research teams, engineers, and clinicians who care about rigorous methods, open science, and
+            tools that survive real-world use. If that sounds like you, we would like to hear from you.
           </p>
-          <p class="join-contact">
-            <a href="mailto:inzira-labs@zerogap.tech" class="cta-button">Contact inzira-labs@zerogap.tech</a>
-          </p>
+          <div class="join-card team-join-card">
+            <p>
+              Share your background, interests, and how you would like to contribute—whether through collaboration, software,
+              or translational projects. We review messages as capacity allows.
+            </p>
+            <p class="join-contact">
+              <a href="mailto:inzira-labs@zerogap.tech" class="cta-button">Contact inzira-labs@zerogap.tech</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -222,25 +222,6 @@
             >Repositories on GitHub</a
           >
         </p>
-      </div>
-    </section>
-  </div>
-
-  <div id="builder-review" class="page">
-    <section class="projects">
-      <div class="section-inner">
-        <h2>Builder Review</h2>
-        <p class="section-subtitle">
-          A structured look at how we design, ship, and evaluate research software: architecture choices, validation, security,
-          and what we learn when tools meet real studies and clinical-adjacent workflows.
-        </p>
-        <div class="join-card">
-          <p>
-            Builder Review posts and notes will highlight trade-offs, benchmarks, and lessons from building platforms like
-            NeuroInsight Research and related pipelines. Content will be linked here as it is published.
-          </p>
-          <p class="builder-placeholder">No published reviews yet—check back soon.</p>
-        </div>
       </div>
     </section>
   </div>
@@ -304,6 +285,6 @@
       "https://inzira-labs-license-service.onrender.com/api/license/request"
     ];
   </script>
-  <script src="js/script.js?v=8"></script>
+  <script src="js/script.js?v=11"></script>
 </body>
 </html>

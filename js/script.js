@@ -23,8 +23,6 @@ function showPage(pageId) {
 function goPage(pageId) {
   showPage(pageId);
   closeMenu();
-  const more = document.getElementById("nav-more-details");
-  if (more) more.removeAttribute("open");
 }
 
 function toggleMenu() {
@@ -183,9 +181,17 @@ document.addEventListener("click", (event) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const rawHash = (location.hash || "").replace(/^#/, "");
-  if (rawHash === "downloads") {
-    showPage("platforms");
-    history.replaceState(null, "", `${location.pathname}${location.search}#platforms`);
+  if (rawHash === "join") {
+    showPage("team");
+    requestAnimationFrame(() => document.getElementById("join")?.scrollIntoView({ behavior: "smooth" }));
+  } else if (rawHash === "platforms" || rawHash === "downloads") {
+    showPage("rd");
+    requestAnimationFrame(() => {
+      document.getElementById("platforms")?.scrollIntoView({ behavior: "smooth" });
+      history.replaceState(null, "", `${location.pathname}${location.search}#platforms`);
+    });
+  } else if (rawHash === "rd" || rawHash === "team" || rawHash === "news" || rawHash === "builder-review" || rawHash === "home") {
+    showPage(rawHash);
   }
   setDownloadsGate(loadStoredRecommendedLinks());
 });

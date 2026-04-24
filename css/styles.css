@@ -55,61 +55,6 @@ nav a:hover {
   opacity: 0.7;
 }
 
-nav .nav-more {
-  position: relative;
-}
-
-nav .nav-more summary {
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 0.95rem;
-  list-style: none;
-  color: #000;
-}
-
-nav .nav-more summary::-webkit-details-marker {
-  display: none;
-}
-
-nav .nav-more-list {
-  list-style: none;
-  margin: 0.35rem 0 0 0.6rem;
-  padding: 0;
-}
-
-nav .nav-more-list a {
-  display: block;
-  padding: 0.25rem 0;
-}
-
-@media (min-width: 801px) {
-  nav .nav-more-list {
-    position: absolute;
-    right: 0;
-    top: 100%;
-    margin: 0.4rem 0 0 0;
-    padding: 0.4rem 0;
-    min-width: 12rem;
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    z-index: 1001;
-  }
-
-  nav .nav-more-list li {
-    margin: 0;
-  }
-
-  nav .nav-more-list a {
-    padding: 0.45rem 1rem;
-  }
-
-  nav .nav-more-list a:hover {
-    background: #f5f5f5;
-  }
-}
-
 .menu-toggle {
   display: none;
   background: none;
@@ -257,6 +202,30 @@ section h2 {
 
 .rd-section {
   background: #f5f5f5;
+}
+
+.rd-platforms {
+  border-top: 1px solid #e0e0e0;
+}
+
+.team-join {
+  max-width: 720px;
+  margin: 2.5rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.team-invite {
+  text-align: center;
+  color: #444;
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+  line-height: 1.6;
+  font-size: 1.02rem;
+}
+
+.team-join-card {
+  margin-top: 0.25rem;
 }
 
 .rd-pillars {
