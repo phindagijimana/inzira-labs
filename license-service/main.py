@@ -465,6 +465,11 @@ def log_request(req: LicenseRequest, ok: bool, error: str = "", client_ip: str =
     )
 
 
+@app.get("/")
+async def root() -> dict:
+    return {"service": "NI license service", "ok": True}
+
+
 @app.get("/health")
 async def health() -> dict:
     return {"ok": True}
