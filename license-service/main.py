@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, EmailStr, Field
 
 load_dotenv()
@@ -465,11 +466,6 @@ def log_request(req: LicenseRequest, ok: bool, error: str = "", client_ip: str =
     )
 
 
-@app.get("/")
-async def root() -> dict:
-    return {"service": "NI license service", "ok": True}
-
-
 @app.get("/health")
 async def health() -> dict:
     return {"ok": True}
@@ -561,6 +557,13 @@ async def request_license(req: LicenseRequest, request: Request) -> dict:
             client_ip=request.client.host if request.client else "",
         )
         raise HTTPException(status_code=502, detail=f"License dispatch failed: {exc}") from exc
+
+
+# Serve the Inzira Labs static website (repo root) from the same service.
+# Mounted LAST so API routes (/health, /api/..., /download/...) are matched first.
+# html=True makes "/" serve index.html and resolve directory paths.
+SITE_DIR = Path(__file__).resolve().parent.parent
+app.mount("/", StaticFiles(directory=str(SITE_DIR), html=True), name="site")
 
 
 if __name__ == "__main__":

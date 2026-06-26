@@ -50,6 +50,9 @@ function getLicenseServiceEndpoints() {
     return [window.INZIRA_LICENSE_ENDPOINT];
   }
   return [
+    // Same-origin: when the site is served by the license backend (e.g. Railway),
+    // this posts to the serving host with no hardcoded domain or CORS.
+    "/api/license/request",
     "https://license.inzira-labs.com/api/license/request",
     "https://inzira-labs-license-service.onrender.com/api/license/request",
   ];
