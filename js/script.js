@@ -5,7 +5,7 @@ const PLATFORM_GATES = {
   "nir-desktop": {
     statusId: "downloads-gate-status",
     boxId: "downloads-unlocked-links",
-    product: "NIR",
+    product: "NI",
   },
   bidshub: {
     statusId: "bidshub-gate-status",
@@ -208,7 +208,7 @@ async function submitLicenseRequest(event) {
     );
     const osLabel = (payload.targetOS || "").toString().trim().toLowerCase();
     const osMap = { linux: "Linux", windows: "Windows", macos: "macOS" };
-    const productLabel = platform === "bidshub" ? "BIDSHub" : "NIR";
+    const productLabel = platform === "bidshub" ? "BIDSHub" : "NI";
     const baseTitle = `verified ${productLabel} (verify, then use)`;
     const osTitle = osMap[osLabel] ? `${osMap[osLabel]} — ${baseTitle}` : `Verified ${productLabel} (verify, then use)`;
     renderRecommendedLinksBox(recEl, recommendedLinks, osTitle);
