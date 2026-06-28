@@ -562,8 +562,42 @@ async def request_license(req: LicenseRequest, request: Request) -> dict:
 # Serve the Inzira Labs static website (repo root) from the same service.
 # Mounted LAST so API routes (/health, /api/..., /download/...) are matched first.
 # html=True makes "/" serve index.html and resolve directory paths.
-SITE_DIR = Path(__file__).resolve().parent.parent
-app.mount("/", StaticFiles(directory=str(SITE_DIR), html=True), name="site")
+#
+# Robust resolution: depending on how Railway is configured (repo-root build with
+# --app-dir, vs. a "license-service" Root Directory), index.html may sit one or two
+# levels up from this file, or alongside it. Pick the first candidate that actually
+# contains index.html. Never let a missing directory crash startup -- StaticFiles
+# raises at import time if the directory is absent, which would brick /health and
+# fail Railway's healthcheck. If no site dir is found we log and skip the mount so
+# the API stays up and the Deploy logs show what was searched.
+def _resolve_site_dir() -> Optional[Path]:
+    here = Path(__file__).resolve()
+    candidates = [
+        here.parent.parent,            # repo root (repo-root build + --app-dir)
+        Path.cwd(),                    # process working dir
+        here.parent,                   # license-service/ itself
+    ]
+    for cand in candidates:
+        if (cand / "index.html").is_file():
+            return cand
+    return None
+
+
+_site_dir = _resolve_site_dir()
+if _site_dir is not None:
+    print(f"[startup] Serving static site from: {_site_dir}", flush=True)
+    app.mount("/", StaticFiles(directory=str(_site_dir), html=True), name="site")
+else:
+    searched = [
+        str(Path(__file__).resolve().parent.parent),
+        str(Path.cwd()),
+        str(Path(__file__).resolve().parent),
+    ]
+    print(
+        "[startup] WARNING: index.html not found; static site NOT mounted. "
+        f"Searched: {searched}. cwd contents: {[p.name for p in Path.cwd().iterdir()]}",
+        flush=True,
+    )
 
 
 if __name__ == "__main__":
