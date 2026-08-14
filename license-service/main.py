@@ -18,6 +18,8 @@ from fastapi.responses import Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, EmailStr, Field
 
+from news_feed import get_news_feed
+
 load_dotenv()
 
 RESEND_API_KEY = os.getenv("RESEND_API_KEY", "").strip()
@@ -469,6 +471,11 @@ def log_request(req: LicenseRequest, ok: bool, error: str = "", client_ip: str =
 @app.get("/health")
 async def health() -> dict:
     return {"ok": True}
+
+
+@app.get("/api/news/feed")
+async def api_news_feed(refresh: bool = False) -> dict:
+    return await get_news_feed(force_refresh=refresh)
 
 
 @app.get("/download/{token}")

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-14T20:40:16Z",
+  "fetchedAt": "2026-08-14T20:42:59Z",
   "itemCount": 36,
   "items": [
     {
@@ -8,13 +8,6 @@
       "date": "2026-08-14",
       "source": "arXiv cs.CV",
       "filter": "methods"
-    },
-    {
-      "title": "The Spatial Divergence of Hypometabolism and Atrophy in Mesial Temporal Lobe Epilepsy: Combining (18)F-FDG PET and Structural MRI for Predicting Postoperative Seizure Freedom.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42592784/",
-      "date": "2026-08-01",
-      "source": "Human Brain Mapping",
-      "filter": "neuroimaging"
     },
     {
       "title": "Learning Class Difficulty via Dynamic Focal Attention for Histopathology Segmentation",
@@ -29,20 +22,6 @@
       "date": "2026-08-14",
       "source": "arXiv q-bio.NC",
       "filter": "methods"
-    },
-    {
-      "title": "Comparison of the Relationships Between Body Size and Cardiorespiratory Fitness With High Frequency Head-Motion Contamination in fMRI.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42578518/",
-      "date": "2026-08-01",
-      "source": "Human Brain Mapping",
-      "filter": "neuroimaging"
-    },
-    {
-      "title": "Optimising 7T-fMRI for Imaging Regions of Magnetic Susceptibility.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42574053/",
-      "date": "2026-08-01",
-      "source": "Human Brain Mapping",
-      "filter": "neuroimaging"
     },
     {
       "title": "Improved visualization and segmentation of the choroid plexus using double inversion recovery MRI",
@@ -253,10 +232,29 @@
       "date": "2026-08-14",
       "source": "arXiv cs.LG",
       "filter": "methods"
+    },
+    {
+      "title": "EEG Decoding Using CNN and LSTM Network",
+      "url": "https://arxiv.org/abs/2608.13285",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "Evaluation Resolution Confounds Learning-Rule Comparisons in Model-Brain RSA of Early Visual Cortex",
+      "url": "https://arxiv.org/abs/2608.12408",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "Analysis of Motor Signatures of Social Adaptation in Autism for Efficient Human-Centric Systems",
+      "url": "https://arxiv.org/abs/2608.12548",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     }
   ],
   "authorItems": [],
-  "errors": [
-    "RSS bioRxiv neuroscience: The read operation timed out"
-  ]
+  "live": true
 }

@@ -9,10 +9,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=60" />
+  <link rel="stylesheet" href="css/styles.css?v=61" />
 </head>
-<body data-inzira-rev="60">
-  <!-- site revision 60 -->
+<body data-inzira-rev="61">
+  <!-- site revision 61 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -861,22 +861,31 @@
       <div class="section-inner">
         <h2>News</h2>
         <p class="section-subtitle">
-          Inzira Labs updates and a curated directory of third-party sources for NIH news, peer-reviewed journals, and
-          work at the intersection of <strong>AI</strong>, <strong>neuroimaging</strong>, and
+          Inzira Labs updates, live headlines from RSS and PubMed, and a curated source directory for NIH news,
+          peer-reviewed journals, and work at the intersection of <strong>AI</strong>, <strong>neuroimaging</strong>, and
           <strong>clinical translation</strong>.
         </p>
 
         <h3 class="news-section-label">From Inzira Labs</h3>
         <ul class="news-list" id="news-announcements" aria-live="polite"></ul>
 
-        <h3 class="news-section-label">Field sources</h3>
-        <p class="news-field-note">
-          Third-party journals, funders, and indexes. Links open in a new tab; we do not curate or endorse individual
-          articles.
-        </p>
+        <div class="news-live" id="news-live">
+          <div class="news-live-header">
+            <h3 class="news-section-label news-section-label--tight">Field watch</h3>
+            <p class="news-live-meta" id="news-live-meta">Loading headlines…</p>
+          </div>
+          <p class="news-field-note">
+            Live headlines from RSS and PubMed across the sources below. Third-party content; not curated or endorsed.
+          </p>
+          <div class="news-filters" id="news-filters" role="tablist" aria-label="Filter headlines and sources"></div>
+          <p class="news-feed-status hidden" id="news-feed-status" aria-live="polite"></p>
+          <div class="news-headline-grid" id="news-headline-grid"></div>
+          <button type="button" class="news-feed-more hidden" id="news-feed-more">Show more</button>
+        </div>
+
         <div class="news-catalog" id="news-catalog" hidden>
+          <h3 class="news-section-label">Source directory</h3>
           <p class="news-catalog-meta" id="news-catalog-meta"></p>
-          <div class="news-filters" id="news-filters" role="tablist" aria-label="Filter field sources"></div>
           <div class="news-source-grid" id="news-source-grid"></div>
         </div>
         <p class="news-catalog-loading" id="news-catalog-loading">Loading sources…</p>
@@ -885,16 +894,6 @@
           <a href="https://github.com/phindagijimana?tab=repositories" target="_blank" rel="noopener noreferrer" class="rd-link-ghost">GitHub</a>
           remains available in the meantime.
         </p>
-
-        <details class="news-feed-panel" id="news-feed-panel" hidden>
-          <summary class="news-feed-summary">Recent headlines</summary>
-          <p class="news-feed-note">
-            Auto-fetched from RSS and PubMed for sources above. Third-party content; not curated or endorsed.
-          </p>
-          <p class="news-feed-meta" id="news-feed-meta"></p>
-          <ul class="news-feed-list" id="news-feed-list"></ul>
-          <button type="button" class="news-feed-more hidden" id="news-feed-more">Show more</button>
-        </details>
       </div>
     </section>
   </div>
@@ -960,6 +959,6 @@
   </script>
   <script src="js/vendor/purify.min.js"></script>
   <script src="js/vendor/marked.min.js"></script>
-  <script src="js/script.js?v=60"></script>
+  <script src="js/script.js?v=61"></script>
 </body>
 </html>

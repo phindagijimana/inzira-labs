@@ -58,11 +58,16 @@ function getLicenseServiceEndpoints() {
   ];
 }
 
+let newsPageRefresh = null;
+
 function showPage(pageId) {
   document.querySelectorAll(".page").forEach((page) => page.classList.remove("active"));
   const page = document.getElementById(pageId);
   if (page) page.classList.add("active");
   window.scrollTo(0, 0);
+  if (pageId === "news" && typeof newsPageRefresh === "function") {
+    newsPageRefresh(false);
+  }
 }
 
 function goPage(pageId) {
@@ -301,16 +306,21 @@ function initNewsSection() {
   const gridEl = document.getElementById("news-source-grid");
   const loadingEl = document.getElementById("news-catalog-loading");
   const errorEl = document.getElementById("news-catalog-error");
-  const feedPanelEl = document.getElementById("news-feed-panel");
-  const feedMetaEl = document.getElementById("news-feed-meta");
-  const feedListEl = document.getElementById("news-feed-list");
+  const liveMetaEl = document.getElementById("news-live-meta");
+  const feedStatusEl = document.getElementById("news-feed-status");
+  const headlineGridEl = document.getElementById("news-headline-grid");
   const feedMoreEl = document.getElementById("news-feed-more");
-  if (!announcementsEl || !catalogEl || !gridEl) return;
+  if (!announcementsEl || !catalogEl || !gridEl || !headlineGridEl) return;
 
   let feedItems = [];
+  let feedFetchedAt = null;
+  let feedLive = false;
   let activeFilter = "all";
   let feedExpanded = false;
-  const FEED_PREVIEW = 10;
+  let feedLoading = false;
+  let manualAnnouncements = [];
+  const FEED_PREVIEW = 12;
+  const FEED_REFRESH_MS = 30 * 60 * 1000;
 
   const fetchJson = (path) =>
     fetch(path, { cache: "no-cache" }).then((r) => {
@@ -366,10 +376,10 @@ function initNewsSection() {
     return li;
   };
 
-  const renderAnnouncements = (manualItems, authorItems) => {
+  const renderAnnouncements = (authorItems) => {
     announcementsEl.innerHTML = "";
     const seenTitles = [];
-    manualItems.forEach((item) => {
+    manualAnnouncements.forEach((item) => {
       announcementsEl.appendChild(renderAnnouncementItem(item));
       const plain = item.bodyHtml ? item.bodyHtml.replace(/<[^>]+>/g, " ") : item.title || "";
       seenTitles.push(plain);
@@ -388,58 +398,70 @@ function initNewsSection() {
     });
   };
 
-  const formatFeedUpdated = (iso) => {
+  const formatRelativeTime = (iso) => {
     if (!iso) return "";
     const dt = new Date(iso);
     if (Number.isNaN(dt.getTime())) return "";
-    return dt.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+    const sec = Math.floor((Date.now() - dt.getTime()) / 1000);
+    if (sec < 90) return "just now";
+    if (sec < 3600) return `${Math.floor(sec / 60)}m ago`;
+    if (sec < 86400) return `${Math.floor(sec / 3600)}h ago`;
+    return dt.toLocaleDateString(undefined, { month: "short", day: "numeric" });
   };
 
-  const renderFeed = () => {
-    if (!feedPanelEl || !feedListEl) return;
+  const updateLiveMeta = (filteredCount) => {
+    if (!liveMetaEl) return;
+    const parts = [`${filteredCount} headline${filteredCount === 1 ? "" : "s"}`];
+    if (feedFetchedAt) {
+      parts.push(`Updated ${formatRelativeTime(feedFetchedAt)}`);
+    }
+    if (feedLive) {
+      parts.push("Live");
+    }
+    liveMetaEl.textContent = parts.join(" · ");
+  };
+
+  const renderHeadlines = () => {
     const filtered =
       activeFilter === "all" ? feedItems : feedItems.filter((item) => item.filter === activeFilter);
     const visible = feedExpanded ? filtered : filtered.slice(0, FEED_PREVIEW);
 
-    if (feedMetaEl) {
-      const updated = formatFeedUpdated(feedPanelEl.dataset.fetchedAt);
-      feedMetaEl.textContent = updated
-        ? `Updated ${updated} · ${filtered.length} headline${filtered.length === 1 ? "" : "s"}`
-        : `${filtered.length} headline${filtered.length === 1 ? "" : "s"}`;
+    headlineGridEl.innerHTML = "";
+    if (!filtered.length) {
+      const empty = document.createElement("p");
+      empty.className = "news-headline-empty";
+      empty.textContent =
+        activeFilter === "all"
+          ? "No headlines in the last two weeks. Check back after the next refresh."
+          : "No headlines in this category right now.";
+      headlineGridEl.appendChild(empty);
+    } else {
+      visible.forEach((item) => {
+        const card = document.createElement("a");
+        card.className = "news-headline-card";
+        card.href = item.url;
+        card.target = "_blank";
+        card.rel = "noopener noreferrer";
+        const badge = document.createElement("span");
+        badge.className = "news-headline-badge";
+        badge.textContent = item.source || "Source";
+        const title = document.createElement("h4");
+        title.textContent = item.title;
+        const meta = document.createElement("p");
+        meta.className = "news-headline-meta";
+        meta.textContent = [item.date, item.source].filter(Boolean).join(" · ");
+        card.append(badge, title, meta);
+        headlineGridEl.appendChild(card);
+      });
     }
 
-    feedListEl.innerHTML = "";
-    visible.forEach((item) => {
-      const li = document.createElement("li");
-      if (item.date) {
-        const when = document.createElement("span");
-        when.className = "news-feed-date";
-        when.textContent = item.date;
-        li.appendChild(when);
-      }
-      const a = document.createElement("a");
-      a.href = item.url;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.className = "rd-link-ghost";
-      a.textContent = item.title;
-      li.appendChild(a);
-      if (item.source) {
-        const src = document.createElement("span");
-        src.className = "news-feed-source";
-        src.textContent = ` · ${item.source}`;
-        li.appendChild(src);
-      }
-      feedListEl.appendChild(li);
-    });
+    updateLiveMeta(filtered.length);
 
     if (feedMoreEl) {
       const showMore = filtered.length > FEED_PREVIEW;
       feedMoreEl.classList.toggle("hidden", !showMore);
       feedMoreEl.textContent = feedExpanded ? "Show fewer" : "Show more";
     }
-
-    feedPanelEl.hidden = feedItems.length === 0;
   };
 
   const applyFilter = (filterId) => {
@@ -454,35 +476,75 @@ function initNewsSection() {
       const show = filterId === "all" || card.dataset.filter === filterId;
       card.classList.toggle("is-hidden", !show);
     });
-    renderFeed();
+    renderHeadlines();
   };
 
+  const applyFeedPayload = (feedData) => {
+    feedItems = Array.isArray(feedData.items) ? feedData.items : [];
+    feedFetchedAt = feedData.fetchedAt || null;
+    feedLive = Boolean(feedData.live);
+    renderAnnouncements(Array.isArray(feedData.authorItems) ? feedData.authorItems : []);
+    renderHeadlines();
+    if (feedStatusEl) {
+      if (feedData.refreshError) {
+        feedStatusEl.textContent = "Showing cached headlines; live refresh unavailable.";
+        feedStatusEl.classList.remove("hidden");
+      } else {
+        feedStatusEl.classList.add("hidden");
+        feedStatusEl.textContent = "";
+      }
+    }
+  };
+
+  const loadLiveFeed = async (forceRefresh = false) => {
+    if (feedLoading) return;
+    feedLoading = true;
+    if (feedStatusEl && forceRefresh) {
+      feedStatusEl.textContent = "Refreshing headlines…";
+      feedStatusEl.classList.remove("hidden");
+    }
+    const endpoints = [
+      `/api/news/feed${forceRefresh ? "?refresh=1" : ""}`,
+      "content/news-feed.json",
+    ];
+    for (const endpoint of endpoints) {
+      try {
+        const data = await fetchJson(endpoint);
+        applyFeedPayload(data);
+        feedLoading = false;
+        return;
+      } catch {
+        // try next source
+      }
+    }
+    feedLoading = false;
+    if (feedStatusEl) {
+      feedStatusEl.textContent = "Headlines could not be loaded.";
+      feedStatusEl.classList.remove("hidden");
+    }
+  };
+
+  newsPageRefresh = loadLiveFeed;
   feedMoreEl?.addEventListener("click", () => {
     feedExpanded = !feedExpanded;
-    renderFeed();
+    renderHeadlines();
   });
 
-  let manualAnnouncements = [];
-  let authorAnnouncements = [];
-
-  Promise.all([
-    fetchJson("content/news-announcements.json").catch(() => []),
-    fetchJson("content/news-feed.json").catch(() => ({})),
-  ])
-    .then(([manual, feedData]) => {
+  fetchJson("content/news-announcements.json")
+    .then((manual) => {
       manualAnnouncements = Array.isArray(manual) ? manual : [];
-      authorAnnouncements = Array.isArray(feedData.authorItems) ? feedData.authorItems : [];
-      renderAnnouncements(manualAnnouncements, authorAnnouncements);
-      feedItems = Array.isArray(feedData.items) ? feedData.items : [];
-      if (feedPanelEl && feedData.fetchedAt) {
-        feedPanelEl.dataset.fetchedAt = feedData.fetchedAt;
-      }
-      renderFeed();
+      loadLiveFeed(false);
     })
     .catch(() => {
-      announcementsEl.innerHTML =
-        '<li class="news-item"><span class="news-date">Inzira Labs</span><p>Announcements could not be loaded.</p></li>';
+      manualAnnouncements = [];
+      loadLiveFeed(false);
     });
+
+  setInterval(() => {
+    if (document.getElementById("news")?.classList.contains("active")) {
+      loadLiveFeed(false);
+    }
+  }, FEED_REFRESH_MS);
 
   fetchJson("content/news-sources.json")
     .then((data) => {
