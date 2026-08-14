@@ -293,8 +293,157 @@ function initBuilderReviewMarkdown() {
   document.querySelectorAll("details.builder-review-details[data-br-src]").forEach(bindOne);
 }
 
+function initNewsSection() {
+  const announcementsEl = document.getElementById("news-announcements");
+  const catalogEl = document.getElementById("news-catalog");
+  const metaEl = document.getElementById("news-catalog-meta");
+  const filtersEl = document.getElementById("news-filters");
+  const gridEl = document.getElementById("news-source-grid");
+  const loadingEl = document.getElementById("news-catalog-loading");
+  const errorEl = document.getElementById("news-catalog-error");
+  if (!announcementsEl || !catalogEl || !gridEl) return;
+
+  const fetchJson = (path) =>
+    fetch(path, { cache: "no-cache" }).then((r) => {
+      if (!r.ok) throw new Error("load failed");
+      return r.json();
+    });
+
+  fetchJson("content/news-announcements.json")
+    .then((items) => {
+      announcementsEl.innerHTML = "";
+      (Array.isArray(items) ? items : []).forEach((item) => {
+        const li = document.createElement("li");
+        li.className = "news-item";
+        const dateLine = document.createElement("span");
+        dateLine.className = "news-date";
+        if (item.tag) {
+          const tag = document.createElement("span");
+          tag.className = "news-tag";
+          tag.textContent = item.tag;
+          dateLine.appendChild(tag);
+        }
+        dateLine.append(document.createTextNode(item.date || ""));
+        const body = document.createElement("p");
+        body.innerHTML = item.bodyHtml || "";
+        li.append(dateLine, body);
+        announcementsEl.appendChild(li);
+      });
+    })
+    .catch(() => {
+      announcementsEl.innerHTML =
+        '<li class="news-item"><span class="news-date">Inzira Labs</span><p>Announcements could not be loaded.</p></li>';
+    });
+
+  fetchJson("content/news-sources.json")
+    .then((data) => {
+      const categories = Array.isArray(data.categories) ? data.categories : [];
+      const filters = Array.isArray(data.filters) ? data.filters : [{ id: "all", label: "All" }];
+      const totalLinks = categories.reduce((n, cat) => n + (cat.links?.length || 0), 0);
+
+      if (metaEl) {
+        metaEl.textContent = `${categories.length} categories · ${totalLinks} sources`;
+      }
+
+      filtersEl.innerHTML = "";
+      filters.forEach((filter, index) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `news-filter${index === 0 ? " is-active" : ""}`;
+        btn.textContent = filter.label;
+        btn.dataset.filter = filter.id;
+        btn.setAttribute("role", "tab");
+        btn.setAttribute("aria-selected", index === 0 ? "true" : "false");
+        filtersEl.appendChild(btn);
+      });
+
+      gridEl.innerHTML = "";
+      categories.forEach((cat) => {
+        const card = document.createElement("article");
+        card.className = "news-source-card";
+        card.dataset.filter = cat.filter || cat.id;
+
+        const head = document.createElement("div");
+        head.className = "news-source-card-head";
+        const title = document.createElement("h4");
+        title.textContent = cat.title || "";
+        const badge = document.createElement("span");
+        badge.className = "news-source-badge";
+        badge.textContent = cat.badge || "Source";
+        head.append(title, badge);
+
+        const desc = document.createElement("p");
+        desc.className = "news-source-desc";
+        desc.textContent = cat.description || "";
+
+        const meta = document.createElement("p");
+        meta.className = "news-source-meta";
+        const linkCount = cat.links?.length || 0;
+        meta.textContent = `${linkCount} source${linkCount === 1 ? "" : "s"}`;
+
+        card.append(head, desc, meta);
+
+        if (linkCount) {
+          const details = document.createElement("details");
+          details.className = "news-source-details";
+          const summary = document.createElement("summary");
+          summary.textContent = "Browse links";
+          const list = document.createElement("ul");
+          list.className = "news-source-links";
+          cat.links.forEach((link) => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = link.url;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            a.className = "rd-link-ghost";
+            a.textContent = link.label;
+            li.appendChild(a);
+            if (link.note) {
+              const note = document.createElement("span");
+              note.className = "news-source-link-note";
+              note.textContent = ` (${link.note})`;
+              li.appendChild(note);
+            }
+            list.appendChild(li);
+          });
+          details.append(summary, list);
+          card.appendChild(details);
+        }
+
+        gridEl.appendChild(card);
+      });
+
+      const applyFilter = (filterId) => {
+        filtersEl.querySelectorAll(".news-filter").forEach((btn) => {
+          const active = btn.dataset.filter === filterId;
+          btn.classList.toggle("is-active", active);
+          btn.setAttribute("aria-selected", active ? "true" : "false");
+        });
+        gridEl.querySelectorAll(".news-source-card").forEach((card) => {
+          const show = filterId === "all" || card.dataset.filter === filterId;
+          card.classList.toggle("is-hidden", !show);
+        });
+      };
+
+      filtersEl.addEventListener("click", (event) => {
+        const btn = event.target.closest(".news-filter");
+        if (!btn) return;
+        applyFilter(btn.dataset.filter || "all");
+      });
+
+      loadingEl?.classList.add("hidden");
+      catalogEl.hidden = false;
+    })
+    .catch(() => {
+      loadingEl?.classList.add("hidden");
+      errorEl?.classList.remove("hidden");
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initBuilderReviewMarkdown();
+  initNewsSection();
   const rawHash = (location.hash || "").replace(/^#/, "");
   if (rawHash === "join") {
     showPage("team");

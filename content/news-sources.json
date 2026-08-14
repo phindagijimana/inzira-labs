@@ -1,0 +1,208 @@
+{
+  "filters": [
+    { "id": "all", "label": "All" },
+    { "id": "nih", "label": "NIH & preprints" },
+    { "id": "neurology", "label": "Neurology" },
+    { "id": "neuroimaging", "label": "Neuroimaging" },
+    { "id": "neuro-oncology", "label": "Neuro-oncology" },
+    { "id": "bioinformatics", "label": "Bioinformatics" },
+    { "id": "nature", "label": "Nature" },
+    { "id": "general-medicine", "label": "General medicine" },
+    { "id": "methods", "label": "Methods & feeds" }
+  ],
+  "categories": [
+    {
+      "id": "nih",
+      "filter": "nih",
+      "title": "NIH, PubMed & preprints",
+      "badge": "Funder & index",
+      "description": "Official NIH news, literature search, and major preprint servers.",
+      "links": [
+        { "label": "NIH — News & events", "url": "https://www.nih.gov/news-events" },
+        { "label": "NIH Research Matters", "url": "https://www.nih.gov/news-events/nih-research-matters" },
+        { "label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/", "note": "Literature search" },
+        {
+          "label": "PubMed alerts & saved searches",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/help/",
+          "note": "NCBI sign-in required"
+        },
+        { "label": "bioRxiv", "url": "https://www.biorxiv.org/", "note": "Preprints" },
+        { "label": "medRxiv", "url": "https://www.medrxiv.org/", "note": "Preprints" }
+      ]
+    },
+    {
+      "id": "neurology",
+      "filter": "neurology",
+      "title": "Neurology & epilepsy",
+      "badge": "Journals",
+      "description": "JAMA Neurology, AAN Neurology, Epilepsia, Brain, and related titles.",
+      "links": [
+        {
+          "label": "JAMA Neurology",
+          "url": "https://jamanetwork.com/journals/jamaneurology",
+          "note": "American Medical Association"
+        },
+        { "label": "Neurology", "url": "https://n.neurology.org/", "note": "American Academy of Neurology" },
+        {
+          "label": "Epilepsia",
+          "url": "https://onlinelibrary.wiley.com/journal/15281167",
+          "note": "International League Against Epilepsy, Wiley"
+        },
+        { "label": "Brain", "url": "https://academic.oup.com/brain", "note": "Oxford University Press" },
+        { "label": "Annals of Neurology", "url": "https://onlinelibrary.wiley.com/journal/15318249", "note": "Wiley" }
+      ]
+    },
+    {
+      "id": "neuroimaging",
+      "filter": "neuroimaging",
+      "title": "Neuroimaging journals",
+      "badge": "Journals",
+      "description": "Structural and clinical neuroimaging across major society and society-affiliated journals.",
+      "links": [
+        { "label": "NeuroImage", "url": "https://www.sciencedirect.com/journal/neuroimage", "note": "Elsevier" },
+        { "label": "Human Brain Mapping", "url": "https://onlinelibrary.wiley.com/journal/10970193", "note": "Wiley" },
+        {
+          "label": "NeuroImage: Clinical",
+          "url": "https://www.sciencedirect.com/journal/neuroimage-clinical",
+          "note": "Open access companion"
+        },
+        { "label": "AJNR", "url": "https://www.ajnr.org/", "note": "American Journal of Neuroradiology" },
+        { "label": "Radiology", "url": "https://pubs.rsna.org/journal/radiology", "note": "RSNA" },
+        { "label": "European Radiology", "url": "https://link.springer.com/journal/330", "note": "Springer" }
+      ]
+    },
+    {
+      "id": "neuro-oncology",
+      "filter": "neuro-oncology",
+      "title": "Neuro-oncology & imaging AI",
+      "badge": "Journals",
+      "description": "Neuro-oncology, precision oncology, and imaging informatics with ML focus.",
+      "links": [
+        {
+          "label": "Neuro-Oncology",
+          "url": "https://academic.oup.com/neuro-oncology",
+          "note": "Society for Neuro-Oncology, Oxford University Press"
+        },
+        { "label": "Journal of Neuro-Oncology", "url": "https://link.springer.com/journal/11060", "note": "Springer" },
+        { "label": "Neuro-Oncology Advances", "url": "https://academic.oup.com/noa", "note": "Open access companion" },
+        { "label": "Neuro-Oncology Practice", "url": "https://academic.oup.com/nop" },
+        {
+          "label": "npj Precision Oncology",
+          "url": "https://www.nature.com/npjponc/",
+          "note": "Nature Partner Journal"
+        },
+        { "label": "Neuroinformatics", "url": "https://link.springer.com/journal/12021", "note": "Springer" },
+        {
+          "label": "Frontiers in Neuroinformatics",
+          "url": "https://www.frontiersin.org/journals/neuroinformatics"
+        },
+        {
+          "label": "Computerized Medical Imaging and Graphics",
+          "url": "https://www.sciencedirect.com/journal/computerized-medical-imaging-and-graphics",
+          "note": "Elsevier"
+        }
+      ]
+    },
+    {
+      "id": "bioinformatics",
+      "filter": "bioinformatics",
+      "title": "Bioinformatics & multi-omics",
+      "badge": "Journals",
+      "description": "Computational biology, genomics, precision medicine, and drug-discovery methods.",
+      "links": [
+        { "label": "Bioinformatics", "url": "https://academic.oup.com/bioinformatics", "note": "OUP" },
+        { "label": "Briefings in Bioinformatics", "url": "https://academic.oup.com/bib" },
+        { "label": "PLOS Computational Biology", "url": "https://journals.plos.org/ploscompbiol" },
+        { "label": "Nucleic Acids Research", "url": "https://academic.oup.com/nar" },
+        { "label": "GigaScience", "url": "https://academic.oup.com/gigascience" },
+        { "label": "Nature Genetics", "url": "https://www.nature.com/ng/" },
+        { "label": "Nature Biotechnology", "url": "https://www.nature.com/nbt" },
+        { "label": "Genome Research", "url": "https://genome.cshlp.org/", "note": "Cold Spring Harbor Press" },
+        { "label": "Genome Biology", "url": "https://genomebiology.biomedcentral.com", "note": "BMC" },
+        { "label": "G3: Genes|Genomes|Genetics", "url": "https://academic.oup.com/g3journal" },
+        { "label": "Cell Genomics", "url": "https://www.cell.com/cell-genomics", "note": "Cell Press" },
+        { "label": "Proteomics", "url": "https://onlinelibrary.wiley.com/journal/16159853", "note": "Wiley" },
+        { "label": "Nature Reviews Genetics", "url": "https://www.nature.com/nrg/" },
+        { "label": "Cell Systems", "url": "https://www.cell.com/cell-systems" },
+        { "label": "PLOS Biology", "url": "https://journals.plos.org/plosbiology" },
+        { "label": "npj Genomic Medicine", "url": "https://www.nature.com/npjgenmed/" },
+        { "label": "Genome Medicine", "url": "https://genomemedicine.biomedcentral.com", "note": "BMC" },
+        {
+          "label": "Journal of Biomedical Informatics",
+          "url": "https://www.sciencedirect.com/journal/journal-of-biomedical-informatics",
+          "note": "Elsevier"
+        },
+        { "label": "Nature Reviews Drug Discovery", "url": "https://www.nature.com/nrd/" },
+        { "label": "Drug Discovery Today", "url": "https://www.sciencedirect.com/journal/drug-discovery-today" },
+        { "label": "Journal of Cheminformatics", "url": "https://jcheminf.biomedcentral.com", "note": "BMC" }
+      ]
+    },
+    {
+      "id": "nature",
+      "filter": "nature",
+      "title": "Nature Research",
+      "badge": "Journals",
+      "description": "Flagship Nature titles in neuroscience, medicine, methods, and machine intelligence.",
+      "links": [
+        { "label": "Nature", "url": "https://www.nature.com/" },
+        { "label": "Nature Neuroscience", "url": "https://www.nature.com/neuro/" },
+        { "label": "Nature Medicine", "url": "https://www.nature.com/nm/" },
+        { "label": "Nature Communications", "url": "https://www.nature.com/ncomms/" },
+        { "label": "Nature Methods", "url": "https://www.nature.com/nmeth/" },
+        { "label": "Nature Biomedical Engineering", "url": "https://www.nature.com/natbiomedeng/" },
+        { "label": "Nature Machine Intelligence", "url": "https://www.nature.com/natmachintell/" },
+        { "label": "npj Digital Medicine", "url": "https://www.nature.com/npjdigitalmed/" }
+      ]
+    },
+    {
+      "id": "general-medicine",
+      "filter": "general-medicine",
+      "title": "High-impact general medicine",
+      "badge": "Journals",
+      "description": "Science, Cell, JAMA, NEJM, The Lancet, BMJ, and related clinical titles.",
+      "links": [
+        { "label": "Science", "url": "https://www.science.org/journal/science" },
+        { "label": "Science Translational Medicine", "url": "https://www.science.org/journal/scitranslmed" },
+        { "label": "Cell", "url": "https://www.cell.com/cell" },
+        { "label": "cell.com (Cell Press family)", "url": "https://www.cell.com/" },
+        { "label": "JAMA", "url": "https://jamanetwork.com/journals/jama" },
+        { "label": "NEJM", "url": "https://www.nejm.org/" },
+        { "label": "The Lancet", "url": "https://www.thelancet.com/" },
+        { "label": "The BMJ", "url": "https://www.bmj.com/" },
+        {
+          "label": "Radiology: Artificial Intelligence",
+          "url": "https://pubs.rsna.org/journal/ai",
+          "note": "RSNA; imaging AI"
+        },
+        { "label": "Stroke", "url": "https://www.ahajournals.org/journal/str", "note": "AHA/ASA" }
+      ]
+    },
+    {
+      "id": "methods",
+      "filter": "methods",
+      "title": "Imaging methods & preprint feeds",
+      "badge": "Methods",
+      "description": "Medical image analysis, digital health, and arXiv categories for imaging and ML.",
+      "links": [
+        {
+          "label": "Medical Image Analysis",
+          "url": "https://www.sciencedirect.com/journal/medical-image-analysis",
+          "note": "Elsevier"
+        },
+        {
+          "label": "IEEE Transactions on Medical Imaging",
+          "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42"
+        },
+        { "label": "The Lancet Digital Health", "url": "https://www.thelancet.com/journals/landig/home" },
+        { "label": "NEJM AI", "url": "https://ai.nejm.org/" },
+        {
+          "label": "arXiv cs.CV",
+          "url": "https://arxiv.org/list/cs.CV/recent",
+          "note": "Computer vision; includes medical imaging"
+        },
+        { "label": "arXiv cs.LG", "url": "https://arxiv.org/list/cs.LG/recent", "note": "Machine learning" },
+        { "label": "arXiv q-bio.NC", "url": "https://arxiv.org/list/q-bio.NC/recent", "note": "Neuroscience" }
+      ]
+    }
+  ]
+}

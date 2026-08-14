@@ -426,59 +426,212 @@ section h2 {
   margin-bottom: 0.5rem;
 }
 
-.news-github {
-  text-align: center;
+.news-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #444;
+  background: #f3f3f3;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+
+.news-section-label {
+  max-width: 960px;
+  margin: 2rem auto 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.news-page .news-list {
+  max-width: 960px;
+}
+
+.news-list .news-item + .news-item {
+  margin-top: 0.75rem;
 }
 
 .news-field-note {
-  max-width: 720px;
-  margin: 0 auto 1.5rem;
+  max-width: 960px;
+  margin: 0 auto 1rem;
   text-align: left;
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 0.92rem;
+  color: #666;
   line-height: 1.55;
 }
 
-.news-sources {
-  max-width: 720px;
-  margin: 0 auto 1.5rem;
+.news-catalog {
+  max-width: 960px;
+  margin: 0 auto;
   text-align: left;
 }
 
-.news-source-group {
-  margin-bottom: 1.35rem;
-  padding: 1.15rem 1.35rem;
+.news-catalog-meta {
+  margin: 0 0 0.85rem;
+  font-size: 0.88rem;
+  color: #777;
+}
+
+.news-catalog-loading,
+.news-catalog-error {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 0.92rem;
+  color: #666;
+}
+
+.news-catalog-error.hidden,
+.news-catalog-loading.hidden {
+  display: none;
+}
+
+.news-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.1rem;
+}
+
+.news-filter {
+  appearance: none;
+  border: 1px solid #ddd;
   background: #fff;
+  color: #333;
+  font: inherit;
+  font-size: 0.86rem;
+  line-height: 1.2;
+  padding: 0.38rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.news-filter:hover {
+  border-color: #bbb;
+}
+
+.news-filter.is-active {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #fff;
+}
+
+.news-source-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+@media (min-width: 720px) {
+  .news-source-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.news-source-card {
   border: 1px solid #e5e5e5;
   border-radius: 10px;
+  background: #fff;
+  padding: 1rem 1.15rem;
 }
 
-.news-source-group:last-child {
-  margin-bottom: 0;
+.news-source-card.is-hidden {
+  display: none;
 }
 
-.news-source-group h3 {
-  font-size: 1.05rem;
+.news-source-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem;
+  margin-bottom: 0.45rem;
+}
+
+.news-source-badge {
+  flex-shrink: 0;
+  font-size: 0.72rem;
   font-weight: 600;
-  margin: 0 0 0.65rem;
-  color: #1a1a1a;
+  color: #555;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  padding: 0.12rem 0.5rem;
+  white-space: nowrap;
 }
 
-.news-source-group ul {
-  list-style: none;
+.news-source-card h4 {
   margin: 0;
-  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.35;
 }
 
-.news-source-group li {
-  margin-bottom: 0.5rem;
+.news-source-desc {
+  margin: 0 0 0.55rem;
+  font-size: 0.9rem;
+  color: #555;
   line-height: 1.5;
-  color: #333;
-  font-size: 0.98rem;
 }
 
-.news-source-group li:last-child {
+.news-source-meta {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #888;
+}
+
+.news-source-details {
+  margin-top: 0.65rem;
+}
+
+.news-source-details > summary {
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  list-style: none;
+}
+
+.news-source-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.news-source-details > summary::after {
+  content: " →";
+  color: #888;
+}
+
+.news-source-details[open] > summary::after {
+  content: "";
+}
+
+.news-source-links {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  border-top: 1px solid #eee;
+  padding-top: 0.55rem;
+}
+
+.news-source-links li {
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.news-source-links li:last-child {
   margin-bottom: 0;
+}
+
+.news-source-link-note {
+  color: #777;
+  font-size: 0.84rem;
 }
 
 .builder-placeholder {
