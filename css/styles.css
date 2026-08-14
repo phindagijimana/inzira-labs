@@ -634,6 +634,101 @@ section h2 {
   font-size: 0.84rem;
 }
 
+.news-feed-panel {
+  max-width: 960px;
+  margin: 1.75rem auto 0;
+  text-align: left;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #fafafa;
+  padding: 0.85rem 1.15rem 1rem;
+}
+
+.news-feed-summary {
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  list-style: none;
+}
+
+.news-feed-summary::-webkit-details-marker {
+  display: none;
+}
+
+.news-feed-summary::after {
+  content: " →";
+  color: #888;
+  font-weight: 500;
+}
+
+.news-feed-panel[open] .news-feed-summary::after {
+  content: "";
+}
+
+.news-feed-note {
+  margin: 0.65rem 0 0.45rem;
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.news-feed-meta {
+  margin: 0 0 0.65rem;
+  font-size: 0.82rem;
+  color: #888;
+}
+
+.news-feed-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-feed-list li {
+  padding: 0.55rem 0;
+  border-top: 1px solid #ececec;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.news-feed-list li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.news-feed-list .news-feed-date {
+  color: #888;
+  font-size: 0.82rem;
+  margin-right: 0.35rem;
+}
+
+.news-feed-list .news-feed-source {
+  color: #666;
+  font-size: 0.82rem;
+}
+
+.news-feed-more {
+  margin-top: 0.65rem;
+  appearance: none;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  font: inherit;
+  font-size: 0.86rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.news-feed-more:hover {
+  border-color: #bbb;
+}
+
+.news-feed-more.hidden {
+  display: none;
+}
+
 .builder-placeholder {
   margin-top: 1rem;
   font-size: 0.95rem;

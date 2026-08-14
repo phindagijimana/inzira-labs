@@ -1,0 +1,41 @@
+{
+  "maxAgeDays": 14,
+  "maxItems": 36,
+  "rss": [
+    {
+      "url": "https://connect.biorxiv.org/biorxiv_xml.php?subject=neuroscience",
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "url": "https://connect.medrxiv.org/medrxiv_xml.php?subject=neurology",
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "url": "https://arxiv.org/rss/cs.CV",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "url": "https://arxiv.org/rss/cs.LG",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "url": "https://arxiv.org/rss/q-bio.NC",
+      "source": "arXiv q-bio.NC",
+      "filter": "methods"
+    }
+  ],
+  "pubmed": [
+    { "term": "Brain Commun[Journal]", "source": "Brain Communications", "filter": "neurology" },
+    { "term": "Neurology[Journal]", "source": "Neurology", "filter": "neurology" },
+    { "term": "Epilepsia[Journal]", "source": "Epilepsia", "filter": "neurology" },
+    { "term": "Neuroimage[Journal]", "source": "NeuroImage", "filter": "neuroimaging" },
+    { "term": "Hum Brain Mapp[Journal]", "source": "Human Brain Mapping", "filter": "neuroimaging" },
+    { "term": "Neuro Oncol[Journal]", "source": "Neuro-Oncology", "filter": "neuro-oncology" },
+    { "term": "Nat Methods[Journal]", "source": "Nature Methods", "filter": "nature" },
+    { "term": "Nat Med[Journal]", "source": "Nature Medicine", "filter": "nature" }
+  ]
+}

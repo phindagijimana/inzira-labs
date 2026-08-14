@@ -9,10 +9,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <link rel="stylesheet" href="css/styles.css?v=58" />
+  <link rel="stylesheet" href="css/styles.css?v=59" />
 </head>
-<body data-inzira-rev="58">
-  <!-- site revision 58 -->
+<body data-inzira-rev="59">
+  <!-- site revision 59 -->
   <nav>
     <div class="container">
       <a href="#" class="logo" onclick="goPage('home'); return false;">Inzira Labs</a>
@@ -885,6 +885,16 @@
           <a href="https://github.com/phindagijimana?tab=repositories" target="_blank" rel="noopener noreferrer" class="rd-link-ghost">GitHub</a>
           remains available in the meantime.
         </p>
+
+        <details class="news-feed-panel" id="news-feed-panel" hidden>
+          <summary class="news-feed-summary">Recent headlines</summary>
+          <p class="news-feed-note">
+            Auto-fetched from RSS and PubMed for sources above. Third-party content; not curated or endorsed.
+          </p>
+          <p class="news-feed-meta" id="news-feed-meta"></p>
+          <ul class="news-feed-list" id="news-feed-list"></ul>
+          <button type="button" class="news-feed-more hidden" id="news-feed-more">Show more</button>
+        </details>
       </div>
     </section>
   </div>
@@ -950,6 +960,6 @@
   </script>
   <script src="js/vendor/purify.min.js"></script>
   <script src="js/vendor/marked.min.js"></script>
-  <script src="js/script.js?v=58"></script>
+  <script src="js/script.js?v=59"></script>
 </body>
 </html>

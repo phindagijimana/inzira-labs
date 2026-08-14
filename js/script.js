@@ -301,13 +301,96 @@ function initNewsSection() {
   const gridEl = document.getElementById("news-source-grid");
   const loadingEl = document.getElementById("news-catalog-loading");
   const errorEl = document.getElementById("news-catalog-error");
+  const feedPanelEl = document.getElementById("news-feed-panel");
+  const feedMetaEl = document.getElementById("news-feed-meta");
+  const feedListEl = document.getElementById("news-feed-list");
+  const feedMoreEl = document.getElementById("news-feed-more");
   if (!announcementsEl || !catalogEl || !gridEl) return;
+
+  let feedItems = [];
+  let activeFilter = "all";
+  let feedExpanded = false;
+  const FEED_PREVIEW = 10;
 
   const fetchJson = (path) =>
     fetch(path, { cache: "no-cache" }).then((r) => {
       if (!r.ok) throw new Error("load failed");
       return r.json();
     });
+
+  const formatFeedUpdated = (iso) => {
+    if (!iso) return "";
+    const dt = new Date(iso);
+    if (Number.isNaN(dt.getTime())) return "";
+    return dt.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+  };
+
+  const renderFeed = () => {
+    if (!feedPanelEl || !feedListEl) return;
+    const filtered =
+      activeFilter === "all" ? feedItems : feedItems.filter((item) => item.filter === activeFilter);
+    const visible = feedExpanded ? filtered : filtered.slice(0, FEED_PREVIEW);
+
+    if (feedMetaEl) {
+      const updated = formatFeedUpdated(feedPanelEl.dataset.fetchedAt);
+      feedMetaEl.textContent = updated
+        ? `Updated ${updated} · ${filtered.length} headline${filtered.length === 1 ? "" : "s"}`
+        : `${filtered.length} headline${filtered.length === 1 ? "" : "s"}`;
+    }
+
+    feedListEl.innerHTML = "";
+    visible.forEach((item) => {
+      const li = document.createElement("li");
+      if (item.date) {
+        const when = document.createElement("span");
+        when.className = "news-feed-date";
+        when.textContent = item.date;
+        li.appendChild(when);
+      }
+      const a = document.createElement("a");
+      a.href = item.url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.className = "rd-link-ghost";
+      a.textContent = item.title;
+      li.appendChild(a);
+      if (item.source) {
+        const src = document.createElement("span");
+        src.className = "news-feed-source";
+        src.textContent = ` · ${item.source}`;
+        li.appendChild(src);
+      }
+      feedListEl.appendChild(li);
+    });
+
+    if (feedMoreEl) {
+      const showMore = filtered.length > FEED_PREVIEW;
+      feedMoreEl.classList.toggle("hidden", !showMore);
+      feedMoreEl.textContent = feedExpanded ? "Show fewer" : "Show more";
+    }
+
+    feedPanelEl.hidden = feedItems.length === 0;
+  };
+
+  const applyFilter = (filterId) => {
+    activeFilter = filterId;
+    feedExpanded = false;
+    filtersEl.querySelectorAll(".news-filter").forEach((btn) => {
+      const active = btn.dataset.filter === filterId;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    gridEl.querySelectorAll(".news-source-card").forEach((card) => {
+      const show = filterId === "all" || card.dataset.filter === filterId;
+      card.classList.toggle("is-hidden", !show);
+    });
+    renderFeed();
+  };
+
+  feedMoreEl?.addEventListener("click", () => {
+    feedExpanded = !feedExpanded;
+    renderFeed();
+  });
 
   fetchJson("content/news-announcements.json")
     .then((items) => {
@@ -414,18 +497,6 @@ function initNewsSection() {
         gridEl.appendChild(card);
       });
 
-      const applyFilter = (filterId) => {
-        filtersEl.querySelectorAll(".news-filter").forEach((btn) => {
-          const active = btn.dataset.filter === filterId;
-          btn.classList.toggle("is-active", active);
-          btn.setAttribute("aria-selected", active ? "true" : "false");
-        });
-        gridEl.querySelectorAll(".news-source-card").forEach((card) => {
-          const show = filterId === "all" || card.dataset.filter === filterId;
-          card.classList.toggle("is-hidden", !show);
-        });
-      };
-
       filtersEl.addEventListener("click", (event) => {
         const btn = event.target.closest(".news-filter");
         if (!btn) return;
@@ -438,6 +509,19 @@ function initNewsSection() {
     .catch(() => {
       loadingEl?.classList.add("hidden");
       errorEl?.classList.remove("hidden");
+    });
+
+  fetchJson("content/news-feed.json")
+    .then((data) => {
+      feedItems = Array.isArray(data.items) ? data.items : [];
+      if (feedPanelEl && data.fetchedAt) {
+        feedPanelEl.dataset.fetchedAt = data.fetchedAt;
+      }
+      renderFeed();
+    })
+    .catch(() => {
+      feedItems = [];
+      renderFeed();
     });
 }
 
