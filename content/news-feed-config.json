@@ -1,6 +1,43 @@
 {
   "maxAgeDays": 14,
   "maxItems": 36,
+  "authorWatch": {
+    "term": "Ndagijimana P[Author] AND (neuroimaging OR epilepsy OR hippocampal OR neurology OR autism)",
+    "maxAgeDays": 730,
+    "retmax": 10
+  },
+  "keywords": [
+    "epilepsy",
+    "hippocampal",
+    "hippocampus",
+    "neuroimaging",
+    "neurology",
+    "neuroimaging",
+    "mri",
+    "fmri",
+    "brain",
+    "seizure",
+    "sclerosis",
+    "medical imaging",
+    "clinical",
+    "biomarker",
+    "deep learning",
+    "machine learning",
+    "neural network",
+    "segmentation",
+    "neuro-oncology",
+    "stroke",
+    "dementia",
+    "autism",
+    "eeg",
+    "meg",
+    "bids",
+    "neurodegenerative",
+    "pathology",
+    "radiology"
+  ],
+  "broadFeedsRequireKeyword": ["arXiv cs.CV", "arXiv cs.LG"],
+  "minKeywordScoreForBroadFeeds": 1,
   "rss": [
     {
       "url": "https://connect.biorxiv.org/biorxiv_xml.php?subject=neuroscience",

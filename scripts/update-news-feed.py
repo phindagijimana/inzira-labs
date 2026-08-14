@@ -36,19 +36,36 @@ def parse_date(value: str | None) -> datetime | None:
         return dt.astimezone(timezone.utc)
     except (TypeError, ValueError, IndexError):
         pass
-    for fmt in ("%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d"):
+    for fmt in ("%Y %b", "%Y %b %d", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d"):
         try:
-            dt = datetime.strptime(value[: len(fmt.replace("%z", "+0000"))], fmt.replace("%z", "+0000") if "%z" in fmt else fmt)
+            sample = value.strip()
+            if fmt == "%Y %b":
+                sample = " ".join(sample.split()[:2])
+            elif fmt == "%Y %b %d":
+                sample = " ".join(sample.split()[:3])
+            elif "T" in fmt:
+                sample = value[:19]
+            else:
+                sample = value[:10]
+            dt = datetime.strptime(sample, fmt.replace("%z", "") if "%z" in fmt else fmt)
             if dt.tzinfo is None:
                 dt = dt.replace(tzinfo=timezone.utc)
             return dt.astimezone(timezone.utc)
         except ValueError:
             continue
+    match = re.match(r"^(\d{4})", value)
+    if match:
+        return datetime(int(match.group(1)), 1, 1, tzinfo=timezone.utc)
     return None
 
 
 def local(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
+
+
+def keyword_score(title: str, keywords: list[str]) -> int:
+    haystack = title.lower()
+    return sum(1 for kw in keywords if kw.lower() in haystack)
 
 
 def parse_rss(xml_text: str, source: str, filter_id: str) -> list[dict]:
@@ -84,7 +101,18 @@ def parse_rss(xml_text: str, source: str, filter_id: str) -> list[dict]:
     return items
 
 
-def pubmed_recent(term: str, source: str, filter_id: str, retmax: int = 4) -> list[dict]:
+def pubmed_summaries(ids: list[str]) -> dict:
+    if not ids:
+        return {}
+    summary_params = urlencode({"db": "pubmed", "id": ",".join(ids), "retmode": "json"})
+    summary_url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?{summary_params}"
+    try:
+        return json.loads(fetch_text(summary_url)).get("result", {})
+    except Exception:
+        return {}
+
+
+def pubmed_search_ids(term: str, retmax: int) -> list[str]:
     params = urlencode(
         {
             "db": "pubmed",
@@ -97,19 +125,14 @@ def pubmed_recent(term: str, source: str, filter_id: str, retmax: int = 4) -> li
     search_url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?{params}"
     try:
         payload = json.loads(fetch_text(search_url))
-        ids = payload.get("esearchresult", {}).get("idlist", [])
-    except Exception:
-        return []
-    if not ids:
-        return []
-
-    summary_params = urlencode({"db": "pubmed", "id": ",".join(ids), "retmode": "json"})
-    summary_url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?{summary_params}"
-    try:
-        summary = json.loads(fetch_text(summary_url)).get("result", {})
+        return payload.get("esearchresult", {}).get("idlist", [])
     except Exception:
         return []
 
+
+def pubmed_recent(term: str, source: str, filter_id: str, retmax: int = 4) -> list[dict]:
+    ids = pubmed_search_ids(term, retmax)
+    summary = pubmed_summaries(ids)
     items: list[dict] = []
     for pmid in ids:
         record = summary.get(pmid, {})
@@ -129,6 +152,33 @@ def pubmed_recent(term: str, source: str, filter_id: str, retmax: int = 4) -> li
     return items
 
 
+def pubmed_author_items(term: str, retmax: int, cutoff: datetime) -> list[dict]:
+    ids = pubmed_search_ids(term, retmax)
+    summary = pubmed_summaries(ids)
+    items: list[dict] = []
+    for pmid in ids:
+        record = summary.get(pmid, {})
+        title = record.get("title")
+        if not title:
+            continue
+        pubdate = record.get("pubdate") or record.get("sortpubdate")
+        dt = parse_date(pubdate)
+        if dt and dt < cutoff:
+            continue
+        journal = record.get("fulljournalname") or record.get("source") or "PubMed"
+        iso_date = dt.date().isoformat() if dt else None
+        items.append(
+            {
+                "title": re.sub(r"\s+", " ", title.strip()),
+                "url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                "date": iso_date,
+                "journal": journal,
+                "source": "PubMed",
+            }
+        )
+    return items
+
+
 def normalize_item(raw: dict, cutoff: datetime) -> dict | None:
     dt = parse_date(raw.get("date"))
     if dt and dt < cutoff:
@@ -138,13 +188,16 @@ def normalize_item(raw: dict, cutoff: datetime) -> dict | None:
     url = raw.get("url", "").strip()
     if not title or not url:
         return None
-    return {
+    item = {
         "title": title,
         "url": url,
         "date": iso_date,
         "source": raw.get("source", ""),
         "filter": raw.get("filter", "all"),
     }
+    if "score" in raw:
+        item["score"] = raw["score"]
+    return item
 
 
 def dedupe_key(item: dict) -> str:
@@ -155,6 +208,9 @@ def main() -> int:
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     max_age = int(config.get("maxAgeDays", 14))
     max_items = int(config.get("maxItems", 36))
+    keywords = [kw for kw in config.get("keywords", []) if isinstance(kw, str) and kw.strip()]
+    broad_sources = set(config.get("broadFeedsRequireKeyword", []))
+    min_broad_score = int(config.get("minKeywordScoreForBroadFeeds", 1))
     cutoff = datetime.now(timezone.utc) - timedelta(days=max_age)
 
     collected: list[dict] = []
@@ -178,6 +234,10 @@ def main() -> int:
     normalized: list[dict] = []
     seen: set[str] = set()
     for raw in collected:
+        score = keyword_score(raw.get("title", ""), keywords)
+        if raw.get("source") in broad_sources and score < min_broad_score:
+            continue
+        raw["score"] = score
         item = normalize_item(raw, cutoff)
         if not item:
             continue
@@ -188,17 +248,37 @@ def main() -> int:
         normalized.append(item)
 
     normalized.sort(key=lambda x: x.get("date") or "", reverse=True)
+    normalized.sort(key=lambda x: x.get("score", 0), reverse=True)
     normalized = normalized[:max_items]
+    for item in normalized:
+        item.pop("score", None)
+
+    author_items: list[dict] = []
+    author_cfg = config.get("authorWatch") or {}
+    author_term = author_cfg.get("term")
+    if author_term:
+        author_cutoff = datetime.now(timezone.utc) - timedelta(
+            days=int(author_cfg.get("maxAgeDays", 730))
+        )
+        try:
+            author_items = pubmed_author_items(
+                author_term,
+                int(author_cfg.get("retmax", 10)),
+                author_cutoff,
+            )
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"PubMed author watch: {exc}")
 
     output = {
         "fetchedAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "itemCount": len(normalized),
         "items": normalized,
+        "authorItems": author_items,
     }
     if errors:
         output["errors"] = errors
     OUTPUT_PATH.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Wrote {len(normalized)} items to {OUTPUT_PATH}")
+    print(f"Wrote {len(normalized)} feed items and {len(author_items)} author items to {OUTPUT_PATH}")
     if errors:
         print("Warnings:", file=sys.stderr)
         for err in errors:

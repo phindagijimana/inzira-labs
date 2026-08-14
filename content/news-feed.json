@@ -1,136 +1,80 @@
 {
-  "fetchedAt": "2026-08-14T20:35:00Z",
+  "fetchedAt": "2026-08-14T20:40:16Z",
   "itemCount": 36,
   "items": [
     {
-      "title": "MV2: Multi-View Multi-Vehicle Driving Dataset for Novel View Synthesis",
-      "url": "https://arxiv.org/abs/2608.12442",
+      "title": "Confidence-Calibrating Regularization for Robust Brain MRI Segmentation Under Domain Shift",
+      "url": "https://arxiv.org/abs/2509.23176",
       "date": "2026-08-14",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "HIMEC: Directional Change Representation and Fixed-Interface Decoding for Remote Sensing Image Change Captioning",
-      "url": "https://arxiv.org/abs/2608.12502",
+      "title": "The Spatial Divergence of Hypometabolism and Atrophy in Mesial Temporal Lobe Epilepsy: Combining (18)F-FDG PET and Structural MRI for Predicting Postoperative Seizure Freedom.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42592784/",
+      "date": "2026-08-01",
+      "source": "Human Brain Mapping",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "Learning Class Difficulty via Dynamic Focal Attention for Histopathology Segmentation",
+      "url": "https://arxiv.org/abs/2604.13479",
       "date": "2026-08-14",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Can Vision-Language Models Assess Proxemic Risk from Egocentric Robot Images?",
-      "url": "https://arxiv.org/abs/2608.12515",
+      "title": "Trophic structure predicts seizure propagation in brain network models",
+      "url": "https://arxiv.org/abs/2608.12382",
       "date": "2026-08-14",
-      "source": "arXiv cs.CV",
+      "source": "arXiv q-bio.NC",
       "filter": "methods"
     },
     {
-      "title": "Surface-to-Skeleton 3D Cephalometry: Estimating Hidden Skeletal Landmarks from CT-Derived External Soft-Tissue Surfaces",
-      "url": "https://arxiv.org/abs/2608.12537",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
+      "title": "Comparison of the Relationships Between Body Size and Cardiorespiratory Fitness With High Frequency Head-Motion Contamination in fMRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42578518/",
+      "date": "2026-08-01",
+      "source": "Human Brain Mapping",
+      "filter": "neuroimaging"
     },
     {
-      "title": "StrAD: A Streaming Method and Benchmark for Audio Description Generation for Long-form Videos",
-      "url": "https://arxiv.org/abs/2608.12549",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
+      "title": "Optimising 7T-fMRI for Imaging Regions of Magnetic Susceptibility.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42574053/",
+      "date": "2026-08-01",
+      "source": "Human Brain Mapping",
+      "filter": "neuroimaging"
     },
     {
-      "title": "Attribute-Conditioned Multimodal Slot Factorization for Controllable Fashion Retrieval",
-      "url": "https://arxiv.org/abs/2608.12570",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
+      "title": "Improved visualization and segmentation of the choroid plexus using double inversion recovery MRI",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.13.26360360v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
-      "title": "PseudoMapLabeler: Confidence-Aware Pseudo-Label Generation for Semi-Supervised Online Mapping",
-      "url": "https://arxiv.org/abs/2608.12600",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
+      "title": "Neuroimaging markers associated with early neurological deterioration in acute isolated pontine infarction: a systematic review and meta-analysis",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.11.26360187v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
-      "title": "From Visual Widgets to UI Code: Efficient Tool-Grounded Generation",
-      "url": "https://arxiv.org/abs/2608.12611",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
+      "title": "Population-based reference equations and Z-scores for blood biomarkers of neurodegenerative diseases",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.09.26360027v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
-      "title": "EgoCITE: Context-Augmented Indexing and Time-Aware Retrieval for Long-Horizon Egocentric Memory",
-      "url": "https://arxiv.org/abs/2608.12627",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
+      "title": "Guideline Adherence Following On-Site Versus Telestroke Consultation for Stroke Due to Intracranial Atherosclerosis",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.06.26359874v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
       "title": "Inference-Time Orthogonal Seeding Enables Geometry-Aligned 3D Organ Segmentation for Slice-Propagation Methods",
       "url": "https://arxiv.org/abs/2608.12658",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Mr3D-VL: A generalist vision language foundation model for Multiparametric 3D Magnetic Resonance Imaging",
-      "url": "https://arxiv.org/abs/2608.12689",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Class Geometry as Supervision for Sample-Efficient Open-World Detection",
-      "url": "https://arxiv.org/abs/2608.12698",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Towards Sparsely Annotated Open-World Object Detection",
-      "url": "https://arxiv.org/abs/2608.12714",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "VOS-Agent: The 1st Place Solution for the 8th LSVOS Challenge (MOSEv2 Track)",
-      "url": "https://arxiv.org/abs/2608.12721",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "A Generative Approach for Improving Multi-Label Defect Classification in Photovoltaic Modules",
-      "url": "https://arxiv.org/abs/2608.12725",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Dual-Manifold Geometry Guided Representation Learning: Adaptive Coupling between Kernel and Data Spaces",
-      "url": "https://arxiv.org/abs/2608.12737",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Dual-Stream Cross-Anchor Correction Grounding Long-Form Captions and the Domain Limits of Object-Level Anchors",
-      "url": "https://arxiv.org/abs/2608.12746",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Scaling Representation Diversity: Modulated Attention and Reconstructive Regularization for Visual Grounding",
-      "url": "https://arxiv.org/abs/2608.12748",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "PatchGen: Learning Soft Intra-Image Predictive Subsets for Visual Generalization",
-      "url": "https://arxiv.org/abs/2608.12766",
       "date": "2026-08-14",
       "source": "arXiv cs.CV",
       "filter": "methods"
@@ -143,106 +87,8 @@
       "filter": "methods"
     },
     {
-      "title": "SCOPE: Subspace Clustering with Online Per-Head Top-K Estimation for Sparse Video Attention",
-      "url": "https://arxiv.org/abs/2608.12780",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Beyond Correctness: Benchmarking and Aligning Response Behaviors in Hybrid-Thinking MLLMs",
-      "url": "https://arxiv.org/abs/2608.12781",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Erase but Preserve: Controllable Removal of Copyrighted Animation Characters via Optimized Semantic Anchors",
-      "url": "https://arxiv.org/abs/2608.12806",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Structured Local Differential Modeling for AI-Generated Image Detection",
-      "url": "https://arxiv.org/abs/2608.12811",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "LocusGS: Spatially Grounded Tokens for Feed-Forward 3D Gaussian Splatting",
-      "url": "https://arxiv.org/abs/2608.12825",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Validation of Smartphone-Based Photogrammetric 3D Body Scanning for Automated Anthropometric Measurements Compared with a Commercial Depth-Sensor-Based Body Scanner",
-      "url": "https://arxiv.org/abs/2608.12827",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Semantic Steering for Controllable Generation: Tuning-Free Concept Erasure in Multimodal Diffusion Transformers",
-      "url": "https://arxiv.org/abs/2608.12829",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Heterogeneous Vision-Language Ensemble with Disagreement-Aware Reranking for Text-Based Person Anomaly Retrieval",
-      "url": "https://arxiv.org/abs/2608.12843",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "SPARED: Reasoning-Based AI-Generated Image Detection via Adversarially Edited Data",
-      "url": "https://arxiv.org/abs/2608.12876",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "NaviDC-OCR: Navigating Document Parsing Across Digital and Camera-Captured Documents",
-      "url": "https://arxiv.org/abs/2608.12898",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "HounsWorld: A Multimodal World Model for Hidden Patient-State Readout, Reconstruction, and Simulation",
-      "url": "https://arxiv.org/abs/2608.12904",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Beyond Visual Evidence: Revealing and Mitigating Relational Privacy Leakage in Document MLLMs",
-      "url": "https://arxiv.org/abs/2608.12911",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
       "title": "TennisVAR: A Stroke-Evidence-Grounded Multimodal Large Language Model for Tactical Reasoning in Tennis Videos",
       "url": "https://arxiv.org/abs/2608.12920",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "A Deep RL based Framework for Targeted White Matter Tractography",
-      "url": "https://arxiv.org/abs/2608.12960",
-      "date": "2026-08-14",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Bias Mitigation in Face Recognition via Demographic-based Supervised Contrastive Learning",
-      "url": "https://arxiv.org/abs/2608.12971",
       "date": "2026-08-14",
       "source": "arXiv cs.CV",
       "filter": "methods"
@@ -253,6 +99,164 @@
       "date": "2026-08-14",
       "source": "arXiv cs.CV",
       "filter": "methods"
+    },
+    {
+      "title": "Predicting Signed Distance Functions for Visual Instance Segmentation",
+      "url": "https://arxiv.org/abs/2608.13135",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Reliability analysis for BraTS-GoAT segmentation: a controlled robustness study of deep-ensemble uncertainty",
+      "url": "https://arxiv.org/abs/2608.13223",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "How Good are Foundation Models in Longitudinal MRI Disease Progression Reasoning?",
+      "url": "https://arxiv.org/abs/2608.13309",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Evaluation of Clinically Steerable Retinal Image Generation from Foundation Model Latent Spaces",
+      "url": "https://arxiv.org/abs/2608.13455",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "BrainWAM: Action-Space Coordination of Semantic Priors and Predictive Dynamics for Autonomous Driving",
+      "url": "https://arxiv.org/abs/2608.12854",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Intervention-Aware Clinical World Model for Post-Op Outcome Forecasting in Cardiology",
+      "url": "https://arxiv.org/abs/2608.13518",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Unsupervised Deep Learning-based Keypoint Localization Estimating Descriptor Matching Performance",
+      "url": "https://arxiv.org/abs/2505.02779",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Pathryoshka: Compressing Pathology Foundation Models via Multi-Teacher Knowledge Distillation with Nested Embeddings",
+      "url": "https://arxiv.org/abs/2511.23204",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Subject-Aware Multi-Granularity Alignment for Zero-Shot EEG-to-Image Retrieval",
+      "url": "https://arxiv.org/abs/2604.17782",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "A Distributional Robustness Margin For Pathology Foundation Models",
+      "url": "https://arxiv.org/abs/2607.25497",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "From Multi-Resolution Cells to Gigapixel Whole Slide Images Foundation Model for Computational Pathology",
+      "url": "https://arxiv.org/abs/2608.03508",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Gated Spatial Redundancy Projection for Pathology Transformer Attentions",
+      "url": "https://arxiv.org/abs/2608.08374",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "AeroReformer2: Spoken-Query Referring Segmentation for Aerial Images",
+      "url": "https://arxiv.org/abs/2608.08874",
+      "date": "2026-08-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Predicting When Random Low-Dimensional Reparameterizations Train Neural Networks",
+      "url": "https://arxiv.org/abs/2608.12597",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "Training Under Challenge: Executable Certificates and Challenge-Closed Optimality for Neural Networks",
+      "url": "https://arxiv.org/abs/2608.12655",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "Perturbation-based Regional Interpretability through Subtraction Mapping (PRISM): naming-error dissociations in language models and post-stroke aphasia",
+      "url": "https://arxiv.org/abs/2608.12717",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "A Cloud-Edge System for Multimodal Clinical Screening in Resource-Constrained Rural Settings",
+      "url": "https://arxiv.org/abs/2608.12745",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "Momentum as Residual-Driven Multiplier Correction for Deep Learning Optimization",
+      "url": "https://arxiv.org/abs/2608.12925",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "Comment on \"Modeling rapid language learning by distilling Bayesian priors into artificial neural networks\"",
+      "url": "https://arxiv.org/abs/2608.12974",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "Incremental Evaluation and Training in Relational Deep Learning",
+      "url": "https://arxiv.org/abs/2608.13023",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "Branch and Bound for Relational Verification of Neural Networks",
+      "url": "https://arxiv.org/abs/2608.13118",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "History-informed Lagrangian Neural Networks",
+      "url": "https://arxiv.org/abs/2608.13215",
+      "date": "2026-08-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     }
+  ],
+  "authorItems": [],
+  "errors": [
+    "RSS bioRxiv neuroscience: The read operation timed out"
   ]
 }

@@ -318,6 +318,76 @@ function initNewsSection() {
       return r.json();
     });
 
+  const normalizeTitle = (value) =>
+    String(value || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+
+  const titlesOverlap = (a, b) => {
+    const left = normalizeTitle(a);
+    const right = normalizeTitle(b);
+    if (!left || !right) return false;
+    if (left === right) return true;
+    const words = left.split(" ").filter((word) => word.length > 4);
+    if (words.length < 3) return false;
+    const matches = words.filter((word) => right.includes(word)).length;
+    return matches >= Math.min(4, Math.ceil(words.length * 0.6));
+  };
+
+  const renderAnnouncementItem = (item) => {
+    const li = document.createElement("li");
+    li.className = "news-item";
+    const dateLine = document.createElement("span");
+    dateLine.className = "news-date";
+    if (item.tag) {
+      const tag = document.createElement("span");
+      tag.className = "news-tag";
+      tag.textContent = item.tag;
+      dateLine.appendChild(tag);
+    }
+    dateLine.append(document.createTextNode(item.date || ""));
+    const body = document.createElement("p");
+    if (item.bodyHtml) {
+      body.innerHTML = item.bodyHtml;
+    } else if (item.url && item.title) {
+      const link = document.createElement("a");
+      link.href = item.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = "rd-link-ghost";
+      link.textContent = item.title;
+      body.appendChild(link);
+      if (item.journal) {
+        body.append(` — ${item.journal}`);
+      }
+    }
+    li.append(dateLine, body);
+    return li;
+  };
+
+  const renderAnnouncements = (manualItems, authorItems) => {
+    announcementsEl.innerHTML = "";
+    const seenTitles = [];
+    manualItems.forEach((item) => {
+      announcementsEl.appendChild(renderAnnouncementItem(item));
+      const plain = item.bodyHtml ? item.bodyHtml.replace(/<[^>]+>/g, " ") : item.title || "";
+      seenTitles.push(plain);
+    });
+    authorItems.forEach((item) => {
+      if (seenTitles.some((existing) => titlesOverlap(existing, item.title))) return;
+      announcementsEl.appendChild(
+        renderAnnouncementItem({
+          date: item.date || "PubMed",
+          tag: "Publication",
+          title: item.title,
+          url: item.url,
+          journal: item.journal,
+        })
+      );
+    });
+  };
+
   const formatFeedUpdated = (iso) => {
     if (!iso) return "";
     const dt = new Date(iso);
@@ -392,26 +462,22 @@ function initNewsSection() {
     renderFeed();
   });
 
-  fetchJson("content/news-announcements.json")
-    .then((items) => {
-      announcementsEl.innerHTML = "";
-      (Array.isArray(items) ? items : []).forEach((item) => {
-        const li = document.createElement("li");
-        li.className = "news-item";
-        const dateLine = document.createElement("span");
-        dateLine.className = "news-date";
-        if (item.tag) {
-          const tag = document.createElement("span");
-          tag.className = "news-tag";
-          tag.textContent = item.tag;
-          dateLine.appendChild(tag);
-        }
-        dateLine.append(document.createTextNode(item.date || ""));
-        const body = document.createElement("p");
-        body.innerHTML = item.bodyHtml || "";
-        li.append(dateLine, body);
-        announcementsEl.appendChild(li);
-      });
+  let manualAnnouncements = [];
+  let authorAnnouncements = [];
+
+  Promise.all([
+    fetchJson("content/news-announcements.json").catch(() => []),
+    fetchJson("content/news-feed.json").catch(() => ({})),
+  ])
+    .then(([manual, feedData]) => {
+      manualAnnouncements = Array.isArray(manual) ? manual : [];
+      authorAnnouncements = Array.isArray(feedData.authorItems) ? feedData.authorItems : [];
+      renderAnnouncements(manualAnnouncements, authorAnnouncements);
+      feedItems = Array.isArray(feedData.items) ? feedData.items : [];
+      if (feedPanelEl && feedData.fetchedAt) {
+        feedPanelEl.dataset.fetchedAt = feedData.fetchedAt;
+      }
+      renderFeed();
     })
     .catch(() => {
       announcementsEl.innerHTML =
@@ -509,19 +575,6 @@ function initNewsSection() {
     .catch(() => {
       loadingEl?.classList.add("hidden");
       errorEl?.classList.remove("hidden");
-    });
-
-  fetchJson("content/news-feed.json")
-    .then((data) => {
-      feedItems = Array.isArray(data.items) ? data.items : [];
-      if (feedPanelEl && data.fetchedAt) {
-        feedPanelEl.dataset.fetchedAt = data.fetchedAt;
-      }
-      renderFeed();
-    })
-    .catch(() => {
-      feedItems = [];
-      renderFeed();
     });
 }
 
