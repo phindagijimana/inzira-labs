@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-08-15T11:12:52Z",
+  "fetchedAt": "2026-08-16T11:13:21Z",
   "itemCount": 36,
   "items": [
+    {
+      "title": "Negative BOLD response to interictal discharges in epilepsy using intracranial EEG-fMRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42602927/",
+      "date": "2026-09-01",
+      "source": "NeuroImage",
+      "filter": "neuroimaging"
+    },
     {
       "title": "MRI-free OPM-MEG recovers medial temporal lobe theta during scene imagination",
       "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743897v1?rss=1",
@@ -59,6 +66,27 @@
       "filter": "neurology"
     },
     {
+      "title": "Leveraging pretrained vision transformers for classifying alcohol use disorder using raw resting-state EEG.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42576984/",
+      "date": "2026-09-01",
+      "source": "NeuroImage",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "Alterations in brain physiological pulsations in Parkinson's disease: a case-control study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42571368/",
+      "date": "2026-09-01",
+      "source": "NeuroImage",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "β-Arrestin2 Drives Sex-Specific Akt/GSK3β Signaling, Aβ Pathology, and Cognitive Decline in Alzheimer's Disease Mice",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743981v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
       "title": "Circuit-specific reorganization of hippocampal-entorhinal-prefrontal subnetworks supports memory recall across the lifespan",
       "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743925v1?rss=1",
       "date": null,
@@ -103,13 +131,6 @@
     {
       "title": "Recovering directional brain networks under temporal undersampling: an application to schizophrenia",
       "url": "https://www.biorxiv.org/content/10.64898/2026.08.09.743708v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Neuroinflammation and metabolic dysfunction in POLG-related mitochondrial epilepsy",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.12.744403v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
@@ -199,57 +220,36 @@
       "filter": "neurology"
     },
     {
+      "title": "DTI-ALPS as a marker of glymphatic function: Review of the literature findings, methodology, and interpretation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42602456/",
+      "date": "2026-09-01",
+      "source": "NeuroImage",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "Network Topology reveals disrupted AMPA receptor stabilization leads to an impaired LTD in epileptic synapses",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743452v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Single-cell profiling reveals tumor grade-dependent immune remodeling in BRAFV600E-driven glioneuronal tumors",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743180v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "REM Sleep Disengagement of β Oscillations Permits Rapid Dream Movements in Parkinsonism",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743926v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
       "title": "Diurnal time and sleep pressure modulate cerebrospinal fluid low-frequency oscillations in synchrony with wake-promoting nuclei",
       "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743907v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Extracochlear Electric Stimulation - Toward Non-Invasive Hearing Restoration",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743874v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "A Cortico-Cerebellar Network Model for Refining Preparatory Activity in Motor Control through Sensorimotor Learning",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743900v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Dissociating the intensity and phase origins of sleepiness through a threshold-distance model of sleep-wake dynamics",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743860v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Pre-Supplementary Motor Area Theta Burst Stimulation Alters Corticomotor Facilitation and Action Reinitiation Without Impairing Response Inhibition",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743855v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Loud acoustic stimulation reveals an online reticulospinal contribution to long-latency reflexes in humans",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.10.743894v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Postmitotic Regulation of Neuronal Subpopulations in the Cerebellum",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.09.743777v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "A two-oscillator SCN model with period adaptation and systemic feedback captures photoperiod and T-cycle aftereffects in vivo and in explants",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.09.743784v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
