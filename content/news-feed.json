@@ -1,10 +1,17 @@
 {
-  "fetchedAt": "2026-08-22T11:14:13Z",
+  "fetchedAt": "2026-08-23T11:14:13Z",
   "itemCount": 36,
   "items": [
     {
-      "title": "Event-Wise Stability of Patient-Specific EEG-MEG Deep Learning Spike Detection in Clinical MEG",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.18.26360638v1?rss=1",
+      "title": "Prevalence of malformations of cortical development in patients with suspected epilepsy based on a clinical MRI dataset",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360591v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "MRI-derived brain aging trajectories across the Alzheimer's continuum: links to cognition, pathology and lifestyle risk factors",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360525v1?rss=1",
       "date": null,
       "source": "medRxiv neurology",
       "filter": "neurology"
@@ -15,6 +22,13 @@
       "date": null,
       "source": "medRxiv neurology",
       "filter": "neurology"
+    },
+    {
+      "title": "Altered microglial communication in brains with Alzheimers Disease pathology",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.13.744723v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
     },
     {
       "title": "Proficiency-Dependent Reorganisation of Language and Control Networks during Second Language Processing: An fMRI Study of Korean-English Bilinguals",
@@ -31,20 +45,6 @@
       "filter": "nih"
     },
     {
-      "title": "Clinically Relevant Biomarkers of Alzheimers Disease Are Associated with Age and Cortical Atrophy in Chimpanzees (Pan troglodytes)",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.12.744516v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Biomarker Fidelity Score - A Quantitative Framework for Individual-Level Validation of Explainability Methods in 3D Alzheimer's Disease MRI Classification",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.15.744687v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
       "title": "Improved visualization and segmentation of the choroid plexus using double inversion recovery MRI",
       "url": "https://www.medrxiv.org/content/10.64898/2026.08.13.26360360v1?rss=1",
       "date": null,
@@ -52,25 +52,53 @@
       "filter": "neurology"
     },
     {
-      "title": "The Menopause Transition and Epilepsy: A Focus on Therapeutics.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42594325/",
-      "date": "2026-10-01",
-      "source": "Neurology",
-      "filter": "neurology"
+      "title": "Different spatial profiles of aberrant N-glycans in pediatric and adult MOGHE brain tissue",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.12.744424v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
     },
     {
-      "title": "Harmonizing Multi-Institutional Clinical Documentation Using Natural Language Processing in Neurofibromatosis Type 1.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42585623/",
-      "date": "2026-10-01",
-      "source": "Neurology",
-      "filter": "neurology"
+      "title": "Daily Bowel Movements are Associated with Stronger Gut-Brain Phase-Amplitude Coupling and Better Cognitive Performance",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.13.744397v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
     },
     {
-      "title": "Establishing a Transition Program for Young Adults With Epilepsy.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42585622/",
-      "date": "2026-10-01",
-      "source": "Neurology",
-      "filter": "neurology"
+      "title": "Prenatal exposure to PFAS and multimodal structural brain development across childhood",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.13.744565v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Claustral pathway coordinates distributed cortical dynamics with hippocampal output during sleep to promote memory consolidation",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.13.744575v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Deep in vivo brain metabolomics maps vulnerability-associated and cocaine-induced neurochemical states",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.14.744954v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Cognitive exertion reshapes resting-state EEG markers across the adult lifespan",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.14.744886v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Brain-wide reconfiguration of burst firing by psilocybin reveals 5-HT2A-dependent circuit dynamics",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.14.744865v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
     },
     {
       "title": "Coordinated behavioural and neural variability in hippocampal reward coding",
@@ -101,11 +129,11 @@
       "filter": "nih"
     },
     {
-      "title": "Disrupted Brain Organoid Circuitry, Structural Organization, and Spine Morphology in 7q11.23 Copy Number Variant Syndromes",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.11.744287v1?rss=1",
+      "title": "The vanishing white matter registry: a case study of historical controls in clinical trial design",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360800v1?rss=1",
       "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
       "title": "Resting-State Network Dynamics and Language Lateralization in Patients with Brain Arteriovenous Malformations",
@@ -185,71 +213,43 @@
       "filter": "neurology"
     },
     {
-      "title": "Neuropathologic Features of Adult-Onset Progressive Leukodystrophy Due to KARS Pathogenic Variants: A Case Report.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42621967/",
-      "date": "2026-10-01",
-      "source": "Neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Visual deprivation in adulthood engages presynaptic plasticity of thalamocortical synapses",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.17.745313v1?rss=1",
+      "title": "Glycolytic compensation rather than NAD+/NADH balance sustains neuronal function during mitochondrial stress",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.20.746069v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Reward evokes value-independent arousal and value-dependent reinforcement processing as dissociable physiological consequences",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.17.745141v1?rss=1",
+      "title": "GABAergic and glutamatergic synaptic networks and mitochondrial morphology in the thalamic ventral motor and centromedian nuclei of Rhesus Monkey: A comparative 3D Electron Microscopic Analysis between Control and Parkinsonian State",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.20.745566v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Precision Confidence Mapping: An approach to determining individualized network topography with limited data",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.17.744952v1?rss=1",
+      "title": "Engineered α-Synuclein-specific nanobody CAR iTregs restrain neuroinflammation and proteinopathy in Parkinson's disease mice",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.21.746338v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Aging and reorganization of the neural hierarchy underlying action perception: older adults prioritize affective-communicative information",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.18.745087v1?rss=1",
+      "title": "Single-particle tracking reveals neuronal activity-dependent shuttling of ARC/ARG3.1 protein between cytoplasmic clusters and the nucleus",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.18.745435v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "α-Synuclein impairs mitochondrial function and alters cryptochrome regulation in the substantia nigra",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.18.745090v1?rss=1",
+      "title": "The Effects of Teaching Emotion Words on Emotional Granularity, Emotion Regulation/Dysregulation, and Satisfaction with Life",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.12.744382v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "A Systems Neuroscience Approach Identifies IL1B-CASP3 Signaling as a Molecular Link Between Polystyrene Exposure and Alzheimer's Disease",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.17.745375v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Shared symmetry detection with divergent temporal dynamics in marmosets and humans",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.17.745359v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Arm locomotor behaviour affects motor unit discharge characteristics in the stationary leg",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.17.745355v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Why Speech Motor Blocks Emerge in a Communicative Context: An Active Inference Model of Stuttering",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.17.745328v1?rss=1",
+      "title": "Evolution of the motor cortex microstructure and its lateralization: a comparative study of chimpanzees and humans",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.20.745984v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
