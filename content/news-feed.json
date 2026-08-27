@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-08-26T11:22:06Z",
+  "fetchedAt": "2026-08-27T20:52:08Z",
   "itemCount": 36,
   "items": [
+    {
+      "title": "Deep Learning Segmentation of Diffusion-Weighted MRI Acute Ischaemic Stroke: A Pragmatic Evaluation Across Three Datasets",
+      "url": "https://arxiv.org/abs/2608.25675",
+      "date": "2026-08-27",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
     {
       "title": "MAESTRO: A Public, Generalizable Model for Stroke Lesion Segmentation from T1 MRI Across the Recovery Continuum",
       "url": "https://www.medrxiv.org/content/10.64898/2026.08.22.26361044v1?rss=1",
@@ -24,81 +31,53 @@
       "filter": "neurology"
     },
     {
-      "title": "Harnessing machine learning for functional connectivity-based feature discovery in post-traumatic epilepsy.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42643256/",
-      "date": "2026-09-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
-    },
-    {
-      "title": "MRI-based assessment of fetal brain gyrification: Reliability across two methods.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42621415/",
-      "date": "2026-09-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
-    },
-    {
-      "title": "Graph-Supervised Hierarchical Clinical Alignment for Radiology Report Generation with Large Language Models",
-      "url": "https://arxiv.org/abs/2608.24121",
-      "date": "2026-08-26",
+      "title": "FlowMoDL: Model-Based Deep Learning with Conjugate-Gradient Data Consistency for Highly Accelerated 4D Flow MRI Reconstruction",
+      "url": "https://arxiv.org/abs/2608.25828",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Comparative Assessment of Deep Learning Architectures for Underwater Subsurface Kelp Forest Segmentation with The Kelp-o-Tron",
-      "url": "https://arxiv.org/abs/2608.24594",
-      "date": "2026-08-26",
+      "title": "PANDA - Prototype-Anchored Alignment for Partially Unpaired Multimodal Learning, with Applications to Alzheimers MRI and TCGA Pathology",
+      "url": "https://arxiv.org/abs/2608.25970",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Ensemble of Convolutional Neural Networks for StrokePrediction: Towards Improved Diagnostic Accuracy",
-      "url": "https://arxiv.org/abs/2608.24771",
-      "date": "2026-08-26",
+      "title": "Synergistic Modality-and-Slice Memory Framework for Cross-Modal 3D Brain Tumor Segmentation",
+      "url": "https://arxiv.org/abs/2510.10679",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Multi-Stage Prompt-Guided Feature Modulation for Generalizable Brain Tumor Segmentation",
-      "url": "https://arxiv.org/abs/2608.23745",
-      "date": "2026-08-26",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Native-Space 3D CarveMix for Multi-Site T1w Stroke Segmentation",
-      "url": "https://arxiv.org/abs/2608.23882",
-      "date": "2026-08-26",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "Screening Autism Spectrum Disorder in children using Deep Learning Approach : Evaluating the classification model of YOLOv26s by comparing with other models",
-      "url": "https://arxiv.org/abs/2306.14300",
-      "date": "2026-08-26",
-      "source": "arXiv cs.CV",
-      "filter": "methods"
-    },
-    {
-      "title": "MnemoDyn: Learning Resting State Dynamics from 40K FMRI sequences",
-      "url": "https://arxiv.org/abs/2608.23936",
-      "date": "2026-08-26",
+      "title": "LibriBrain100: One Hundred Hours of Broad and Deep MEG Data for Neural Speech Decoding at Scale",
+      "url": "https://arxiv.org/abs/2608.25204",
+      "date": "2026-08-27",
       "source": "arXiv cs.LG",
       "filter": "methods"
     },
     {
-      "title": "Taming foundation model with invariance-oriented pre-training for broad-spectrum EEG analysis across signal-level, brain-state, and brain-health tasks",
-      "url": "https://arxiv.org/abs/2608.24597",
-      "date": "2026-08-26",
-      "source": "arXiv cs.LG",
-      "filter": "methods"
-    },
-    {
-      "title": "Beyond pain: a brain-based biomarker predicts individual pain relief",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.21.746216v1?rss=1",
+      "title": "Distinct and overlapping correlates of fear acquisition and extinction across different neuroimaging modalities",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.24.746689v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
+    },
+    {
+      "title": "A multi-b-value test-retest diffusion MRI brain dataset for model validation and reproducibility assessment",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.23.746449v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Perceptions of non-invasive brain stimulation and barriers to it's clinical translation: a multi-stakeholder focus group study",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361180v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
       "title": "Quantifying Large Language Model Influence in Brain Computer Interface Communication for Amyotrophic Lateral Sclerosis",
@@ -122,135 +101,156 @@
       "filter": "neurology"
     },
     {
-      "title": "Distributed EEG power asymmetries across frequencies in PTSD: Introducing the dynamic EEG power differential (DEPD) index.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42622012/",
-      "date": "2026-09-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
-    },
-    {
-      "title": "Rostral associations of MRI atrophy of the amygdala and entorhinal cortex across the AD spectrum.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42620569/",
-      "date": "2026-09-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
-    },
-    {
-      "title": "Cross-Generation Optimization of YOLOv26, YOLOv11, and YOLOv8 for Fine-Grained Small-Object Detection and Instance Segmentation in Complex Orchards",
-      "url": "https://arxiv.org/abs/2608.23636",
-      "date": "2026-08-26",
+      "title": "Lightweight Machine Learning-Driven Monocular Sidewalk Path Extraction for Embedded Micromobility Navigation",
+      "url": "https://arxiv.org/abs/2608.25178",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "CRISP: Calibration-Aware Visual State Space Duality for Remote Sensing Semantic Segmentation",
-      "url": "https://arxiv.org/abs/2608.23746",
-      "date": "2026-08-26",
+      "title": "What Do Medical Vision-Language Models Learn in Radiology? Transfer, Alignment, and Source-Proxy Leakage Under Distribution Shift",
+      "url": "https://arxiv.org/abs/2608.25251",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "LUCAID: Agentic Multimodal AI for Lung Cancer Precision Pathology",
-      "url": "https://arxiv.org/abs/2608.23803",
-      "date": "2026-08-26",
+      "title": "Saliency-Depth Conditioning for Zero-Shot Segmentation of Communication-Tower Components in Cluttered UAV Imagery",
+      "url": "https://arxiv.org/abs/2608.25435",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "ConsensusTAS: Self-Supervised Temporal Action Segmentation for Long-Horizon Construction Videos",
-      "url": "https://arxiv.org/abs/2608.24043",
-      "date": "2026-08-26",
+      "title": "Automatic weld seam segmentation for industrial quality control: a comparison of RGB and polarimetric imaging with CNN and transformer architectures",
+      "url": "https://arxiv.org/abs/2608.25465",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "DRRG: A Discrete Diffusion Framework for Radiology Report Generation",
-      "url": "https://arxiv.org/abs/2608.24105",
-      "date": "2026-08-26",
+      "title": "MAMA-FLUX.2: Image-to-Image Synthesis of Post-Contrast Breast DCE-MRI for the MAMA-SYNTH Challenge",
+      "url": "https://arxiv.org/abs/2608.25648",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "B-MIM: Biased Masked Image Modeling for Generalizable Segmentation of Fine-Grained Anatomical Structures",
-      "url": "https://arxiv.org/abs/2608.24364",
-      "date": "2026-08-26",
+      "title": "Unsupervised Anatomical Feature Learning via Diffusion Models: Enhanced Medical Image Segmentation with Denoising Diffusion Probabilistic Models",
+      "url": "https://arxiv.org/abs/2608.25693",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "MRI-based Deep Radiomic Phenotyping of Neuromuscular Disorders: A Topology-driven Characterization",
-      "url": "https://arxiv.org/abs/2608.24415",
-      "date": "2026-08-26",
+      "title": "Difficulty-Aware Sample Allocation for Adaptive Data Augmentation in Semantic Segmentation",
+      "url": "https://arxiv.org/abs/2608.25710",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Hierarchical Prototype-Memory Adaptation of SAM for Surgical Instrument Segmentation",
-      "url": "https://arxiv.org/abs/2608.24541",
-      "date": "2026-08-26",
+      "title": "Steer the Sampling, Not the Kernel Grid: Geometry-Guided Sampling Operator for Volumetric Segmentation",
+      "url": "https://arxiv.org/abs/2608.25819",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "ReGround-Surg: Reliability-Guided Anchor Grounding for Referring Surgical Video Segmentation",
-      "url": "https://arxiv.org/abs/2608.24671",
-      "date": "2026-08-26",
+      "title": "LUTSeg: A Longitudinal Multi-Expert Dataset for Ulcer Tissue Segmentation",
+      "url": "https://arxiv.org/abs/2608.25866",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Deep Learning Super Resolution for Satellite Cloud Mask Downscaling",
-      "url": "https://arxiv.org/abs/2608.24715",
-      "date": "2026-08-26",
+      "title": "Code World Model: Coding Agent as World Brain",
+      "url": "https://arxiv.org/abs/2608.25927",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Weakly Supervised Seafloor Segmentation for Seagrass Habitat Mapping in Side-Scan Sonar Imagery",
-      "url": "https://arxiv.org/abs/2608.24756",
-      "date": "2026-08-26",
+      "title": "Less Contouring, More Accuracy: Lesion-Guided ROI Deep Learning for Ovarian Ultrasound Classification",
+      "url": "https://arxiv.org/abs/2608.25965",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "MoE-based Feature Adapter for Prompt-free Binary Coronary Artery Segmentation in X-ray Angiography",
-      "url": "https://arxiv.org/abs/2608.24783",
-      "date": "2026-08-26",
+      "title": "FRAME: separating sampling variation from representational cause in medical imaging fairness",
+      "url": "https://arxiv.org/abs/2608.25981",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "EMFE: A lightweight, explainable machine learning framework for malaria cell classification",
-      "url": "https://arxiv.org/abs/2608.24793",
-      "date": "2026-08-26",
+      "title": "Modality Contribution Score - A Per-Patient Framework for Quantifying the Relative Diagnostic Contribution of Structural MRI and Amyloid PET in Alzheimer's Disease",
+      "url": "https://arxiv.org/abs/2608.24931",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Model Effect or Label Effect? Refined Annotations and a Human-Referenced Benchmark for Pulmonary Embolism Segmentation",
-      "url": "https://arxiv.org/abs/2608.24486",
-      "date": "2026-08-26",
+      "title": "Improving Cross-Site Whole-Heart Segmentation",
+      "url": "https://arxiv.org/abs/2608.25109",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Deep Feature Pyramid Convolutional Networks with In-Place Activated Batch Normalization for Automated Skin Lesion Boundary Segmentation",
-      "url": "https://arxiv.org/abs/1812.00877",
-      "date": "2026-08-26",
+      "title": "Learning from waste: Machine Learning for health risk prediction and computer vision-based sorting in Ghana",
+      "url": "https://arxiv.org/abs/2608.25759",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "Segmentation-Guided Homography Estimation for Long-Term Planar Tracking",
-      "url": "https://arxiv.org/abs/2602.19624",
-      "date": "2026-08-26",
+      "title": "Controlling for Omitted Variable Bias in Deep Neural Networks",
+      "url": "https://arxiv.org/abs/2608.25930",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     },
     {
-      "title": "RePL: Pseudo-label Refinement for Semi-supervised LiDAR Semantic Segmentation",
-      "url": "https://arxiv.org/abs/2604.06825",
-      "date": "2026-08-26",
+      "title": "SEG-SAM: Semantic-Guided SAM for Unified Medical Image Segmentation",
+      "url": "https://arxiv.org/abs/2412.12660",
+      "date": "2026-08-27",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "ARGenSeg: Image Segmentation with Autoregressive Image Generation Model",
+      "url": "https://arxiv.org/abs/2510.20803",
+      "date": "2026-08-27",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Segmentation-Based Attention Entropy: Detecting and Mitigating Object Hallucinations in Large Vision-Language Models",
+      "url": "https://arxiv.org/abs/2603.16558",
+      "date": "2026-08-27",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "STATrack: A Target-Aware Fully Spiking Neural Network for Efficient UAV Tracking",
+      "url": "https://arxiv.org/abs/2603.27493",
+      "date": "2026-08-27",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Frequency-Decorrelated Temporal Ensembles for EEG--fNIRS Imagined-Handwriting Decoding",
+      "url": "https://arxiv.org/abs/2608.03176",
+      "date": "2026-08-27",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Reliability analysis for BraTS-GoAT segmentation: a controlled robustness study of deep-ensemble uncertainty",
+      "url": "https://arxiv.org/abs/2608.13223",
+      "date": "2026-08-27",
       "source": "arXiv cs.CV",
       "filter": "methods"
     }
