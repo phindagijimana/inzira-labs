@@ -1,40 +1,260 @@
 {
-  "fetchedAt": "2026-08-29T15:23:36Z",
-  "itemCount": 4,
+  "fetchedAt": "2026-08-30T15:08:05Z",
+  "itemCount": 36,
   "items": [
     {
-      "title": "Latent persistence in fMRI dynamics during human memory consolidation.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42656631/",
-      "date": "2026-09-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
+      "title": "MAESTRO: A Public, Generalizable Model for Stroke Lesion Segmentation from T1 MRI Across the Recovery Continuum",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.22.26361044v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
-      "title": "Harnessing machine learning for functional connectivity-based feature discovery in post-traumatic epilepsy.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42643256/",
-      "date": "2026-09-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
+      "title": "Prevalence of malformations of cortical development in patients with suspected epilepsy based on a clinical MRI dataset",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360591v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
-      "title": "MRI-based assessment of fetal brain gyrification: Reliability across two methods.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42621415/",
-      "date": "2026-09-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
+      "title": "MRI-derived brain aging trajectories across the Alzheimer's continuum: links to cognition, pathology and lifestyle risk factors",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360525v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
-      "title": "Distributed EEG power asymmetries across frequencies in PTSD: Introducing the dynamic EEG power differential (DEPD) index.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42622012/",
-      "date": "2026-09-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
+      "title": "Comparison of MRI sequences for optic nerve lesion detection in the follow-up of multiple sclerosis",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361188v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Perceptions of non-invasive brain stimulation and barriers to it's clinical translation: a multi-stakeholder focus group study",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361180v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Quantifying Large Language Model Influence in Brain Computer Interface Communication for Amyotrophic Lateral Sclerosis",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360941v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Brain Age Gap and Cognitive Processing Speed in Multiple Sclerosis",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360954v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Mitochondrial DNA copy number in neurodegenerative diseases: a global meta-analysis of 156 comparisons across 76 studies",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747144v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Descending somatosensory and motor cortical inputs shape auditory processing in the midbrain",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747140v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Hippocampal CA2 Inhibition Disrupts Prefrontal and Thalamic Connectivity",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746953v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Neuronal selectivity and geometric alignment in the human hippocampus support abstract generalization",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746980v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "An explainable AI latent space of brain dynamics reveals a cerebello-prefrontal signature of schizophrenia symptoms",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746991v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Mitochondrial dysfunction as a hallmark of brain senescence in telomerase-deficient mice",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746691v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "From Channel-Pair Connectivity to Brain Networks: An Open Graph Theoretical Pipeline for fNIRS Hyperscanning",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746918v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Mitigation of Parkinson's Disease Pathology in C. elegans by Marine Bacterium Kocuria rhizophila via Ferroptosis Suppression",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746916v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Neuronal primary cilia are not required for hippocampal circuit function or behavior in adult mice",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.24.746770v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "A Spanish grammaticality judgment task for neurodegenerative diseases: inflectional, transitivity, and word order comprehension in PPA and Alzheimer's Disease",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.25.26360651v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Genetic associations with EEG signatures in mild cognitive impairment: insights into Alzheimer's disease pathophysiology",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.25.26361294v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Intent Drift in LLM-Assisted Brain Computer Interface Communication: An In-Silico Benchmark Under Simulated Decoder Corruption",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360939v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Explainable Deep Learning Reveals Distributed Neurodegeneration Signatures of Neuropsychiatric Symptoms Across the Alzheimer's Continuum",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361256v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Adult Vaccination History and Plasma Biomarker Signatures in the Asymptomatic PREVENT-AD Cohort",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361238v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "It Takes 52 to Recruit One: Recruitment Barriers in Mechanistic Stroke Neurorehabilitation",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361192v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Temporal patterning of trigeminal nerve stimulation gates hippocampal plasticity across species",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.25.26361320v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Movement-responsive deep brain stimulation reinforces motor circuits in Parkinson's disease",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360021v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Different Responses to tDCS after Stroke in Male and Female Patients: Insights from the NETS Trial",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360862v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Domain-Specific Effects of GABA-Modulating Pharmacotherapies in Autism Spectrum Disorder: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.23.26361086v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "The vanishing white matter registry: a case study of historical controls in clinical trial design",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360800v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "VGLL3 Links Pericyte Hypercontractility to Perivascular Fibrosis of the Cerebral Microcirculation, a Novel Vasculopathy Leading to Distinct Long-Term Cerebral Autoregulation Dysfunction After Subarachnoid Hemorrhage",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747162v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "RGC-specific reversal of lipid peroxidation drives neuroprotection and vision restoration in optic nerve ischemia by targeting GPX4",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747113v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Value-guided attention links what we learn to how much we learn",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747046v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Heartbeat-Related Bodily Processing Shapes Transition Patterns in Self-Related Spontaneous Thought",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747022v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Joint experience-dependent representations of odors and temporal context in the zebrafish homolog of piriform cortex",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747023v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Gradients of function between sensory drive and working memory in human frontal cortex",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747005v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "RhabdoForge: A Modular, Biophysically-Grounded Rendering Framework for Insect Vision Neuroethology",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747007v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Vision-language encoding models reveal an image-computable food-quality dimension in human occipitotemporal cortex",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747006v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "MTHFR*677C>T produces distinct prodromal disease signatures in a mouse model of late-onset Alzheimer's disease",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746973v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
     }
   ],
   "authorItems": [],
-  "live": true,
-  "errors": [
-    "RSS bioRxiv neuroscience: HTTP Error 503: Service Unavailable",
-    "RSS medRxiv neurology: HTTP Error 503: Service Unavailable"
-  ]
+  "live": true
 }
