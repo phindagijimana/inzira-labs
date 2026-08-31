@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-08-30T15:08:05Z",
+  "fetchedAt": "2026-08-31T17:46:34Z",
   "itemCount": 36,
   "items": [
+    {
+      "title": "Prompts Without Evidence: How Neuroimaging Mentions Shift Clinical Vision-Language Model Predictions",
+      "url": "https://arxiv.org/abs/2603.28387",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
     {
       "title": "MAESTRO: A Public, Generalizable Model for Stroke Lesion Segmentation from T1 MRI Across the Recovery Continuum",
       "url": "https://www.medrxiv.org/content/10.64898/2026.08.22.26361044v1?rss=1",
@@ -10,15 +17,8 @@
       "filter": "neurology"
     },
     {
-      "title": "Prevalence of malformations of cortical development in patients with suspected epilepsy based on a clinical MRI dataset",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360591v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "MRI-derived brain aging trajectories across the Alzheimer's continuum: links to cognition, pathology and lifestyle risk factors",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360525v1?rss=1",
+      "title": "New lesion formation is associated with accelerated brain aging in multiple sclerosis",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.08.27.26361556v1?rss=1",
       "date": null,
       "source": "medRxiv neurology",
       "filter": "neurology"
@@ -45,214 +45,214 @@
       "filter": "neurology"
     },
     {
-      "title": "Brain Age Gap and Cognitive Processing Speed in Multiple Sclerosis",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360954v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "From Perspective to Fisheye Depth Estimation and Open-Vocabulary Segmentation",
+      "url": "https://arxiv.org/abs/2608.27860",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Mitochondrial DNA copy number in neurodegenerative diseases: a global meta-analysis of 156 comparisons across 76 studies",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747144v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Empowering Local Agriculture: A Deep Learning-Powered Web System for Identifying Bangladeshi Mango Varieties",
+      "url": "https://arxiv.org/abs/2608.28161",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Descending somatosensory and motor cortical inputs shape auditory processing in the midbrain",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747140v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "EXPOSE: Explainable and Domain-Robust Embeddings from Pathology Vision Foundation Models using Sparse Autoencoders",
+      "url": "https://arxiv.org/abs/2608.28191",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Hippocampal CA2 Inhibition Disrupts Prefrontal and Thalamic Connectivity",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746953v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Cross-Spectral Dense Correspondence for Multimodal Spectral Medical Imaging",
+      "url": "https://arxiv.org/abs/2608.28341",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Neuronal selectivity and geometric alignment in the human hippocampus support abstract generalization",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746980v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Prompt-Guided Interactive Segmentation of Interstitial Lung Disease in Thoracic CT",
+      "url": "https://arxiv.org/abs/2608.28453",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "An explainable AI latent space of brain dynamics reveals a cerebello-prefrontal signature of schizophrenia symptoms",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746991v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Anatomy-Aware Promptable Segmentation with Online Interactive Training for AUTOPET V",
+      "url": "https://arxiv.org/abs/2608.28461",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Mitochondrial dysfunction as a hallmark of brain senescence in telomerase-deficient mice",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746691v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Texture Image Classification Using DWT AlexNet Feature Fusion and Deep Neural Networks",
+      "url": "https://arxiv.org/abs/2608.28524",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "From Channel-Pair Connectivity to Brain Networks: An Open Graph Theoretical Pipeline for fNIRS Hyperscanning",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746918v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Image Augmentation as Test Generation for Deep Learning-Based Image Retrieval Systems",
+      "url": "https://arxiv.org/abs/2608.27502",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Mitigation of Parkinson's Disease Pathology in C. elegans by Marine Bacterium Kocuria rhizophila via Ferroptosis Suppression",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746916v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Destroy Me: Automatic Artifact Generation for Histopathology Images",
+      "url": "https://arxiv.org/abs/2608.27516",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Neuronal primary cilia are not required for hippocampal circuit function or behavior in adult mice",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.24.746770v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Bringing SAM to new heights: Leveraging elevation data for tree crown segmentation from drone imagery",
+      "url": "https://arxiv.org/abs/2506.04970",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "A Spanish grammaticality judgment task for neurodegenerative diseases: inflectional, transitivity, and word order comprehension in PPA and Alzheimer's Disease",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.25.26360651v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Hierarchical Feature-level Reverse Propagation for Post-Training Neural Networks",
+      "url": "https://arxiv.org/abs/2506.07188",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Genetic associations with EEG signatures in mild cognitive impairment: insights into Alzheimer's disease pathophysiology",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.25.26361294v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Riverbank Erosion Analysis in Bangladesh Using Spatiotemporal Segmentation",
+      "url": "https://arxiv.org/abs/2510.17198",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Intent Drift in LLM-Assisted Brain Computer Interface Communication: An In-Silico Benchmark Under Simulated Decoder Corruption",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360939v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Medical Imaging AI Competitions Lack Fairness",
+      "url": "https://arxiv.org/abs/2512.17581",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Explainable Deep Learning Reveals Distributed Neurodegeneration Signatures of Neuropsychiatric Symptoms Across the Alzheimer's Continuum",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361256v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "3D MRI-Based Alzheimer's Disease Classification Using Multi-Modal 3D CNN with Leakage-Aware Subject-Level Evaluation",
+      "url": "https://arxiv.org/abs/2603.17304",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Adult Vaccination History and Plasma Biomarker Signatures in the Asymptomatic PREVENT-AD Cohort",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361238v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "DeferredSeg:A Multi-Expert Deferral Framework for Medical Image Segmentation",
+      "url": "https://arxiv.org/abs/2604.12411",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "It Takes 52 to Recruit One: Recruitment Barriers in Mechanistic Stroke Neurorehabilitation",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361192v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "MSCGC-KAN: Multi-scale Causal Graph Convolution and KAN-inspired Analytic-basis Mapping for EEG Emotion Recognition",
+      "url": "https://arxiv.org/abs/2605.26624",
+      "date": "2026-08-31",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Temporal patterning of trigeminal nerve stimulation gates hippocampal plasticity across species",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.25.26361320v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Self-Explainable Multi-Label Graph Neural Network for Correlated Evidence Attribution",
+      "url": "https://arxiv.org/abs/2608.27574",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Movement-responsive deep brain stimulation reinforces motor circuits in Parkinson's disease",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360021v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "SegBench-GC: Testing Segmentation Invariance in Multi-Step Offline Goal-Conditioned Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2608.27678",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Different Responses to tDCS after Stroke in Male and Female Patients: Insights from the NETS Trial",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360862v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "RiskBlend: A Multi-Signal Framework for Test Input Prioritization in Machine Learning Regression Testing",
+      "url": "https://arxiv.org/abs/2608.27704",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Domain-Specific Effects of GABA-Modulating Pharmacotherapies in Autism Spectrum Disorder: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.23.26361086v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Leveraging a Foundation Model for the EEG-Based Diagnosis of Alzheimer's Disease",
+      "url": "https://arxiv.org/abs/2608.27719",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "The vanishing white matter registry: a case study of historical controls in clinical trial design",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360800v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Actionable CBFI: Integrating Structural Decomposition and Causal Counterfactual Recourse for Tabular Machine Learning",
+      "url": "https://arxiv.org/abs/2608.27821",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "VGLL3 Links Pericyte Hypercontractility to Perivascular Fibrosis of the Cerebral Microcirculation, a Novel Vasculopathy Leading to Distinct Long-Term Cerebral Autoregulation Dysfunction After Subarachnoid Hemorrhage",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747162v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Comparing Classical and Quantum Machine Learning for Regression in High Energy Physics Collision Data",
+      "url": "https://arxiv.org/abs/2608.28084",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "RGC-specific reversal of lipid peroxidation drives neuroprotection and vision restoration in optic nerve ischemia by targeting GPX4",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747113v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Residual-Guided Randomized Neural Networks",
+      "url": "https://arxiv.org/abs/2608.28267",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Value-guided attention links what we learn to how much we learn",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747046v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs",
+      "url": "https://arxiv.org/abs/2608.28589",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Heartbeat-Related Bodily Processing Shapes Transition Patterns in Self-Related Spontaneous Thought",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747022v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Effectiveness of IoT and Deep Learning for Detection and Severity Assessment of Postelectrotermes militaris in Tea Plantations",
+      "url": "https://arxiv.org/abs/2608.27480",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Joint experience-dependent representations of odors and temporal context in the zebrafish homolog of piriform cortex",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747023v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Optimal Transport for Network Comparison: A Review with Machine Learning Applications",
+      "url": "https://arxiv.org/abs/2608.27500",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Gradients of function between sensory drive and working memory in human frontal cortex",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747005v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Under-Mattress Temporal Sensing for Next-Day Agitation Risk Scoring in Dementia Wards",
+      "url": "https://arxiv.org/abs/2608.28152",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "RhabdoForge: A Modular, Biophysically-Grounded Rendering Framework for Insect Vision Neuroethology",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747007v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "One Model for All: Universal Pre-training for EEG based Emotion Recognition across Heterogeneous Datasets and Paradigms",
+      "url": "https://arxiv.org/abs/2511.08444",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Vision-language encoding models reveal an image-computable food-quality dimension in human occipitotemporal cortex",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.747006v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "SemEnrich: Self-Supervised Semantic Enrichment of Radiology Reports for Vision-Language Learning",
+      "url": "https://arxiv.org/abs/2604.09887",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "MTHFR*677C>T produces distinct prodromal disease signatures in a mouse model of late-onset Alzheimer's disease",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.08.25.746973v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Can Subgraph Explanations Be Weaponized to Steal Graph Neural Networks?",
+      "url": "https://arxiv.org/abs/2605.30470",
+      "date": "2026-08-31",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     }
   ],
   "authorItems": [],
