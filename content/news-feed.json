@@ -1,111 +1,153 @@
 {
-  "fetchedAt": "2026-09-08T14:50:27Z",
+  "fetchedAt": "2026-09-09T14:56:58Z",
   "itemCount": 36,
   "items": [
     {
-      "title": "Hippocampal/medial temporal sclerosis is associated with clinical severity, regional TDP-43, and hippocampal atrophy in Alzheimer disease",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.03.749099v1?rss=1",
+      "title": "Social Experience and Motivated Cognition Shape the Representation of Concepts: A Behavioural and Functional Neuroimaging Study",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.03.749162v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Reduced EEG Complexity and Its Association with Social Communication in Adults with Autism Spectrum Disorder: A Multiscale Entropy Study",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.01.747412v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Clinical deep sequencing to diagnose pathogenic mosaic variants in malformations of cortical development and epilepsy",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.01.26361943v1?rss=1",
+      "title": "Association Between Disability and Longitudinal Brain Volumetric Measures Across the Peri-Pregnancy Period in Women with Multiple Sclerosis: A Pilot Study",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.06.26362381v1?rss=1",
       "date": null,
       "source": "medRxiv neurology",
       "filter": "neurology"
     },
     {
-      "title": "Evaluating Cognitive Impact of Traumatic Brain Injury and Risk for Post-Traumatic Epilepsy",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.30.26361760v1?rss=1",
+      "title": "Structural Brain Networks and the Seizure-Survival Paradox in Glioblastoma",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.04.26362299v1?rss=1",
       "date": null,
       "source": "medRxiv neurology",
       "filter": "neurology"
     },
     {
-      "title": "Heterogeneity of Brain Dynamics in Genetic and Psychiatric Conditions",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.01.748394v1?rss=1",
+      "title": "Non-unitary reproducibility of an EEG-DMN-like sensor-level proxy: metric-family, task-window and paradigm effects across internally oriented tasks.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42710644/",
+      "date": "2026-09-01",
+      "source": "NeuroImage",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "Characterizing the role of the gut microbiota-inflammation-brain axis in major depressive disorder: an integrative multi-omics study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42710643/",
+      "date": "2026-09-01",
+      "source": "NeuroImage",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "Strengthening clinical trial ethics and regulatory oversight in Africa: lessons from the TRACE initiative.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42706369/",
+      "date": "2026-09-01",
+      "source": "Nature Medicine",
+      "filter": "nature"
+    },
+    {
+      "title": "Gene alteration in human brain suggests genetic and epigenetic roots of major depression.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42693300/",
+      "date": "2026-09-01",
+      "source": "Nature Medicine",
+      "filter": "nature"
+    },
+    {
+      "title": "Naturalistic narrative listening reveals a core brain network for detecting moral information",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749401v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Sex-divergent responses to microglial depletion suggest distinct regulatory dependencies in the aged brain",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.03.745468v1?rss=1",
+      "title": "Diffusion MR Microscopy of the Human Hippocampus at 50 μm Resolution at 14.1 T for 3D Virtual Histology",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749425v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "OCTOPUS: A versatile open-source tool creating realistic numericalbrain cells",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.02.748537v1?rss=1",
+      "title": "Specification dependence of EEG theta/alpha ratio associations with cognitive impairment: a multiverse analysis",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.03.749187v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Hippocampal stimulation timed to memory reactivation shapes human sleep oscillatory dynamics and consolidation",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.02.748628v1?rss=1",
+      "title": "Semaglutide engages distinct brainstem-to-hypothalamus circuits to suppress motivated feeding and regulate ketogenesis and energy expenditure",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749561v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Distinct tuning properties of human hippocampal neurons along the longitudinal axis during working memory",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.03.749046v1?rss=1",
+      "title": "Spatial transcriptomics identifies L6 corticothalamic and L6b subplate-like heterotopic neurons in an epileptogenic SLC35A2-associated brain malformation.",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749069v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Altered astrocyte morphology in pathogenic HEPACAM variants: a multipoint analysis and new machine learning framework for 3D Sholl analysis",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.02.748961v1?rss=1",
+      "title": "The neural geometry of surprise: Graded boundary breakthroughs in the human brain",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.03.748562v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Spatially confined dopamine from locus coeruleus axons selectively shapes hippocampal dynamics and action timing",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.02.748730v1?rss=1",
+      "title": "Acute lysergic acid diethylamide induces a time-dependent shift toward hippocampal control of default mode network reorganization",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.03.748807v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "DRUMS - A Flexible New Deep Learning Tool for Precise Cortical Surface Alignment across Individuals",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.01.748559v1?rss=1",
+      "title": "Predicting Conversion from SCD to MCI: A Machine Learning Study",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.04.26362240v1?rss=1",
       "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
-      "title": "Gut Microbiota Signatures of Brain and Peripheral gamma-amino butyric acid (GABA) in Healthy Adult Males",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.01.748531v1?rss=1",
+      "title": "Deciphering Physiological and Pathological Influences on Amygdala-Hippocampus Connectivity",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.06.26362367v1?rss=1",
       "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
-      "title": "Glucocorticoids impair memory inference through noradrenergic disruption of GABAergic regulation in hippocampal CA3",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.02.748771v1?rss=1",
+      "title": "C-Reactive Protein-Triglyceride-Glucose Index, Inflammatory-Metabolic Burden, and Prevalent Stroke in U.S. Adults: NHANES 1999-2010",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.07.26362446v1?rss=1",
       "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
-      "title": "Striatal dopamine dynamics across temporal scales in brain-specific Atp2a2 heterozygous knockout mice during reward conditioning",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.01.748702v1?rss=1",
+      "title": "A survey and review of eye-tracking in clinical practice",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.07.26361936v1?rss=1",
       "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Valproate-induced hyperammonemic encephalopathy versus asymptomatic hyperammonemia in adults with epilepsy: a cross-sectional study",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.05.26362327v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Sex Differences in the Associations between Education, Neuropathology, and Cognition",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.03.26362216v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
+    },
+    {
+      "title": "Serum lipidomics identifies outcome signatures in patients with traumatic brain injury, presenting with Glasgow Coma Scale score of 13-15",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.07.26362408v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
       "title": "Education and Alzheimer Disease Genetic Risk in Associations of GLP-1 Receptor Agonists With Dementia Among Adults With Type 2 Diabetes",
@@ -178,78 +220,36 @@
       "filter": "neurology"
     },
     {
-      "title": "Incremental Value of CSF Biomarker-Integrated Classification of Cerebral Amyloid Angiopathy",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.30.26361511v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "The parcellation organization of cerebellum associated with white-matter functional systems.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42710645/",
+      "date": "2026-09-01",
+      "source": "NeuroImage",
+      "filter": "neuroimaging"
     },
     {
-      "title": "Returning APOE and pTau-217 Results: the eSMARTER Randomized Noninferiority Clinical Trial",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.27.26361535v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Disrupted Sensorimotor Integration, Rather Than Regional Cortical Activation, Is Associated with Force Sense Deficits in Chronic Ankle Instability: A Partial Directed Coherence Analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42710642/",
+      "date": "2026-09-01",
+      "source": "NeuroImage",
+      "filter": "neuroimaging"
     },
     {
-      "title": "Big tau and brain-derived tau reveal peripheral and central nervous system involvement in neuropathies",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.27.26361202v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "A binding ban, and its limits: Japan legislates on heritable human genome editing.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42711520/",
+      "date": "2026-09-01",
+      "source": "Nature Medicine",
+      "filter": "nature"
     },
     {
-      "title": "Antiseizure Medication Administration Gaps Across the ICU-to-Floor Transfer: A Matched Within-Patient Comparison",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.26.26361462v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "From algorithms to patient outcomes - lessons from one of the first randomized trials of AI in medicine.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42706370/",
+      "date": "2026-09-01",
+      "source": "Nature Medicine",
+      "filter": "nature"
     },
     {
-      "title": "Paradoxical relief after seizures: a diagnostic signal distinguishing functional/dissociative from epileptic seizures",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.08.27.26360607v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Structured Connectivity Across Multiple Drosophila Mushroom Bodies",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.06.749654v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Differentiation of KISS1-Expressing Cells from Human Pluripotent Stem Cells: Many Roads To Rome",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.02.748796v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Acetylcholine drives astrocytic JAK2-STAT3 signaling to modulate male-to-female approach behavior",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.02.748883v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Supramammillary projections to the lateral preoptic area drive dopamine release and active behavior",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.01.748391v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Computer vision-aided locomotor behavioral analysis identifies therapeutic motor signatures in a mouse model of Huntington disease",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.03.749147v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Cortical isolation separates rhythmic synchrony from network integration in the human neocortex.",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.02.748777v1?rss=1",
+      "title": "A Female-Specific Microglial Redox Program Gates Susceptibility to Obesity",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749380v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
