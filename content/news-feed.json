@@ -1,10 +1,31 @@
 {
-  "fetchedAt": "2026-09-12T13:48:50Z",
+  "fetchedAt": "2026-09-13T14:45:02Z",
   "itemCount": 36,
   "items": [
     {
-      "title": "Cryo-ET and Sub-Volume Analysis of Fibrillar Pathology in the Neurodegenerative Human Brain",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749518v1?rss=1",
+      "title": "Relationship between cognitive functioning and diffusion tensor imaging analysis along perivascular spaces as a diffusion magnetic resonance imaging marker of perivascular directional diffusivity in functional seizures after traumatic brain injury.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42730507/",
+      "date": "2026-09-01",
+      "source": "Epilepsia",
+      "filter": "neurology"
+    },
+    {
+      "title": "Conversation in fMRI: DMN Activates During Live Mentalizing",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.07.749824v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Hippocampal-cingulate dynamics in the human brain link reinforcement-learning and memory",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.10.750374v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Brain deviation scores derived from normative modelling identify dimensions of psychopathology in children and adolescents",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.12.751102v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
@@ -38,43 +59,50 @@
       "filter": "neurology"
     },
     {
-      "title": "Corrigendum to: ΔNp73/ETS2 complex drives glioblastoma pathogenesis-targeting downstream mediators by rebastinib prolongs survival in preclinical models of glioblastoma.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42710498/",
+      "title": "Classifying seizures in practice: Testing the 2025 ILAE framework among clinicians in South Africa.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42730498/",
       "date": "2026-09-01",
-      "source": "Neuro-Oncology",
-      "filter": "neuro-oncology"
+      "source": "Epilepsia",
+      "filter": "neurology"
     },
     {
-      "title": "Brain-resident myeloid cells promote rapid leukocyte adhesion in leptomeningeal vessels after anti-Aβ immunotherapy",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.07.749938v1?rss=1",
+      "title": "Interictal electric source imaging with open-source software and routine low-density electroencephalography: A systematic comparison of four inverse methods in drug-resistant epilepsy.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42720845/",
+      "date": "2026-09-01",
+      "source": "Epilepsia",
+      "filter": "neurology"
+    },
+    {
+      "title": "A systematic review on mental health issues in adults with newly diagnosed epilepsy.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42714928/",
+      "date": "2026-09-01",
+      "source": "Epilepsia",
+      "filter": "neurology"
+    },
+    {
+      "title": "Polar Geometry of Time-Odd EEG Dynamics",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.08.749160v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Quantifying Uncertainty in Brain Age Predictions via Conformal Prediction",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749442v1?rss=1",
+      "title": "An updated roadmap for brain-mental health associations in the UK Biobank",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.09.750514v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Differential Effects of Neutral Sphingomyelinase and Serine Palmitoyltransferase Inhibitors on Alzheimer's-Like Neuropathology.",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749232v1?rss=1",
+      "title": "Delta rhythm and voice familiarity organize neural entrainment in the infant brain",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.10.750698v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Postnatal maturation of putamen microstructure accompanies topographic white matter connectivity and altered circuits in autism",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.09.750447v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "OPM-MEG reveals protracted maturation of visual phase-amplitude coupling from early childhood to adulthood",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.08.749145v1?rss=1",
+      "title": "Mistrafficking of KCC2 promotes hyperexcitability in hippocampal circuitry in a murine model of Christianson Syndrome",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.09.750201v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
@@ -171,85 +199,57 @@
       "filter": "neurology"
     },
     {
-      "title": "EFTUD2-Regulated Alternative Splicing of MSH5 Drives Radioresistance in Recurrent IDH-Mutant Glioma.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42717441/",
+      "title": "A global digital navigator of human health for precision medicine.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42728381/",
       "date": "2026-09-01",
-      "source": "Neuro-Oncology",
-      "filter": "neuro-oncology"
+      "source": "Nature Medicine",
+      "filter": "nature"
     },
     {
-      "title": "Association between temozolomide-related hematologic toxicity and health-related quality of life (HRQoL) in patients with newly diagnosed glioblastoma.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42711275/",
+      "title": "Joint impact of pathological burden and cognitive resilience on Alzheimer's disease risk.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42728380/",
       "date": "2026-09-01",
-      "source": "Neuro-Oncology",
-      "filter": "neuro-oncology"
+      "source": "Nature Medicine",
+      "filter": "nature"
     },
     {
-      "title": "Functional clustering within glioblastoma identifies a network-integrated subtype with improved survival.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42711254/",
+      "title": "Teclistamab versus lenalidomide-dexamethasone in high-risk smoldering multiple myeloma: a randomized phase 2 trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42728379/",
       "date": "2026-09-01",
-      "source": "Neuro-Oncology",
-      "filter": "neuro-oncology"
+      "source": "Nature Medicine",
+      "filter": "nature"
     },
     {
-      "title": "Soluble pathogenic tau transmission to astrocytes drives acute oxidative damage, cellular senescence, and neurovascular uncoupling in a model of Alzheimers tauopathy",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.08.750215v1?rss=1",
+      "title": "Author Correction: Colonoscopy and fecal immunochemical testing versus usual care in diagnostic colorectal cancer screening: the SCREESCO randomized controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42722889/",
+      "date": "2026-09-01",
+      "source": "Nature Medicine",
+      "filter": "nature"
+    },
+    {
+      "title": "Competing calcium sensors orchestrate various patterns of synaptic transmission",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.09.750532v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "GBAviewer: a structural database of GBA1 variants in Parkinson's disease",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.05.749596v1?rss=1",
+      "title": "Cortical high frequency oscillations reflect encoding and retrieval of specific word concepts",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.11.750906v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Flexible reorientation of conserved neural dynamics underlies grasp control",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749537v1?rss=1",
+      "title": "Mentally transformed representations in memory are linked to their originals",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.10.750562v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Natural sleep, but not propofol-induced anesthesia preserves spatial and procedural memory consolidation",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.05.749587v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Plateau-gated one-shot plasticity supports continual recognition memory",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749460v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "High frame rate in vivo two-photon microscopy to quantify murine cerebrospinal fluid flow heterogeneity",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749497v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Social isolation is associated with microRNA expression changes in the visual system of poison frog tadpoles",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749321v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Age-related hyperexcitability in the mouse inferior colliculus: evidence from sound-evoked local field potentials",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749491v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Cardiac belief updating from volatile physiological afferents",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749527v1?rss=1",
+      "title": "Rtel1 in hypothalamic oxytocin neurons regulates oxytocin output and social behaviors in mice",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.10.750776v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
