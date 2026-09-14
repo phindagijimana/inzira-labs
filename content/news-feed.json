@@ -1,13 +1,69 @@
 {
-  "fetchedAt": "2026-09-13T14:45:02Z",
+  "fetchedAt": "2026-09-14T16:43:20Z",
   "itemCount": 36,
   "items": [
     {
-      "title": "Relationship between cognitive functioning and diffusion tensor imaging analysis along perivascular spaces as a diffusion magnetic resonance imaging marker of perivascular directional diffusivity in functional seizures after traumatic brain injury.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42730507/",
-      "date": "2026-09-01",
-      "source": "Epilepsia",
+      "title": "FRIST: FMRI Representation Informed Shared-space Training Improves EEG-only Individual-Finger BCI Decoding",
+      "url": "https://arxiv.org/abs/2609.12298",
+      "date": "2026-09-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
+    },
+    {
+      "title": "GFAP as a Biomarker of Stroke Subtype and Brain Tissue Damage in Acute Stroke: A Systematic Review and Meta-Analysis",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.11.26362885v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
       "filter": "neurology"
+    },
+    {
+      "title": "A Multimodal Explainable Deep Learning Framework for Alzheimer's Disease Diagnosis using 3D Magnetic Resonance Imaging and Clinical Data",
+      "url": "https://arxiv.org/abs/2609.12410",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Unified CT and MRI Pancreas Segmentation for Label-Efficient Cross-Modality Subregion Transfer",
+      "url": "https://arxiv.org/abs/2609.13043",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Learning Sparse Latent Predictive Foundation Model for Multimodal Neuroimaging",
+      "url": "https://arxiv.org/abs/2606.14957",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Uni-Light: An Ultra-Lightweight Framework via Uncertainty-Aware Knowledge Distillation for Brain Tumour Segmentation",
+      "url": "https://arxiv.org/abs/2609.06729",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Naturalistic fMRI Language Mapping With Rotation Forest.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42728209/",
+      "date": "2026-09-01",
+      "source": "Human Brain Mapping",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "EEG Biomarkers for Affective Disorders Diagnosis: An Evaluation and Validation Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42702788/",
+      "date": "2026-09-01",
+      "source": "Human Brain Mapping",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "HIPPOCAMPAL TAU RELATED SIGNAL INDEXES HYPEREXCITABILITY AND NREM SLEEP MEMORY DYSFUNCTION IN TEMPORAL LOBE EPILEPSY",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.07.748279v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
     },
     {
       "title": "Conversation in fMRI: DMN Activates During Live Mentalizing",
@@ -24,18 +80,11 @@
       "filter": "nih"
     },
     {
-      "title": "Brain deviation scores derived from normative modelling identify dimensions of psychopathology in children and adolescents",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.12.751102v1?rss=1",
+      "title": "A large language model for risk-of-bias assessment in systematic reviews of prognosis studies in clinical neurology",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.09.09.26362643v1?rss=1",
       "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Large-Vessel Venous Signal Confounds Apparent Amygdala Activation in BOLD fMRI",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.04.749520v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
       "title": "Amyloid-Independent Elevation of Plasma phosphorylated tau-217 Tracks Neurodegenerative Risk in Tuberous Sclerosis Complex: Implications for mTOR-Targeted Intervention",
@@ -59,200 +108,151 @@
       "filter": "neurology"
     },
     {
-      "title": "Classifying seizures in practice: Testing the 2025 ILAE framework among clinicians in South Africa.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42730498/",
-      "date": "2026-09-01",
-      "source": "Epilepsia",
-      "filter": "neurology"
+      "title": "Beyond Argmax: A Mechanistic Study of Semantic Retention in Frozen Foundation-Model Composition for Generalized Few-Shot 3D Segmentation",
+      "url": "https://arxiv.org/abs/2609.12099",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Interictal electric source imaging with open-source software and routine low-density electroencephalography: A systematic comparison of four inverse methods in drug-resistant epilepsy.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42720845/",
-      "date": "2026-09-01",
-      "source": "Epilepsia",
-      "filter": "neurology"
+      "title": "HSI-Road Relabeled: Surface-Aware Road-Scene Segmentation",
+      "url": "https://arxiv.org/abs/2609.12151",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "A systematic review on mental health issues in adults with newly diagnosed epilepsy.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42714928/",
-      "date": "2026-09-01",
-      "source": "Epilepsia",
-      "filter": "neurology"
+      "title": "When Ground-Truth Fidelity Matters: An Orchestrated UAS Framework for Wheat Streak Mosaic Virus Detection Using Vision Transformers and Machine Learning",
+      "url": "https://arxiv.org/abs/2609.12169",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Polar Geometry of Time-Odd EEG Dynamics",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.08.749160v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "EgoMaize: A First-Person Maize Instance Segmentation Benchmark under Severe Field Occlusion",
+      "url": "https://arxiv.org/abs/2609.12350",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "An updated roadmap for brain-mental health associations in the UK Biobank",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.09.750514v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "PhysioAI: Clinical Knowledge-Guided Semantic Supervision for Skeleton-Based Physiotherapy Action Recognition",
+      "url": "https://arxiv.org/abs/2609.12491",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Delta rhythm and voice familiarity organize neural entrainment in the infant brain",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.10.750698v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "An Ultra-Widefield Swept-Source OCTA Dataset and a Polar-Gated Mamba Network for Retinal Vessel Segmentation",
+      "url": "https://arxiv.org/abs/2609.12574",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Mistrafficking of KCC2 promotes hyperexcitability in hippocampal circuitry in a murine model of Christianson Syndrome",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.09.750201v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Beyond Accuracy: Uncertainty-Guided Boundary Refinement for Reliable Biomedical Image Segmentation",
+      "url": "https://arxiv.org/abs/2609.12892",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Feasibility of SMS-based screening for mood disturbances after minor stroke: strengths and limitations",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.09.26362636v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "UniPart: Towards Zero-shot Language-Grounded 3D Part Segmentation for Embodied Interaction",
+      "url": "https://arxiv.org/abs/2609.12898",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Processing Speed Accounts for the Discriminative Power of a Smartphone Go/No-Go Task in Multiple Sclerosis",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.09.26362640v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "DementiaCare-Bench: A Modality-Validated Video Benchmark",
+      "url": "https://arxiv.org/abs/2609.12929",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Immune Profiling after treatment with an Anti-CD19 Chimeric Antigen Receptor T Cell Therapy in Treatment-Refractory Progressive Multiple Sclerosis",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.11.26361992v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "SV-Cine: Diagnosis-Conditioned Segmentation of Single Ventricle Physiology via Generative Data Augmentation",
+      "url": "https://arxiv.org/abs/2609.12997",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Cortical Network Reorganization During Balance Control in Chronic Stroke: Premotor-Parietal Behavioral Uncoupling and Directional Prefrontal Compensation.",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.08.26362085v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "PLSP (Pre-hoc Liminal Space Profiling): OOD Prediction over Detection -- An Anticipatory Approach for Machine Learning Model Reliability",
+      "url": "https://arxiv.org/abs/2609.12225",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Vascular and neurodegenerative contributions to cognitive decline and multidomain progression in de novo Parkinsons disease",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.09.26362673v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Physics-Guided Synthetic High-Frequency Ultrasound Generation for Skin Layer Segmentation",
+      "url": "https://arxiv.org/abs/2609.12735",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Cerebrospinal fluid hemolysis precedes secondary brain injury after aneurysmal subarachnoid hemorrhage",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.08.26362434v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "MCSeg: Pre-training and Fine-tuning Volumetric Pyramid Transformer for Multi-modal Cardiac Image Segmentation",
+      "url": "https://arxiv.org/abs/2608.30371",
+      "date": "2026-09-14",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Predicting Conversion from SCD to MCI: A Machine Learning Study",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.04.26362240v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Fed-Equilibrium Framework for Topological Pareto Control in Robust and Fair Clinical Federated Learning",
+      "url": "https://arxiv.org/abs/2609.11937",
+      "date": "2026-09-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Deciphering Physiological and Pathological Influences on Amygdala-Hippocampus Connectivity",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.06.26362367v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Estimating Pedestrian Volumes from GIS-Derived Built-Environment Features: A Machine Learning Framework",
+      "url": "https://arxiv.org/abs/2609.12173",
+      "date": "2026-09-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "C-Reactive Protein-Triglyceride-Glucose Index, Inflammatory-Metabolic Burden, and Prevalent Stroke in U.S. Adults: NHANES 1999-2010",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.07.26362446v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Reinforcement Learning over Patient Trajectories for Clinical Reasoning in EHR Foundation Models",
+      "url": "https://arxiv.org/abs/2609.12277",
+      "date": "2026-09-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "A survey and review of eye-tracking in clinical practice",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.07.26361936v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Impact of Multiple Non-Invasive Biosignals on Cardiovascular Biomarker Estimation via Simulation-Based Inference",
+      "url": "https://arxiv.org/abs/2609.11969",
+      "date": "2026-09-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Valproate-induced hyperammonemic encephalopathy versus asymptomatic hyperammonemia in adults with epilepsy: a cross-sectional study",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.05.26362327v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "Fast BIB simulation at a future Muon Collider with generative machine learning",
+      "url": "https://arxiv.org/abs/2609.12054",
+      "date": "2026-09-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Sex Differences in the Associations between Education, Neuropathology, and Cognition",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.03.26362216v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "BRIDGE-EEG: Bridging Self-Supervised Pretraining and Efficient Deployment for Cross-Dataset EEG Classification",
+      "url": "https://arxiv.org/abs/2609.12218",
+      "date": "2026-09-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "Serum lipidomics identifies outcome signatures in patients with traumatic brain injury, presenting with Glasgow Coma Scale score of 13-15",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.07.26362408v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
+      "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+      "url": "https://arxiv.org/abs/2609.12815",
+      "date": "2026-09-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     },
     {
-      "title": "A global digital navigator of human health for precision medicine.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42728381/",
-      "date": "2026-09-01",
-      "source": "Nature Medicine",
-      "filter": "nature"
-    },
-    {
-      "title": "Joint impact of pathological burden and cognitive resilience on Alzheimer's disease risk.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42728380/",
-      "date": "2026-09-01",
-      "source": "Nature Medicine",
-      "filter": "nature"
-    },
-    {
-      "title": "Teclistamab versus lenalidomide-dexamethasone in high-risk smoldering multiple myeloma: a randomized phase 2 trial.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42728379/",
-      "date": "2026-09-01",
-      "source": "Nature Medicine",
-      "filter": "nature"
-    },
-    {
-      "title": "Author Correction: Colonoscopy and fecal immunochemical testing versus usual care in diagnostic colorectal cancer screening: the SCREESCO randomized controlled trial.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42722889/",
-      "date": "2026-09-01",
-      "source": "Nature Medicine",
-      "filter": "nature"
-    },
-    {
-      "title": "Competing calcium sensors orchestrate various patterns of synaptic transmission",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.09.750532v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Cortical high frequency oscillations reflect encoding and retrieval of specific word concepts",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.11.750906v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Mentally transformed representations in memory are linked to their originals",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.10.750562v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Rtel1 in hypothalamic oxytocin neurons regulates oxytocin output and social behaviors in mice",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.10.750776v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "In-Hospital Stroke Risk-State Classification from PPG-Derived Hemodynamic Features",
+      "url": "https://arxiv.org/abs/2602.09328",
+      "date": "2026-09-14",
+      "source": "arXiv cs.LG",
+      "filter": "methods"
     }
   ],
   "authorItems": [],
