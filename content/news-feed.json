@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-19T14:04:45Z",
+  "fetchedAt": "2026-09-20T14:23:47Z",
   "itemCount": 36,
   "items": [
     {
@@ -10,8 +10,15 @@
       "filter": "neurology"
     },
     {
-      "title": "An Interpretable EEG Machine Learning Prototype for Alzheimers Disease Classification",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.12.751104v1?rss=1",
+      "title": "Changes in Neural Dynamics of Brain Activity and Connectivity Independently Predict Post-Stroke Aphasia Recovery",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.751646v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "A lifespan single-cell atlas of the human developing hippocampus benchmarks familial Alzheimer's disease brain organoids.",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.18.752796v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
@@ -38,6 +45,27 @@
       "filter": "neurology"
     },
     {
+      "title": "Cellular code for mnemonic pattern separation in the human hippocampus is revealed by false memories",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.18.752786v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "What Transfers Across Brains Is Not What Stays Within Individuals: Evidence from Bilingual Language States",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.18.752561v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Hippocampal interferon-response, unfolded-protein-response and synaptic transcriptional signatures in RORγt-transgenic mice",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.13.751197v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
       "title": "Striatal cholinergic interneuron pathology and muscarinic signaling independently shape motor dysfunction in a DYT-TOR1A dystonia model",
       "url": "https://www.biorxiv.org/content/10.64898/2026.09.13.751056v1?rss=1",
       "date": null,
@@ -54,34 +82,6 @@
     {
       "title": "Img2EEG: A Scalable and Interpretable Encoding Framework for Simulating Human EEG Responses to Visual Inputs",
       "url": "https://www.biorxiv.org/content/10.64898/2026.09.16.751610v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Spatial organization and mitigation of autofluorescence in multiplexed spatial proteomics of aged fresh-frozen human brain",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.11.750056v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Traumatic Brain Injury induces persistent behavioural deficits that are rescued by the antiepileptic drug Levetiracetam",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.12.751143v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Controlled Blood-Brain Barrier Modulation by a High-Affinity Claudin-5 Peptide Binder",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.12.751133v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Brain-to-brain synchrony during shared reminiscing predicts connection and memory in romantic couples",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.11.751017v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
@@ -171,6 +171,62 @@
       "filter": "neurology"
     },
     {
+      "title": "The activation function of CA3 pyramidal neurons is optimal for the stable recall of memory patterns",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.752025v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Evolution of new cerebellar nuclei by excitatory progenitor diversification in the early rhombic lip",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.751883v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Basolateral amygdala neurons await oscillatory recruitment into valence-relevant ensembles",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.15.751884v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Local translation couples synaptic activity to mitochondrial adaptation in dendrites",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.752159v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Single neurons in the human substantia nigra encode social learning signals",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.18.752742v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Distinct Roles of Working Memory and Inhibitory Control in Speech-in-Noise Perception",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.752459v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Ile35 residue of SOD1 plays a key role in aggregate formation and eye degeneration in a Drosophila model of ALS",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.13.751333v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Superficial spinal Tac1-lineage neurons are polymodal nociceptive",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.13.751298v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
       "title": "Voice and linguistic features support early attentional filtering of irrelevant stimuli",
       "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.752368v1?rss=1",
       "date": null,
@@ -194,62 +250,6 @@
     {
       "title": "A comparative framework for neocortical sulcal anatomy in pinnipeds",
       "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.752275v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Spatiotemporal dynamics of lexical and morphosyntactic planning during language production revealed by magnetoencephalography",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.752155v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Learning Environmental Dynamics: Building Internal Models of a Simulated External Force",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.751840v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Sleep spindles stabilize human thalamocortical networks, inhibiting pathological disruptions",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.13.751011v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Emotional Modulation of Face Working Memory Precision in Specific Learning Disorders: Valence Flattening and Mnemonic Distortions",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.13.751264v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "MERIT: A No-Code Platform for Unifying High-Precision Cognitive Assessment Across Laboratory and Real-World Settings",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.13.751236v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "USH2A High-Capacity Adenoviral Vector Restores usherin, whirlin, and ADGRV1 in Photoreceptor Cells of Retinal Organoids",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.14.751468v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Categorical Color Structure Persists in Color Vision Deficiency",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.13.751220v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Behaviorally prioritized entity-relation structure captures human visual cortical representations of natural scenes",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.16.752038v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
