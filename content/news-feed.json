@@ -1,20 +1,34 @@
 {
-  "fetchedAt": "2026-09-27T15:28:35Z",
+  "fetchedAt": "2026-09-28T18:19:34Z",
   "itemCount": 36,
   "items": [
     {
-      "title": "Divergence in neurodivergent brains: mapping the relationship between developmental trajectories in functional connectivity and clinical outcomes",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.23.753857v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "How Far Can INRs Go? Cross-Domain Parameter-efficient INR-Based Semantic Segmentation for Brain MRI",
+      "url": "https://arxiv.org/abs/2609.31573",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
-      "title": "Menstrual cycle phase and premenstrual symptoms in relation with the stress response: an fMRI study",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.21.753084v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
+      "title": "Charting the Normal Development of Structural Brain Connectivity in Utero Using Diffusion MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42798243/",
+      "date": "2026-10-01",
+      "source": "Human Brain Mapping",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "Combining General and Domain-Specific Pretext Tasks for Brain MR Image Segmentation",
+      "url": "https://arxiv.org/abs/2609.30708",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "FlatClip: A Geometry-Aware Surface-Level Baseline for fMRI Representation Learning",
+      "url": "https://arxiv.org/abs/2609.31204",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
     },
     {
       "title": "Concordance Between Capillary Dried Plasma Spot and Venous Plasma Biomarkers in Traumatic Brain Injury: An Analytical Feasibility Pilot Study",
@@ -45,50 +59,169 @@
       "filter": "neurology"
     },
     {
-      "title": "Different hippocampal subfield volumes predict source memory performance and general cognitive ability in an adult lifespan sample",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.25.754488v1?rss=1",
+      "title": "DTI-ALPS Primarily Reflects White Matter Diffusion Dispersion and Microstructural Heterogeneity in Neurodegeneration: Insights From Multi-Modal MRI.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42786724/",
+      "date": "2026-10-01",
+      "source": "Human Brain Mapping",
+      "filter": "neuroimaging"
+    },
+    {
+      "title": "Skip the Talk, Re-Focus on Vision: Latent Reasoning for Reasoning Segmentation in Multimodal Large Language Models",
+      "url": "https://arxiv.org/abs/2609.30783",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Band-Selection Stability and Semantic Segmentation Performance: A Study on Hyperspectral City",
+      "url": "https://arxiv.org/abs/2609.31074",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Seeing Semantic Shift: Difference-Aware Sentence-Level Temporal Segmentation of Sign Language Videos",
+      "url": "https://arxiv.org/abs/2609.31148",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "FedHisto-PAST: Parameter-Efficient Stain-Aware Federated Learning for Cross-Site Lung Histopathology Classification",
+      "url": "https://arxiv.org/abs/2609.31150",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "ReG-SAM: Reference Graph-Driven SAM for 2D Foundational Vessel Segmentation",
+      "url": "https://arxiv.org/abs/2609.31160",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "UniAR: A Unified Framework for Autism Recognition Enhanced by Multi-View Prompt Learning",
+      "url": "https://arxiv.org/abs/2609.31298",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "CytoSPM: Open-Vocabulary Cytopathology Detection with Structured Prompt Bank",
+      "url": "https://arxiv.org/abs/2609.31314",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "AxonSynth: Domain-Randomized Synthetic Data for Zero-Shot 3D Axon Segmentation in Light-Sheet Microscopy",
+      "url": "https://arxiv.org/abs/2609.31431",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "KneePreM: Towards 3D Knee MRI Foundation Models via Large-Scale Unlabeled Pretraining and Label-Efficient Fine-Tuning",
+      "url": "https://arxiv.org/abs/2609.31461",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Adapting Visualization Techniques for Time-Series Anomaly Detection: From Convolutional Neural Networks to Convolutional-Recurrent Neural Networks",
+      "url": "https://arxiv.org/abs/2411.04707",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "VFM-UDA++: Improving Network Architectures and Data Strategies for Unsupervised Domain Adaptive Semantic Segmentation",
+      "url": "https://arxiv.org/abs/2503.10685",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "AdapToPASS: Ambiguity-aware Adaptive Spherical Transformer for Panoramic Semantic Segmentation",
+      "url": "https://arxiv.org/abs/2608.29081",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Learning with Volterra Neural Networks: A System Theoretic Perspective",
+      "url": "https://arxiv.org/abs/2609.01928",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "A Vision-Language Foundation Model for Precise and Comprehensive Brain Tumor Diagnosis from Preoperative Multimodal Data",
+      "url": "https://arxiv.org/abs/2609.16597",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "LightMIS: Ultra-Lightweight Medical Image Segmentation Without a Stage-Wise Decoder",
+      "url": "https://arxiv.org/abs/2609.28327",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Pseudo-Invertible Neural Networks",
+      "url": "https://arxiv.org/abs/2602.06042",
+      "date": "2026-09-28",
+      "source": "arXiv cs.CV",
+      "filter": "methods"
+    },
+    {
+      "title": "Spiral brain dynamics track the temporal unfolding of subjective intensity during the N,N-dimethyltryptamine experience",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.22.753116v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Type-I IFNs in EAE drive synaptic transcriptional responses in neurons and astrocytes in the brain",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.23.753833v1?rss=1",
+      "title": "Single Cell Cytometry of Mouse Brain Tissue",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.22.753505v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Single molecule detection of Tau seeds in extracellular vesicles from Alzheimer's disease brains",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.21.753085v1?rss=1",
+      "title": "Reciprocal control of the stomach and intestine by viscerosensory neurons in caudal brainstem",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.21.753299v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Auditory brainstem response amplitude predicts age-related forward masking temporal-processing deficits in normal-hearing listeners",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.21.753073v1?rss=1",
+      "title": "Attention Across Scales: From Individual Variation to Social Hierarchies and Brain Networks in Semi-Free-Ranging Macaques",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.21.752444v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "SubCortexMesh: A Python toolbox for surface-based analysis of subcortical brain regions",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.20.753034v1?rss=1",
+      "title": "A choice disinhibition paradigm to reveal neural correlates of behavioral disinhibition in Frontotemporal dementia",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.21.753256v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Concordance between the fast and efficient mixed-effects algorithm (FEMA) and conventional mixed-effects modeling for whole-brain connectivity in longitudinal chronic pain",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.20.753017v1?rss=1",
+      "title": "Seizure control via astrocyte targeted optogenetic extracellular potassium modulation: computational analysis of K+ vs non-selective cation-conducting opsins",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.24.754075v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Brain state shapes the polarity of pulsed infrared neural stimulation responses in individual cortical neurons",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.19.752571v1?rss=1",
+      "title": "Diet Quality from Midlife to Later Life Relates to Late-Life Brain Health and Verbal Memory in the SG70 Cohort",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.09.23.753372v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
@@ -120,139 +253,6 @@
       "date": null,
       "source": "medRxiv neurology",
       "filter": "neurology"
-    },
-    {
-      "title": "The value of a family history to distinguish monogenic from polygenic amyotrophic lateral sclerosis",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.16.26362994v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Peripheral immunoinflammatory markers and clinical correlations in Parkinson's disease patients carrying LRRK2 G2385R and R1628P variants",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.20.26363505v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Clinical and attitudinal outcomes of a personalized, multimodal lifestyle intervention for Alzheimer's disease prevention in high-risk, cognitively normal older adults in north Alabama: A pilot study",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.19.26363495v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Differentiating nonfluent/agrammatic and logopenic primary progressive aphasia in Catalan-Spanish bilinguals by applying multilingual multimodal machine learning to connected speech",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.18.26363435v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Lifespan EEG reference charts disentangle alpha-band alterations in neurological and neuropsychiatric disorders",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.19.26363457v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Clinical Meaningfulness of Individual Items of the Brief Ataxia Rating Scale and the Scale for the Assessment and Rating of Ataxia",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.15.26362565v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Persistently uneven deep brain stimulation management in Japan: a nationwide claims analysis, 2014-2024",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.14.26362780v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Associations of menopause hormone therapy with late-life cognition and brain health vary by formulation and APOEε4 presence",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.09.16.26363120v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Three dimensional reconstruction of the human nucleus accumbens reveals topographic organization and molecular heterogeneity of D1-islands across the anterior posterior axis",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.25.754413v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Goals Drive Adaptive Analysis of Linguistic Features During Reading",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.25.754337v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Axons organize into micro-tracts around the cortical vasculature",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.26.754479v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Cross-Modal Organization of Facial and Vocal Behavior Revealed by Coordination Metrics Derived from Temporal Alignment",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.26.754599v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Cerebellar mitochondrial dysfunction coincides with structural and behavioral abnormalities in 3q29Del mice",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.25.754481v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Cell type specific astrocytic feedback regulates excitation inhibition balance and cortical network dynamics",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.26.754623v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "VCP inhibition prevents cone photoreceptor degeneration in the cpfl1 mouse model of achromatopsia",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.21.753131v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Cell Type-Specific Structural and Functional Signatures of APOE4, Age and Sex in the Mouse Anterior Olfactory Nucleus",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.21.753183v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Impaired cortical encoding of prosodic prominence in single multisyllabic words for adults with dyslexia",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.25.754341v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "Selective vulnerability of intracortical projection neurons drives long-term cortical circuit rewiring after perinatal hypoxia",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.21.753115v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
-    },
-    {
-      "title": "SOMATODENDRITIC VASOPRESSIN RELEASE COUPLES INTRINSIC EXCITABILITY TO POPULATION-LEVEL ACTIVITY",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.09.22.753511v1?rss=1",
-      "date": null,
-      "source": "bioRxiv neuroscience",
-      "filter": "nih"
     }
   ],
   "authorItems": [],
