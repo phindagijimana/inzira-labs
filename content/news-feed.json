@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-30T16:54:28Z",
+  "fetchedAt": "2026-10-31T15:55:22Z",
   "itemCount": 36,
   "items": [
     {
@@ -10,8 +10,8 @@
       "filter": "neurology"
     },
     {
-      "title": "A preclinical platform for focused ultrasound delivery from microplate to awake brain",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.23.760846v1?rss=1",
+      "title": "Longitudinal persistence of EEG brain fingerprints:phase and complex coherency geometry across sessions andfunctional states",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.26.761764v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
@@ -38,74 +38,74 @@
       "filter": "neurology"
     },
     {
-      "title": "Robustness of MEG source imaging in pediatric patients with surgical cavities: A case series.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42953325/",
-      "date": "2026-12-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
-    },
-    {
-      "title": "Multiple instance learning for differentiating neoplastic and non-neoplastic brain lesions using MR spectroscopy.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42927027/",
-      "date": "2026-12-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
-    },
-    {
-      "title": "Salience network expansion as a transdiagnostic neural marker for psychopathology risk in adolescence",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.28.762645v1?rss=1",
+      "title": "HERC1 Loss of Function Causes a Developmental Disorder with Impaired Hippocampal Function",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763099v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Brain representations of visual short-term memories during healthy human aging: occipital decline and frontoparietal compensation",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.26.761884v1?rss=1",
+      "title": "Levodopa induced dyskinesia severity is linked to distinct microstructural alterations in nigrostriatal and brainwide neural circuits",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763167v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Disrupting SORL1-retromer endosomal recycling in mice drives the age-dependent neurodegenerative signature of Alzheimer's disease",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.26.761980v1?rss=1",
+      "title": "Trisomy 21 Perturbs Oligodendrocyte Developmental States and Oligo-Neuron Communication in Human Forebrain Assembloids",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763166v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Differential endothelial cell remodeling in Down syndrome and APP duplication drives distinct blood brain barrier dysfunction",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.29.762815v1?rss=1",
+      "title": "Full-Term and Preterm Differences in Human Brain Functional Connectivity Development Across Birth",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.29.762902v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Individualized brain-body signatures of positive emotions revealed by large-scale multimodal neurophysiological recording",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.23.761434v1?rss=1",
+      "title": "Concurrent cognitive, behavioral and systemic physiological features mark preclinical Alzheimer's disease",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.26.761827v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Affective representations and brain-body dynamics during emotional video viewing",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.28.762567v1?rss=1",
+      "title": "Neural and Gait Adaptations to Dual-Task Demands in Children and Young Adults: A Mobile Brain-Body Imaging (MoBI) Study.",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.26.761688v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Adolescent Sugar-Induced Miswiring of Hippocampal Neurons Drives Adult Motivational Dysfunction in rats",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.26.761002v1?rss=1",
+      "title": "Pre-stress functional brain connectivity is associated with subsequent anxiety during war-related stress",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.24.761100v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Gamma and theta-burst stimulation of the hippocampus and entorhinal area transiently disrupts memory",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.28.762322v1?rss=1",
+      "title": "Spatially resolved single-cell atlas reveals cortical glial reactivity associated with regions of neuronal growth programs in both hemispheres after stroke",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.26.761917v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
+    },
+    {
+      "title": "Impact of heat and sex on embryonic brain growth in dragons with temperature induced sex-reversal (Pogona vitticeps, Lacertilia: Agamidae)",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.26.761761v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Relative Importance of Positive and Potentially Traumatic Childhood Experiences in Explaining Multiple Sclerosis Symptoms",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.29.26366800v1?rss=1",
+      "date": null,
+      "source": "medRxiv neurology",
+      "filter": "neurology"
     },
     {
       "title": "Quantitative CTA-Based Carotid Plaque Composition Across Stroke Etiologies and Residual Vascular Risk",
@@ -213,48 +213,56 @@
       "filter": "neurology"
     },
     {
-      "title": "Aspirin-Containing Antiplatelet Therapy and In-Hospital Gout Flares in Acute Ischemic Stroke Patients with Gout and Hyperuricemia: A Retrospective New-User Cohort Study",
-      "url": "https://www.medrxiv.org/content/10.64898/2026.10.23.26366257v1?rss=1",
-      "date": null,
-      "source": "medRxiv neurology",
-      "filter": "neurology"
-    },
-    {
-      "title": "Acute exercise for emotional pattern separation in youth with psychiatric symptoms and childhood adversity: a randomized controlled trial.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42953727/",
-      "date": "2026-12-01",
-      "source": "NeuroImage",
+      "title": "Functional Network Organization Underlying Individual Differences in False Feedback Susceptibility: A Graph Theoretical Analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42963537/",
+      "date": "2026-11-01",
+      "source": "Human Brain Mapping",
       "filter": "neuroimaging"
     },
     {
-      "title": "Architectural reorganization of functional connectivity after propofol anesthesia exceeds within-state measurement variability and is only marginally reversed during early recovery.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42871879/",
-      "date": "2026-12-01",
-      "source": "NeuroImage",
-      "filter": "neuroimaging"
-    },
-    {
-      "title": "Evolutionary tuning of complexin-synaptotagmin fusion clamp governs regulated neurotransmitter release",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.26.761994v1?rss=1",
+      "title": "State-dependent modulation of cross-area sensory processing in mouse neocortex",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763148v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Comparative Proteomics Reveals Cell-Type-Specific Heterogeneity of Human Neural Cell-Derived Extracellular Vesicles",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.29.762880v1?rss=1",
+      "title": "An expanded toolbox for genetic access to molecularly defined cortical intratelencephalic neuron subtypes",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.762849v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     },
     {
-      "title": "Neural mechanisms for resilient sensory computation under metabolic stress",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.10.29.761790v1?rss=1",
+      "title": "Multimodal profiling and intersectional genetics reveal CA1 border inhibitory neuron diversity and postnatal emergence of retrosplenial connectivity",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.29.762784v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "Connectivity predicts where computation forms and where it can be changed",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.28.762656v1?rss=1",
+      "date": null,
+      "source": "bioRxiv neuroscience",
+      "filter": "nih"
+    },
+    {
+      "title": "From Images and Words to Modality-Independent Semantic Representations: When and Where They Emerge",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.10.30.763035v1?rss=1",
       "date": null,
       "source": "bioRxiv neuroscience",
       "filter": "nih"
     }
   ],
-  "authorItems": [],
+  "authorItems": [
+    {
+      "title": "MRI derived hippocampal asymmetry identifies hippocampal sclerosis in epilepsy surgical specimens.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42676852/",
+      "date": "2026-01-01",
+      "journal": "Brain communications",
+      "source": "PubMed"
+    }
+  ],
   "live": true
 }
